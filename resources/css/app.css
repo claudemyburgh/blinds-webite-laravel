@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    *::selection {
+        @apply bg-gray-500 text-white;
+    }
+
+    .wrapper {
+        @apply max-w-7xl mx-auto px-2 sm:px-4 lg:px-8;
+    }
+
+}
+
+
+@layer base {
+    /*
+   These are the styles from DaisyUI needed
+   for the scroll bar colours
+  */
+    :root {
+        /* Default is Dark */
+        --primary: theme('colors.gray.100');
+        --secondary: theme('colors.primary.400');
+    }
+
+    *::selection {
+        background: var(--secondary);
+        color: var(--primary)
+    }
+
+
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--secondary) var(--primary);
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--primary);
+        border-radius: 0;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);
+        border-radius: 5px;
+        border: 2px solid var(--primary);
+    }
+}
+
+
+@layer utilities {
+    .hero-clip {
+        clip-path: url(#svgClipPath);
+    }
+}
