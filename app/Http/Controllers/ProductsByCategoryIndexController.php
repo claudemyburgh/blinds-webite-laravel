@@ -21,7 +21,7 @@ class ProductsByCategoryIndexController extends Controller
     {
         $category->load('products.media');
 
-        
+
 
         return view("products.index", compact('category'));
     }
