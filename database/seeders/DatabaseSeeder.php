@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ProductSeeder::class,
             VariantsSeeder::class,
-            ImagesToProductsSeeder::class,
+//            ImagesToProductsSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();
