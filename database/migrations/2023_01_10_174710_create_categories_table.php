@@ -19,8 +19,10 @@ return new class extends Migration
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->string('slug')->unique()->index();
             $table->text('description')->nullable();
+            $table->text('body')->nullable();
             $table->text('excerpt')->nullable();
-            $table->timestamp('live')->nullable();
+            $table->boolean('live')->default(true);
+            $table->boolean('popular')->default(false);
             $table->timestamps();
         });
     }

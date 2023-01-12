@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Eloquent\Traits\MostPopular;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -11,24 +10,31 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Product extends Model implements HasMedia
+class Variant extends Model implements HasMedia
 {
     use HasFactory;
-
     use InteractsWithMedia;
 
-    use MostPopular;
-
-
-    protected $fillable = ['title', 'slug', 'category_id', 'description', 'excerpt', 'body', 'social_description'];
-
+    protected $fillable = [
+        'product_number',
+        'cleaning',
+        'color',
+        'material',
+        'pattern',
+        'thickness',
+        'pattern_width',
+        'pattern_height',
+        'flame_retardant',
+        'printable',
+        'popular',
+    ];
 
     /**
      * @return BelongsTo
      */
-    public function category(): BelongsTo
+    public function product(): BelongsTo
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Product::class);
     }
 
 
@@ -57,6 +63,8 @@ class Product extends Model implements HasMedia
         $this->addMediaCollection('default')
             ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
     }
+
+
 
 
 }

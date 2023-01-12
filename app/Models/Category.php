@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Eloquent\Traits\LiveAware;
+use App\Eloquent\Traits\MostPopular;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -16,14 +18,26 @@ class Category extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
     use HasRecursiveRelationships;
+    use LiveAware;
+    use MostPopular;
 
     protected $fillable = [
         'title',
         'slug',
         'description',
         'excerpt',
-        'live'
+        'live',
+        'body'
     ];
+
+    /**
+     * @return HasMany
+     */
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
+
 
     public function registerMediaConversions(Media $media = null): void
     {
@@ -41,7 +55,6 @@ class Category extends Model implements HasMedia
 
     }
 
-
     /**
      * @return void
      */
@@ -49,14 +62,6 @@ class Category extends Model implements HasMedia
     {
         $this->addMediaCollection('default')
             ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
-    }
-
-    /**
-     * @return HasMany
-     */
-    public function products(): HasMany
-    {
-        return $this->hasMany(Product::class);
     }
 
 

@@ -14,7 +14,7 @@ class ProductsObserver
      */
     public function creating(Model $model): void
     {
-        $model->slug = Str::slug($model->title);
+        $model->slug = Str::slug($model->title ." ". $model->range);
     }
 
     /**

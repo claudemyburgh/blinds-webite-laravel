@@ -2,8 +2,9 @@
     <div class="wrapper">
         <div class="flex items-center justify-between h-20">
             <div class="flex flex-1 items-center justify-between px-2 lg:px-0">
-                <a href="{{ config('app.url') }}" class="flex-shrink-0 text-2xl font-bold">
-                    {{ config('app.name') }}
+                <a href="{{ config('app.url') }}" class="flex-shrink-0  text-2xl font-bold">
+                    @include('layouts.partials._logo')
+                    <span class="sr-only">{{ config('app.name') }}</span>
                 </a>
                 <div class="hidden lg:block lg:ml-6">
                     <div class="flex space-x-4">
@@ -38,7 +39,7 @@
                             </button>
                             <div aria-labelledby="products-links" hidden
                                  class="absolute bg-white inset-x-0 py-4 top-full shadow-lg border-t border-b border-gray-300">
-                                <x-wrapper class="grid grid-cols-4 gap-4">
+                                <x-wrapper class="grid grid-cols-3 gap-4">
                                     <div class="col-span-4 border-b border-gray-100">
                                         <a href="{{ route('categories.index') }}"
                                            class="inline-flex space-x-px items-center font-semibold text-xl ">
@@ -63,10 +64,16 @@
                                             @if( $category->depth === 0)
                                                 <ul class="list-disc marker:text-primary-600 marker:text-xl list-outside pl-4 space-y-1.5 ">
                                                     @foreach($category->children as  $child)
-                                                        <li>
+                                                        <li class="flex justify-between items-center" >
                                                             <x-link href="{{ route('category.products.index', $child) }}">
                                                                 <x-title type="h4">{{ $child->title }}</x-title>
                                                             </x-link>
+
+                                                            @if($child->isPopular())
+                                                                <small class="border border-sky-500 bg-sky-100 rounded-full px-1 text-xs text-sky-500 inline-flex items-center space-x-1">
+                                                                    <span>Most Popular</span>
+                                                                </small>
+                                                            @endif
                                                         </li>
                                                     @endforeach
                                                 </ul>
@@ -84,8 +91,6 @@
                                             </a>
                                         @endforeach
                                     </div>
-
-
                                 </x-wrapper>
                             </div>
                         </headless-popover>

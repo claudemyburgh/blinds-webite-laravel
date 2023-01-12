@@ -9,6 +9,9 @@ use Illuminate\View\View;
 
 class CategoriesPageController extends Controller
 {
+
+
+
     /**
      * Handle the incoming request.
      *

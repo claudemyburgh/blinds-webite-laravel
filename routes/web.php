@@ -20,7 +20,7 @@ Route::get('/contact-us', \App\Http\Controllers\ContactUsPageController::class)-
 
 Route::get('/categories', \App\Http\Controllers\CategoriesPageController::class)->name('categories.index');
 Route::get('/category/{category:slug}', \App\Http\Controllers\ProductsByCategoryIndexController::class)->name('category.products.index');
-
+Route::get('/category/{category:slug}/product/{product:slug}', \App\Http\Controllers\ProductInCategoryShow::class)->name('category.product.show');
 
 
 Route::get('/dashboard', function () {

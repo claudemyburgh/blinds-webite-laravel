@@ -9,6 +9,8 @@ use Illuminate\View\View;
 
 class ProductsByCategoryIndexController extends Controller
 {
+
+
     /**
      * Handle the incoming request.
      *
@@ -17,7 +19,9 @@ class ProductsByCategoryIndexController extends Controller
      */
     public function __invoke(Category $category): View
     {
-        $category->load('products');
+        $category->load('products.media');
+
+        
 
         return view("products.index", compact('category'));
     }

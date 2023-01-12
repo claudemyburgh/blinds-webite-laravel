@@ -14,8 +14,11 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: colors.emerald,
+                primary: colors.teal,
                 gray: colors.zinc
+            },
+            width: {
+                "square-diagonal": (Math.sqrt(2) * 100).toFixed(2) + "%",
             },
             zIndex: {
                 100: 100,

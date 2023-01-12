@@ -8,10 +8,10 @@
             $classType = 'font-semibold text-3xl md:text-4xl';
             break;
         case 'h3':
-            $classType = 'font-semibold text-xl';
+            $classType = 'font-semibold text-xl md:text-2xl';
             break;
         case 'h4':
-            $classType = 'font-semibold text-lg';
+            $classType = 'font-semibold text-lg md:text-xl';
             break;
         default:
             $classType = 'font-bold text-5xl';
@@ -19,7 +19,7 @@
     }
 @endphp
 
-<{{$type}} @class(['tracking-tight text-gray-800 leading-tight ', $classType, $class])">
+<{{$type}} @class(['tracking-tight text-black leading-tight ', $classType, $class])">
 {{ $slot }}
 </{{$type}}>
 

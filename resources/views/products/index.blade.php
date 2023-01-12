@@ -1,14 +1,26 @@
 <x-site-layout>
 
-    <x-wrapper size="none" class="pt-28 2xl:pt-36">
+    <x-hero imageUrl="{{ Vite::asset('resources/img/' . $category->slug . '.jpg') }}">
         <x-title>{{ $category->title }}</x-title>
         @if($category->description)
-            <x-prose class="mt-6">
-                {!! $category->description !!}
-            </x-prose>
+        <x-paragraph class="rounded-md backdrop-blur py-4 max-w-2xl">
+            {{ $category->description }}
+        </x-paragraph>
         @endif
+    </x-hero>
+
+    <x-wrapper class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:grid-cols-4" size="none">
+        @foreach($category->products as $product)
+            <a href="{{ route('category.product.show', [$category, $product]) }}" class="relative group flex p-4 items-end bg-gray-200 border border-gray-400 rounded-md  aspect-square overflow-hidden flex-shrink-0">
+                <x-title type="h4" class="relative z-10">
+                    {{ $product->title }}
+                </x-title>
+                <img height="300" width="300" class="group-hover:scale-110 shadow-lg transition-transform w-full h-full absolute inset-0 object-cover" src="{{ $product->getFirstMediaUrl('default', 'medium') }}" alt="{{ $product->title }} background image">
+                <span class="h-1/3 w-full bg-gradient-to-b from-transparent to-black/40 block inset-x-0 bottom-0 absolute translate-y-full transition-transform group-hover:translate-y-0"></span>
+            </a>
+        @endforeach
     </x-wrapper>
 
-    {{ $category->products }}
+
 
 </x-site-layout>

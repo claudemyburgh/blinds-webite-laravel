@@ -1,10 +1,13 @@
+@props(['imageUrl' => Vite::asset('resources/img/hero-blinds.jpg')])
+
+
 <section class="relative">
     <x-wrapper class="relative z-10 pt-36 2xl:pt-44" size="lg">
         {{ $slot }}
     </x-wrapper>
 
-    <div class="absolute top-0 right-0 md:w-[650px] md:h-[600px]  2xl:w-[850px] 2xl:h-[800px] opacity-20 md:opacity-100">
-        <img class="hero-clip object-cover  w-full h-full" src="{{ Vite::asset('resources/img/hero-blinds.jpg') }}"
+    <div class="absolute top-0 right-0 md:w-[650px] md:h-[750px]  2xl:w-[850px] 2xl:h-[900px] opacity-20 md:opacity-100">
+        <img class="hero-clip object-cover  w-full h-full" src="{{ $imageUrl }}"
              alt="Hero image for {{config('app.name')}}">
     </div>
 
