@@ -12,8 +12,8 @@ class NavigationViewComposer
     public function compose(View $view)
     {
 
-        $categories = Cache::rememberForever('categories-nav', function () {
-            return Category::live()->with('media')->orderBy('title')->tree()->get()->toTree();
+        $categories = Cache::remember('categories-nav', '30', function () {
+            return Category::with('media')->orderBy('title')->tree()->get()->toTree();
         });
 
         return $view->with('categories', $categories);
