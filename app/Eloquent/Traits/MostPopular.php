@@ -13,13 +13,13 @@ trait MostPopular
      */
     public function scopePopular(Builder $builder): Builder
     {
-        return (boolean) $builder->where('popular', true);
+        return $builder->where('popular', true);
     }
 
     /**
      * @return bool
      */
-    public function isPopular(): bool
+    public function isPopular()
     {
         return (boolean) $this->popular === true;
     }
@@ -27,7 +27,7 @@ trait MostPopular
     /**
      * @return bool
      */
-    public function isNotPopular(): bool
+    public function isNotPopular()
     {
         return !$this->isPopular();
     }

@@ -22,7 +22,7 @@ trait LiveAware
      */
     public function isLive()
     {
-        return (boolean) $this->live === true;
+        return $this->live === true;
     }
 
     /**
