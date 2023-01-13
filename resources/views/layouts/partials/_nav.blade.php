@@ -1,26 +1,28 @@
 <headless-navigation role="navigation" class="bg-white fixed inset-x-0 top-0 block shadow-sm shadow-black/30 z-100">
     <div class="wrapper">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-16 md:h-20">
             <div class="flex flex-1 items-center justify-between px-2 lg:px-0">
-                <a href="{{ config('app.url') }}" class="flex-shrink-0  text-2xl font-bold">
+                <a href="{{ config('app.url') }}" class="flex-shrink-0 text-2xl font-bold">
                     @include('layouts.partials._logo')
                     <span class="sr-only">{{ config('app.name') }}</span>
                 </a>
                 <div class="hidden lg:block lg:ml-6">
                     <div class="flex space-x-4">
-
                         <a href="{{ route('home') }}"
                            @if( request()->routeIs('home')) aria-current="true" @endif
                             @class([
-                            'text-gray-900 hover:bg-primary-500 hover:text-white px-5 py-2.5 rounded-md text-base font-medium',
+                            'px-5 py-2.5 rounded-md text-base font-medium',
+                            'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('home'),
                             'bg-primary-500 text-white' => request()->routeIs('home')
                             ])>Home
                         </a>
                         <headless-popover>
                             <button type="button"
                                     @class([
-                                    'text-gray-900 hover:bg-primary-500 flex items-center hover:text-white px-5 py-2.5 rounded-md text-base font-medium',
-                                    'bg-primary-500 text-white' => request()->routeIs('categories*')
+                                    'px-5 py-2.5 rounded-md text-base font-medium flex items-center',
+                                    'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
+                                    'bg-primary-500 text-white' => request()->routeIs('categor*')
+
                                     ])
                                     id="products-links"
                                     aria-haspopup="true"
@@ -64,13 +66,15 @@
                                             @if( $category->depth === 0)
                                                 <ul class="list-disc marker:text-primary-600 marker:text-xl list-outside pl-4 space-y-1.5 ">
                                                     @foreach($category->children as  $child)
-                                                        <li class="flex justify-between items-center" >
-                                                            <x-link href="{{ route('category.products.index', $child) }}">
+                                                        <li class="flex justify-between items-center">
+                                                            <x-link
+                                                                href="{{ route('category.products.index', $child) }}">
                                                                 <x-title type="h4">{{ $child->title }}</x-title>
                                                             </x-link>
 
                                                             @if($child->isPopular())
-                                                                <small class="border border-sky-500 bg-sky-100 rounded-full px-1 text-xs text-sky-500 inline-flex items-center space-x-1">
+                                                                <small
+                                                                    class="border border-sky-500 bg-sky-100 rounded-full px-1 text-xs text-sky-500 inline-flex items-center space-x-1">
                                                                     <span>Most Popular</span>
                                                                 </small>
                                                             @endif
@@ -86,7 +90,8 @@
                                         @foreach($categories->take(4) as $category)
                                             <a href="#"
                                                class="rounded-md bg-gray-200 aspect-square overflow-hidden border border-gray-300 hover:shadow-md transition-shadow hover:shadow-primary-600/30">
-                                                <img class="hover:scale-110 transition-transform " src="{{ $category->getFirstMediaUrl('default', 'thumb') }}"
+                                                <img class="hover:scale-110 transition-transform "
+                                                     src="{{ $category->getFirstMediaUrl('default', 'thumb') }}"
                                                      alt="{{ $category->title }}">
                                             </a>
                                         @endforeach
@@ -98,14 +103,16 @@
                         <a href="{{ route('about-us') }}"
                            @if( request()->routeIs('about-us')) aria-current="true" @endif
                             @class([
-                            'text-gray-900 hover:bg-primary-500 hover:text-white px-5 py-2.5 rounded-md text-base font-medium',
+                            'px-5 py-2.5 rounded-md text-base font-medium',
+                            'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('about-us'),
                             'bg-primary-500 text-white' => request()->routeIs('about-us')
                             ])>About Us</a>
 
                         <a href="{{ route('contact-us') }}"
                            @if( request()->routeIs('contact-us')) aria-current="true" @endif
                             @class([
-                            'text-gray-900 hover:bg-primary-500 hover:text-white px-5 py-2.5 rounded-md text-base font-medium',
+                            'px-5 py-2.5 rounded-md text-base font-medium',
+                            'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('contact-us'),
                             'bg-primary-500 text-white' => request()->routeIs('contact-us')
                             ])>Contact Us</a>
 

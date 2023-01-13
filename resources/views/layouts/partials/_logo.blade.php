@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg class="h-12" id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3413.19 491.55">
+
+<svg class="h-8 md:h-12 block" id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3413.19 491.55">
     <g id="Layer_1-2">
         <g>
             <g>
