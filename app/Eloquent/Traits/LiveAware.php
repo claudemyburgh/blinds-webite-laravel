@@ -20,7 +20,7 @@ trait LiveAware
     /**
      * @return bool
      */
-    public function isLive()
+    public function isLive(): bool
     {
         return $this->live === true;
     }
@@ -28,7 +28,7 @@ trait LiveAware
     /**
      * @return bool
      */
-    public function isNotLive()
+    public function isNotLive(): bool
     {
         return !$this->isLive();
     }

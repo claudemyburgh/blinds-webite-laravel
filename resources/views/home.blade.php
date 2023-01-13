@@ -23,7 +23,7 @@
         <x-btn-link href="{{ route('categories.index') }}" >VIEW ALL PRODUCTS</x-btn-link>
     </x-hero>
 
-
+    <x-category-list></x-category-list>
 
 
 </x-site-layout>

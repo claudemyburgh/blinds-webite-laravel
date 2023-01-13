@@ -19,7 +19,7 @@ trait MostPopular
     /**
      * @return bool
      */
-    public function isPopular()
+    public function isPopular(): bool
     {
         return (boolean) $this->popular === true;
     }
@@ -27,7 +27,7 @@ trait MostPopular
     /**
      * @return bool
      */
-    public function isNotPopular()
+    public function isNotPopular(): bool
     {
         return !$this->isPopular();
     }
