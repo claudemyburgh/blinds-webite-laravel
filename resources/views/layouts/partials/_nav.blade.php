@@ -56,41 +56,22 @@
                                         </a>
                                     </div>
                                     @foreach($categories as $category)
-                                        <div class="p-4 rounded-md bg-white aspect-square space-y-1.5">
-                                            <x-link href="#">
-                                                <x-title type="h3">{{ $category->title }}</x-title>
-                                            </x-link>
-                                            @if( $category->depth === 0)
-                                                <ul class="list-disc marker:text-primary-600 marker:text-xl list-outside pl-4 space-y-1.5 ">
-                                                    @foreach($category->children as  $child)
-                                                        <li class="flex justify-between items-center">
-                                                            <x-link
-                                                                href="{{ route('category.products.index', $child) }}">
-                                                                <x-title type="h4">{{ $child->title }}</x-title>
-                                                            </x-link>
-{{--                                                            @if($child->isPopular())--}}
-{{--                                                                <small--}}
-{{--                                                                    class="border border-sky-500 bg-sky-100 rounded-full px-1 text-xs text-sky-500 inline-flex items-center space-x-1">--}}
-{{--                                                                    <span>Most Popular</span>--}}
-{{--                                                                </small>--}}
-{{--                                                            @endif--}}
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            @endif
-                                        </div>
+                                        <ul class="list-disc list-outside pl-5">
+                                            <li>
+                                                <a href="{{ route('category.products.index', $category) }}">{{ $category->title }}</a>
+                                                @if($category->children)
+                                                    <ul class="list-disc list-outside pl-4 ">
+                                                        @foreach($category->children as $child)
+                                                            <li>
+                                                                <a href="{{ route('category.products.index', $child) }}">{{ $child->title }}</a>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                @endif
+                                            </li>
+                                        </ul>
                                     @endforeach
-                                    <div class="p-4 rounded-md bg-gray-200 aspect-square"></div>
-                                    <div class="aspect-square grid grid-rows-2 grid-cols-2 gap-4">
-                                        @foreach($categories->take(4) as $category)
-                                            <a href="#"
-                                               class="rounded-md bg-gray-200 aspect-square overflow-hidden border border-gray-300 hover:shadow-md transition-shadow hover:shadow-primary-600/30">
-                                                <img class="hover:scale-110 transition-transform "
-                                                     src="{{ $category->getFirstMediaUrl('default', 'thumb') }}"
-                                                     alt="{{ $category->title }}">
-                                            </a>
-                                        @endforeach
-                                    </div>
+
                                 </x-wrapper>
                             </div>
                         </headless-popover>

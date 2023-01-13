@@ -12,9 +12,7 @@ class NavigationViewComposer
     public function compose(View $view)
     {
 
-        $categories = Cache::remember('categories-nav', '30', function () {
-            return Category::with('media')->orderBy('title')->tree()->get()->toTree();
-        });
+        $categories = Category::with('media')->orderBy('title')->tree()->get()->toTree();
 
         return $view->with('categories', $categories);
     }
