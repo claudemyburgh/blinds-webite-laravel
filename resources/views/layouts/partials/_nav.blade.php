@@ -55,7 +55,7 @@
                                             </span>
                                         </a>
                                     </div>
-                                    @foreach($categories->take(2) as $category)
+                                    @foreach($categories as $category)
                                         <div class="p-4 rounded-md bg-white aspect-square space-y-1.5">
                                             <x-link href="#">
                                                 <x-title type="h3">{{ $category->title }}</x-title>

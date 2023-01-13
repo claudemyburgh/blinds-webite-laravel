@@ -3,8 +3,6 @@
     <x-wrapper class="my-24">
 
     @foreach($categories as $category)
-
-
         <ul class="list-outside list-disc">
             <li>
                 <x-link href="{{ route('category.products.index', $category) }}">
@@ -18,7 +16,6 @@
                         </li>
                     @endforeach
                 </ul>
-
             </li>
         </ul>
     @endforeach
