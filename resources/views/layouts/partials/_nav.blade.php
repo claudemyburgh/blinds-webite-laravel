@@ -16,7 +16,7 @@
                             'bg-primary-500 text-white' => request()->routeIs('home')
                             ])>Home
                         </a>
-                        <headless-popover>
+                        <headless-popover class="block">
                             <button type="button"
                                     @class([
                                     'px-5 py-2.5 rounded-md text-base font-medium flex items-center',
@@ -41,7 +41,7 @@
                             </button>
                             <div aria-labelledby="products-links" hidden
                                  class="absolute bg-white inset-x-0 py-4 top-full shadow-lg border-t border-b border-gray-300">
-                                <x-wrapper class="grid grid-cols-3 gap-4">
+                                <x-wrapper class="grid grid-cols-4 gap-4">
                                     <div class="col-span-4 border-b border-gray-100">
                                         <a href="{{ route('categories.index') }}"
                                            class="inline-flex space-x-px items-center font-semibold text-xl ">
@@ -55,14 +55,11 @@
                                             </span>
                                         </a>
                                     </div>
-
-
                                     @foreach($categories->take(2) as $category)
                                         <div class="p-4 rounded-md bg-white aspect-square space-y-1.5">
                                             <x-link href="#">
                                                 <x-title type="h3">{{ $category->title }}</x-title>
                                             </x-link>
-
                                             @if( $category->depth === 0)
                                                 <ul class="list-disc marker:text-primary-600 marker:text-xl list-outside pl-4 space-y-1.5 ">
                                                     @foreach($category->children as  $child)
@@ -71,18 +68,16 @@
                                                                 href="{{ route('category.products.index', $child) }}">
                                                                 <x-title type="h4">{{ $child->title }}</x-title>
                                                             </x-link>
-
-                                                            @if($child->isPopular())
-                                                                <small
-                                                                    class="border border-sky-500 bg-sky-100 rounded-full px-1 text-xs text-sky-500 inline-flex items-center space-x-1">
-                                                                    <span>Most Popular</span>
-                                                                </small>
-                                                            @endif
+{{--                                                            @if($child->isPopular())--}}
+{{--                                                                <small--}}
+{{--                                                                    class="border border-sky-500 bg-sky-100 rounded-full px-1 text-xs text-sky-500 inline-flex items-center space-x-1">--}}
+{{--                                                                    <span>Most Popular</span>--}}
+{{--                                                                </small>--}}
+{{--                                                            @endif--}}
                                                         </li>
                                                     @endforeach
                                                 </ul>
                                             @endif
-
                                         </div>
                                     @endforeach
                                     <div class="p-4 rounded-md bg-gray-200 aspect-square"></div>
