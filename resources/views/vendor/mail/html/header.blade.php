@@ -2,7 +2,7 @@
 <tr>
 <td class="header">
 <a href="{{ $url }}" style="display: inline-block;">
-    <svg class="logo" height="350" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1065.16 640.55">
+    <svg class="logo" height="550" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1065.16 640.55">
         <defs>
             <style>
                 .cls-1 {

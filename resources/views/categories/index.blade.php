@@ -4,9 +4,14 @@
         <x-title>Categories</x-title>
         <x-prose class="my-6">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque commodi cumque deserunt dolorem dolores est expedita, incidunt ipsum iste laudantium neque nesciunt, quam quod sit suscipit velit vitae voluptatibus.</p>
+                We are excited to offer you a wide variety of products to choose from. We have put in a lot of effort to curate a diverse range of products to cater to different needs and preferences
+            </p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque commodi cumque deserunt dolorem dolores est expedita, incidunt ipsum iste laudantium neque nesciunt, quam quod sit suscipit velit vitae voluptatibus.</p>
+                We understand that it can be overwhelming to browse through a long list of products, so we have made it easy for you to find what you're looking for by organizing our products into different categories. You can also use the search bar to narrow down your options.
+            </p>
+            <p>
+                We take great pride in our selection of products and are confident that you will find something you'll love. Our team is always working hard to bring you the latest and greatest products, so be sure to check back often.
+            </p>
         </x-prose>
     </x-wrapper>
 

@@ -1,5 +1,5 @@
-<div class="mt-24">
-<div class="max-w-4xl mx-auto text-center">
+<div class="mt-24 ">
+<div class="max-w-4xl px-4 md:px-6 lg:px-8 mx-auto text-center">
     <x-title type="h2" >Trusted by developers from over 80 planets</x-title>
     <x-paragraph class="text-center mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Repellendus repellat laudantium.</x-paragraph>
