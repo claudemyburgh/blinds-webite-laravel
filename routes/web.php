@@ -23,9 +23,22 @@ Route::get('/category/{category:slug}', \App\Http\Controllers\ProductsByCategory
 Route::get('/category/{category:slug}/product/{product:slug}', \App\Http\Controllers\ProductInCategoryShow::class)->name('category.product.show');
 
 
+Route::post('/contact-send', \App\Http\Controllers\ContactFormSendController::class)->name('contact.send');
+Route::post('api/contact-send', \App\Http\Controllers\Api\ContactFormSendController::class);
+
+Route::group([
+    'middleware' => ['auth', 'verified'],
+    'as' => 'dashboard.',
+    'prefix' => '/dashboard'
+    ], function() {
+//    Route::get('/', \App\Http\Controllers\Dashboard\DashboardController::class)->name('index');
+    Route::resource('categories', \App\Http\Controllers\Dashboard\CategoriesControllers::class);
+
+});
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('dashboard.index');
+})->middleware(['auth', 'verified'])->name('dashboard.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

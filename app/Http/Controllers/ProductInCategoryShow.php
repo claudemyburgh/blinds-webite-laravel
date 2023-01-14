@@ -17,6 +17,9 @@ class ProductInCategoryShow extends Controller
      */
     public function __invoke(Category $category, Product $product): View
     {
+
+        $product->load('media', 'variants.media');
+
         return view('products.show', compact('product', 'category'));
     }
 }

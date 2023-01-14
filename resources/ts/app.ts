@@ -1,6 +1,6 @@
 import './bootstrap';
 import "vanilla-headless"
-
+import "./components/ContactForm"
 
 // import Alpine from 'alpinejs';
 //
