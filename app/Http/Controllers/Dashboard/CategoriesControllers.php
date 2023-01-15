@@ -73,17 +73,14 @@ class CategoriesControllers extends Controller
 
     public function update(CategoryCreateRequest $request, Category $category)
     {
-
         $category->load('media');
 
         $category->update($request->only('title', 'parent_id', 'excerpt', 'description', 'body', 'popular', 'live'));
 
-
-
         if($request->image) {
-
-               $category->addMedia($request->image)->toMediaCollection();
-
+               $category->addMedia($request->image)
+                   ->preservingOriginal()
+                   ->toMediaCollection();
         }
 
         return redirect()->back()->withSuccess('Updated successfully!');

@@ -43,6 +43,8 @@ class Category extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null): void
     {
+//        $this->addMediaCollection('categories');
+
         $this->addMediaConversion('thumb')
             ->fit(Manipulations::FIT_CROP, 200, 200);
 
@@ -53,7 +55,7 @@ class Category extends Model implements HasMedia
             ->fit(Manipulations::FIT_CROP, 800, 800);
 
         $this->addMediaConversion('large')
-            ->fit(Manipulations::FIT_CROP, 1200, 1200);
+            ->fit(Manipulations::FIT_CROP, 1600, 1600);
 
     }
 
@@ -64,6 +66,10 @@ class Category extends Model implements HasMedia
     {
         $this->addMediaCollection('default')
             ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
+
+//        $this->addMediaCollection('default')
+//            ->useFallbackPath(public_path('img/hero-blinds.jpg'));
+
     }
 
 

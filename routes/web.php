@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\AboutUsPageController;
+use App\Http\Controllers\CategoriesPageController;
+use App\Http\Controllers\ContactFormSendController;
+use App\Http\Controllers\ContactUsPageController;
 use App\Http\Controllers\Dashboard\CategoriesControllers;
 use App\Http\Controllers\Dashboard\RemoveCategoryImageController;
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ProductInCategoryShow;
+use App\Http\Controllers\ProductsByCategoryIndexController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,16 +23,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Http\Controllers\HomePageController::class)->name('home');
-Route::get('/about-us', \App\Http\Controllers\AboutUsPageController::class)->name('about-us');
-Route::get('/contact-us', \App\Http\Controllers\ContactUsPageController::class)->name('contact-us');
+Route::get('/', HomePageController::class)->name('home');
+Route::get('/about-us', AboutUsPageController::class)->name('about-us');
+Route::get('/contact-us', ContactUsPageController::class)->name('contact-us');
 
-Route::get('/categories', \App\Http\Controllers\CategoriesPageController::class)->name('categories.index');
-Route::get('/category/{category:slug}', \App\Http\Controllers\ProductsByCategoryIndexController::class)->name('category.products.index');
-Route::get('/category/{category:slug}/product/{product:slug}', \App\Http\Controllers\ProductInCategoryShow::class)->name('category.product.show');
+Route::get('/categories', CategoriesPageController::class)->name('categories.index');
+Route::get('/category/{category:slug}', ProductsByCategoryIndexController::class)->name('category.products.index');
+Route::get('/category/{category:slug}/product/{product:slug}', ProductInCategoryShow::class)->name('category.product.show');
 
 
-Route::post('/contact-send', \App\Http\Controllers\ContactFormSendController::class)->name('contact.send');
+Route::post('/contact-send', ContactFormSendController::class)->name('contact.send');
 Route::post('api/contact-send', \App\Http\Controllers\Api\ContactFormSendController::class);
 
 Route::group([

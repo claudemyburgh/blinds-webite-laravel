@@ -1,8 +1,8 @@
 <x-site-layout>
     <x-wrapper size="none" class="pt-28 2xl:pt-36">
-        <x-title>Contact Us</x-title>
+        <x-title>Contact Us </x-title>
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             <article>
                 <x-paragraph>
                     At {{ config('app.name') }}, we value our customers and are always eager to hear from you. Whether you have a question about our products or services, or just want to give us feedback, we would love to hear from you.

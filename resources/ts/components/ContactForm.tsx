@@ -74,7 +74,7 @@ export default function ContactForm() {
             )}
             {(Object.keys(errors).length > 0) && (
                 <div
-                    className="relative p-5 mb-4 mx-2 border border-red-500 bg-green-50 bg-red-500 rounded-md text-white shadow-lg shadow-red-500/30">
+                    className="relative p-5 mb-4 mx-2 border border-red-500 bg-red-500 rounded-md text-white shadow-lg shadow-red-500/30">
                     <button onClick={() => setErrors({})} type="button"
                             className={`absolute right-1 flex items-center justify-center top-1 h-8 w-8 rounded-md border border-white/30 text-white`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"

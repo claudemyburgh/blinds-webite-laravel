@@ -18,17 +18,25 @@ class CategorySeeder extends Seeder
 
         $categories = [
             [
-                "title" => "Indoor",
-                "description" => "",
-                "body" => "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+                "title" => "Indoor Blinds",
+                "excerpt" => " Indoor blinds are popular for their ability to control light and privacy, and can come in various styles such as Roman, roller, Venetian, and cellular.",
+                "description" => "
+                    Indoor blinds are popular for their ability to control light and privacy, and can come in various styles such as Roman, roller, Venetian, and cellular.
+                ",
+                "body" => "<p>
+                    Indoor blinds are window coverings that are installed inside a room or building, as opposed to outside. They can be made from a variety of materials such as wood, vinyl, aluminum, or fabric, and can be controlled manually or with motorization. Indoor blinds are popular for their ability to control light and privacy, and can come in various styles such as Roman, roller, Venetian, and cellular. They can be custom-made to fit any window size and can be a great addition to any room in your home or office.</p>
+                ",
                 "parent_id" => null,
                 "popular" => (boolean) false,
                 "live" => (boolean) true
             ],
             [
-                "title" => "Outdoor",
-                "description" => "",
-                "body" => "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+                "title" => "Outdoor Blinds",
+                "excerpt" => "Outdoor blinds can provide protection from sun, wind and rain, and can be controlled manually or with motorization. They come in various styles, such as roll-up, retractable, or fixed, and can be a great addition to any outdoor living space",
+
+                "description" => "Outdoor blinds can provide protection from sun, wind and rain, and can be controlled manually or with motorization. They come in various styles, such as roll-up, retractable, or fixed, and can be a great addition to any outdoor living space",
+
+                "body" => "<p>Outdoor blinds are window coverings that are installed outside of a building or on a patio, deck, or pergola. They are typically made from waterproof and UV resistant materials such as acrylic, PVC or polycarbonate, to withstand the elements. Outdoor blinds can provide protection from sun, wind and rain, and can be controlled manually or with motorization. They come in various styles, such as roll-up, retractable, or fixed, and can be a great addition to any outdoor living space, providing privacy and shade while extending the use of outdoor areas.</p>",
                 "parent_id" => null,
                 "live" => false
             ],

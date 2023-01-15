@@ -45,7 +45,7 @@
                                     <div class="col-span-4 border-b border-gray-100">
                                         <a href="{{ route('categories.index') }}"
                                            class="inline-flex space-x-px items-center font-semibold text-xl ">
-                                            <span>Categories</span>
+                                            <span>Catalog</span>
                                             <span aria-hidden="true">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                      stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
@@ -75,14 +75,6 @@
                                 </x-wrapper>
                             </div>
                         </headless-popover>
-
-                        <a href="{{ route('about-us') }}"
-                           @if( request()->routeIs('about-us')) aria-current="true" @endif
-                            @class([
-                            'px-5 py-2.5 rounded-md text-base font-medium',
-                            'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('about-us'),
-                            'bg-primary-500 text-white' => request()->routeIs('about-us')
-                            ])>About Us</a>
 
                         <a href="{{ route('contact-us') }}"
                            @if( request()->routeIs('contact-us')) aria-current="true" @endif
@@ -118,11 +110,34 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div hidden class="lg:hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
-            <a href="#"
-               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-            <a href="#"
-               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+
+            <a href="{{ route('home') }}"
+               @if( request()->routeIs('home')) aria-current="true" @endif
+                @class([
+                'px-3 py-2 block rounded-md text-base font-medium',
+                'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('home'),
+                'bg-primary-500 text-white' => request()->routeIs('home')
+                ])>Home
+            </a>
+
+            <a href="{{ route('categories.index') }}"
+               @if( request()->routeIs('categor*')) aria-current="true" @endif
+                @class([
+                'px-3 py-2 block rounded-md text-base font-medium',
+                'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
+                'bg-primary-500 text-white' => request()->routeIs('categor*')
+                ])>Catalog
+            </a>
+
+            <a href="{{ route('contact-us') }}"
+               @if( request()->routeIs('contact-us')) aria-current="true" @endif
+                @class([
+                'px-3 py-2 block rounded-md text-base font-medium',
+                'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('contact-us'),
+                'bg-primary-500 text-white' => request()->routeIs('contact-us')
+                ])>Contact Us
+            </a>
+
         </div>
     </div>
 </headless-navigation>
