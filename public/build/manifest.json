@@ -11,6 +11,10 @@
     "file": "assets/basswood-blinds-34a63e76.jpg",
     "src": "resources/img/basswood-blinds.jpg"
   },
+  "resources/img/double-roller-blinds.jpg": {
+    "file": "assets/double-roller-blinds-d2be0c9a.jpg",
+    "src": "resources/img/double-roller-blinds.jpg"
+  },
   "resources/img/hero-blinds-2.jpg": {
     "file": "assets/hero-blinds-2-b39d35f2.jpg",
     "src": "resources/img/hero-blinds-2.jpg"
@@ -23,6 +27,10 @@
     "file": "assets/honeycomb-blinds-62a77f56.jpg",
     "src": "resources/img/honeycomb-blinds.jpg"
   },
+  "resources/img/outdoor.jpg": {
+    "file": "assets/indoor-6d699ab3.jpg",
+    "src": "resources/img/outdoor.jpg"
+  },
   "resources/img/svg/blob.svg": {
     "file": "assets/blob-7dd4f7e7.svg",
     "src": "resources/img/svg/blob.svg"
@@ -31,21 +39,17 @@
     "file": "assets/motion-blinds-1aefd8b6.jpg",
     "src": "resources/img/motion-blinds.jpg"
   },
-  "resources/img/double-roller-blinds.jpg": {
-    "file": "assets/double-roller-blinds-d2be0c9a.jpg",
-    "src": "resources/img/double-roller-blinds.jpg"
-  },
-  "resources/img/outdoor.jpg": {
-    "file": "assets/outdoor-6d699ab3.jpg",
-    "src": "resources/img/outdoor.jpg"
+  "resources/img/svg/header-blob.svg": {
+    "file": "assets/header-blob-b05365f9.svg",
+    "src": "resources/img/svg/header-blob.svg"
   },
   "resources/img/roller-blinds.jpg": {
     "file": "assets/roller-blinds-583b3132.jpg",
     "src": "resources/img/roller-blinds.jpg"
   },
-  "resources/img/svg/header-blob.svg": {
-    "file": "assets/header-blob-b05365f9.svg",
-    "src": "resources/img/svg/header-blob.svg"
+  "resources/img/blinds.jpg": {
+    "file": "assets/blinds-49fb0e30.jpg",
+    "src": "resources/img/blinds.jpg"
   },
   "resources/img/venetian-blinds.jpg": {
     "file": "assets/venetian-blinds-983df028.jpg",
@@ -55,18 +59,18 @@
     "file": "assets/zebra-blinds-cf7b7e6c.jpg",
     "src": "resources/img/zebra-blinds.jpg"
   },
-  "resources/img/blinds.jpg": {
-    "file": "assets/blinds-49fb0e30.jpg",
-    "src": "resources/img/blinds.jpg"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-02f51787.css",
+    "file": "assets/app-22e9836f.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-d05d164c.js",
+    "file": "assets/app-6d7a78d6.js",
     "src": "resources/ts/app.ts",
     "isEntry": true
+  },
+  "resources/img/indoor.jpg": {
+    "file": "assets/indoor-6d699ab3.jpg",
+    "src": "resources/img/outdoor.jpg"
   }
 }

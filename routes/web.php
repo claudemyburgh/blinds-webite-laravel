@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Dashboard\CategoriesControllers;
+use App\Http\Controllers\Dashboard\RemoveCategoryImageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,11 +31,12 @@ Route::post('api/contact-send', \App\Http\Controllers\Api\ContactFormSendControl
 Route::group([
     'middleware' => ['auth', 'verified'],
     'as' => 'dashboard.',
-    'prefix' => '/dashboard'
+    'prefix' => '/dashboard',
+    'namespace' => "App\Http\Controllers\Dashboard"
     ], function() {
 //    Route::get('/', \App\Http\Controllers\Dashboard\DashboardController::class)->name('index');
-    Route::resource('categories', \App\Http\Controllers\Dashboard\CategoriesControllers::class);
-
+    Route::resource('categories', CategoriesControllers::class);
+    Route::delete('/media/{media}/image-delete', RemoveCategoryImageController::class)->name('categories.image-delete');
 });
 
 Route::get('/dashboard', function () {

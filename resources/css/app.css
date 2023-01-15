@@ -36,7 +36,6 @@
         color: var(--primary)
     }
 
-
     /* Firefox */
     * {
         scrollbar-width: thin;
@@ -58,6 +57,8 @@
         border-radius: 5px;
         border: 2px solid var(--primary);
     }
+
+
 }
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Dasboard\CategoryCreateRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -18,7 +19,7 @@ class CategoriesControllers extends Controller
     public function index(Category $categories): View
     {
         return view('dashboard.categories.index', [
-            'categories' => $categories->paginate()
+            'categories' => $categories->get()
         ]);
     }
 
@@ -27,9 +28,11 @@ class CategoriesControllers extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Category $categories): View
     {
-        //
+        return view('dashboard.categories.create', [
+            'category' => new Category()
+        ]);
     }
 
     /**
@@ -38,9 +41,11 @@ class CategoriesControllers extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryCreateRequest $request)
     {
-        //
+        $category = Category::create($request->only('title', 'parent_id', 'excerpt', 'description', 'body', 'popular', 'live'));
+
+        return response()->redirectToRoute('dashboard.categories.edit', $category)->withSuccess('Category successfully created!');
     }
 
     /**
@@ -49,9 +54,9 @@ class CategoriesControllers extends Controller
      * @param Category $category
      * @return View
      */
-    public function show(Category $category): View
+    public function show(Category $category)
     {
-        return view('dashboard.categories.edit', compact('category'));
+
     }
 
     /**
@@ -62,19 +67,26 @@ class CategoriesControllers extends Controller
      */
     public function edit(Category $category): View
     {
-
+        return view('dashboard.categories.edit', compact('category'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Category $category)
+
+    public function update(CategoryCreateRequest $request, Category $category)
     {
-        //
+
+        $category->load('media');
+
+        $category->update($request->only('title', 'parent_id', 'excerpt', 'description', 'body', 'popular', 'live'));
+
+
+
+        if($request->image) {
+
+               $category->addMedia($request->image)->toMediaCollection();
+
+        }
+
+        return redirect()->back()->withSuccess('Updated successfully!');
     }
 
     /**
@@ -85,6 +97,8 @@ class CategoriesControllers extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->route('dashboard.categories.index')->withSuccess('Category successfully deleted');
     }
 }

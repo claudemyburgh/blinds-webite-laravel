@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\ViewComposers\CategoriesSelectViewComposer;
 use App\ViewComposers\NavigationViewComposer;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +17,9 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function register()
     {
         view()->composer('layouts.partials._nav', NavigationViewComposer::class);
+
+        view()->composer('dashboard.categories.partials._categories-select', CategoriesSelectViewComposer::class);
+
     }
 
     /**
