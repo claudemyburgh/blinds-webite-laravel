@@ -18,13 +18,13 @@ class UserSeeder extends Seeder
         $users = [
             [
                 "name" => "Claude Myburgh",
-                "email" => config('dashboard.admin.claude.email'),
-                "password" => config('dashboard.admin.claude.password')
+                "email" =>   config('dashboard.admin.claude.email'),
+                "password" => bcrypt(config('dashboard.admin.claude.password'))
             ],
             [
                 "name" => "Hendry Ollewagen",
                 "email" => config('dashboard.admin.hendry.email'),
-                "password" => config('dashboard.admin.hendry.password')
+                "password" => bcrypt(config('dashboard.admin.hendry.password'))
             ],
         ];
 
