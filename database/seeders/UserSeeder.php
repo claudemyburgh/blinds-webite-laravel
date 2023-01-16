@@ -18,9 +18,14 @@ class UserSeeder extends Seeder
         $users = [
             [
                 "name" => "Claude Myburgh",
-                "email" => "claude@eloquentblinds.co.za",
-                "password" => "password"
-            ]
+                "email" => config('dashboard.claude.email'),
+                "password" => config('dashboard.claude.password')
+            ],
+            [
+                "name" => "Hendry Ollewagen",
+                "email" => config('dashboard.hendry.email'),
+                "password" => config('dashboard.hendry.password')
+            ],
         ];
 
         foreach ($users as $user) {
