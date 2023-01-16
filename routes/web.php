@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactUsPageController;
 use App\Http\Controllers\Dashboard\CategoriesControllers;
 use App\Http\Controllers\Dashboard\ProductsController;
 use App\Http\Controllers\Dashboard\DeleteMediaController;
+use App\Http\Controllers\Dashboard\VariantsController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductInCategoryShow;
 use App\Http\Controllers\ProductsByCategoryIndexController;
@@ -46,6 +47,8 @@ Route::group([
     Route::resource('categories', CategoriesControllers::class);
     Route::resource('products', ProductsController::class);
     Route::delete('/media/{media}/delete', DeleteMediaController::class)->name('media.delete');
+
+    Route::resource('/{product}/variants', VariantsController::class);
 });
 
 Route::get('/dashboard', function () {

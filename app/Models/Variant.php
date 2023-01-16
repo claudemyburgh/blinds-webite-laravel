@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Eloquent\Traits\MostPopular;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,19 +14,19 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Variant extends Model implements HasMedia
 {
     use HasFactory;
+
     use InteractsWithMedia;
 
+    use MostPopular;
+
     protected $fillable = [
-        'product_number',
-        'cleaning',
-        'color',
+        'sku',
+        'colour',
         'material',
         'pattern',
         'thickness',
         'pattern_width',
         'pattern_height',
-        'flame_retardant',
-        'printable',
         'popular',
     ];
 
@@ -40,7 +41,15 @@ class Variant extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null): void
     {
+
+
+        $this->addMediaConversion('tiny')
+            ->fit(Manipulations::FIT_CROP, 50, 50);
+
         $this->addMediaConversion('thumb')
+            ->fit(Manipulations::FIT_CROP, 100, 100);
+
+        $this->addMediaConversion('small')
             ->fit(Manipulations::FIT_CROP, 200, 200);
 
         $this->addMediaConversion('medium')
@@ -48,23 +57,16 @@ class Variant extends Model implements HasMedia
 
         $this->addMediaConversion('normal')
             ->fit(Manipulations::FIT_CROP, 800, 800);
-
-        $this->addMediaConversion('large')
-            ->fit(Manipulations::FIT_CROP, 1200, 1200);
-
     }
-
 
     /**
      * @return void
      */
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('default')
+        $this->addMediaCollection('variant')
+            ->singleFile()
             ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
     }
-
-
-
 
 }

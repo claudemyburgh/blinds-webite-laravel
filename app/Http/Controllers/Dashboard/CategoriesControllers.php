@@ -28,7 +28,7 @@ class CategoriesControllers extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Category $categories): View
+    public function create(): View
     {
         return view('dashboard.categories.create', [
             'category' => new Category()
@@ -94,6 +94,7 @@ class CategoriesControllers extends Controller
      */
     public function destroy(Category $category)
     {
+
         $category->delete();
 
         return redirect()->route('dashboard.categories.index')->withSuccess('Category successfully deleted');

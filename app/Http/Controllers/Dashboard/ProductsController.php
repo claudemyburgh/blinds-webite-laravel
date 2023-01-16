@@ -65,6 +65,9 @@ class ProductsController extends Controller
      */
     public function edit(Product $product): View
     {
+        $product->load('variants.media', 'media');
+
+
         return view('dashboard.products.edit', compact('product'));
     }
 

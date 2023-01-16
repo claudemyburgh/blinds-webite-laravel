@@ -2,6 +2,10 @@
     <x-slot:header>
         <div class="flex justify-between">
             <h1 class="text-2xl font-bold text-gray-400">Categories Edit</h1>
+            
+            @if($category->children->count())
+                <p class="text-red-300 text-sm">Top level categories with children caned be deleted</p>
+            @else
 
             <headless-popover popper placement="bottom-end bottom-start" offset="2 10">
                 <button id="delete-dropdown" aria-expanded="false" aria-haspopup="true" class="dark:bg-gray-900 dark:text-white text-red-500 bg-red-200 px-3 py-1.5 rounded-md" type="button">DELETE</button>
@@ -13,8 +17,9 @@
                         <button type="submit" class="bg-red-500 block w-full text-white px-3 py-1.5 rounded-md">Are you sure?</button>
                     </form>
                 </div>
-
             </headless-popover>
+            @endif
+
         </div>
 
 
@@ -24,9 +29,11 @@
 
         <div class="p-4 rounded-md bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-50 shadow max-w-3xl mx-auto">
              @include('layouts.dashboard.partials._form_sessions')
+
+
             <div class="grid grid-cols-5 gap-2">
                 @foreach($category->getMedia() as $img)
-                    <div class="w-32 aspect-square  dark:bg-gray-900 rounded-md overflow-hidden group">
+                    <div class="w-32 aspect-square dark:bg-gray-900 rounded-md overflow-hidden group">
                         <form class="relative" action="{{ route('dashboard.media.delete', $img) }}" method="post">
                             @csrf
                             @method('DELETE')
@@ -52,7 +59,6 @@
                         <p class="text-red-500 mt-1 block">{{ $message }}</p>
                     @enderror
                 </div>
-
 
                 @include('dashboard.categories.partials._form')
                 <div class="flex justify-end mt-4">

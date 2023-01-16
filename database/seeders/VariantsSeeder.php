@@ -19,15 +19,12 @@ class VariantsSeeder extends Seeder
           [
               "product_id" => 1,
               "sku" => "asc",
-              "cleaning" => "Damp cloth",
-              "color" => "peal",
+              "colour" => "peal",
               "material" => "plastic",
               "pattern" => "flowers",
               "thickness" => "0.5mm",
               "pattern_width" => "300mm",
               "pattern_height" => "320mm",
-              "flame_retardant" => false,
-              "printable" => true,
               "popular" => true,
           ]
         ];

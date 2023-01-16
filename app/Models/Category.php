@@ -46,6 +46,9 @@ class Category extends Model implements HasMedia
 //        $this->addMediaCollection('categories');
 
         $this->addMediaConversion('thumb')
+            ->fit(Manipulations::FIT_CROP, 100, 100);
+
+        $this->addMediaConversion('small')
             ->fit(Manipulations::FIT_CROP, 200, 200);
 
         $this->addMediaConversion('medium')
