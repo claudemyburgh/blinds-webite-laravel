@@ -21,11 +21,10 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->text('excerpt')->nullable();
             $table->text('body')->nullable();
-            $table->string('range')->nullable();
-            $table->string('icon')->nullable();
-            $table->text('social_description')->nullable();
+            $table->string('product_range')->nullable();
             $table->boolean('live')->default(true);
             $table->boolean('popular')->default(false);
+            $table->integer('price')->nullable()->default(0);
             $table->timestamps();
         });
     }

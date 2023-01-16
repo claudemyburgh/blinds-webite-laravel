@@ -9,8 +9,6 @@ use Illuminate\View\View;
 
 class ProductsByCategoryIndexController extends Controller
 {
-
-
     /**
      * Handle the incoming request.
      *

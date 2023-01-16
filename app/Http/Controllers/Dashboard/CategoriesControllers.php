@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dasboard\CategoryCreateRequest;
+use App\Http\Requests\Dashboard\CategoryCreateRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\View\View;

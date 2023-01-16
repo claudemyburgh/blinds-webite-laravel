@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard.index') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        @include('layouts.partials._logo')
                     </a>
                 </div>
 
@@ -17,9 +17,12 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-
-                    <x-nav-link :href="route('dashboard.categories.index')" :active="request()->routeIs('dashboard.categories.index')">
+                    <x-nav-link :href="route('dashboard.categories.index')" :active="request()->routeIs('dashboard.categories*')">
                         {{ __('Categories') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('dashboard.products.index')" :active="request()->routeIs('dashboard.products*')">
+                        {{ __('Products') }}
                     </x-nav-link>
 
 

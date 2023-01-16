@@ -14,7 +14,6 @@ class HomePageController extends Controller
      */
     public function __invoke(): View
     {
-
         $categories = Cache::rememberForever('hero_links', function () {
            return Category::find(1)->descendants()->depthFirst()->get();
         });

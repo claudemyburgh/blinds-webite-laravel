@@ -1,31 +1,25 @@
 <x-app-layout>
     <x-slot:header>
         <div class="flex justify-between">
-            <h1 class="text-2xl font-bold text-gray-400">Categories Edit</h1>
-
+            <h1 class="text-2xl font-bold text-gray-400">Product Edit</h1>
             <headless-popover popper placement="bottom-end bottom-start" offset="2 10">
                 <button id="delete-dropdown" aria-expanded="false" aria-haspopup="true" class="dark:bg-gray-900 dark:text-white text-red-500 bg-red-200 px-3 py-1.5 rounded-md" type="button">DELETE</button>
-
                 <div hidden aria-labelledby="delete-dropdown" class="bg-gray-200 rounded-md shadow-lg p-2 w-40">
-                    <form action="{{ route('dashboard.categories.destroy', $category) }}" method="post">
+                    <form action="{{ route('dashboard.products.destroy', $product) }}" method="post">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="bg-red-500 block w-full text-white px-3 py-1.5 rounded-md">Are you sure?</button>
                     </form>
                 </div>
-
             </headless-popover>
         </div>
-
-
     </x-slot:header>
 
     <x-wrapper class="pb-24">
-
         <div class="p-4 rounded-md bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-50 shadow max-w-3xl mx-auto">
-             @include('layouts.dashboard.partials._form_sessions')
+            @include('layouts.dashboard.partials._form_sessions')
             <div class="grid grid-cols-5 gap-2">
-                @foreach($category->getMedia() as $img)
+                @foreach($product->getMedia() as $img)
                     <div class="w-32 aspect-square  dark:bg-gray-900 rounded-md overflow-hidden group">
                         <form class="relative" action="{{ route('dashboard.media.delete', $img) }}" method="post">
                             @csrf
@@ -37,7 +31,7 @@
                 @endforeach
             </div>
 
-            <form action="{{ route('dashboard.categories.update', $category) }}" class="text-white space-y-4" method="post" enctype="multipart/form-data">
+            <form action="{{ route('dashboard.products.update', $product) }}" class="text-white space-y-4" method="post" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
                 <div>
@@ -53,20 +47,15 @@
                     @enderror
                 </div>
 
-
-                @include('dashboard.categories.partials._form')
+                @include('dashboard.products.partials._form')
                 <div class="flex justify-end mt-4">
                     <button type="submit"
                             class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                         Update
                     </button>
                 </div>
-
             </form>
-
-
         </div><!--end-->
-
     </x-wrapper>
 
 </x-app-layout>

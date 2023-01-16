@@ -23,6 +23,7 @@ module.exports = {
         './resources/views/**/*.blade.php',
         './resources/ts/**/*.{ts,tsx}',
     ],
+    darkMode: "class",
     safelist: ['[x-clock]'],
     theme: {
         extend: {

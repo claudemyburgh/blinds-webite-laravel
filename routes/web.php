@@ -5,7 +5,8 @@ use App\Http\Controllers\CategoriesPageController;
 use App\Http\Controllers\ContactFormSendController;
 use App\Http\Controllers\ContactUsPageController;
 use App\Http\Controllers\Dashboard\CategoriesControllers;
-use App\Http\Controllers\Dashboard\RemoveCategoryImageController;
+use App\Http\Controllers\Dashboard\ProductsController;
+use App\Http\Controllers\Dashboard\DeleteMediaController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductInCategoryShow;
 use App\Http\Controllers\ProductsByCategoryIndexController;
@@ -43,7 +44,8 @@ Route::group([
     ], function() {
 //    Route::get('/', \App\Http\Controllers\Dashboard\DashboardController::class)->name('index');
     Route::resource('categories', CategoriesControllers::class);
-    Route::delete('/media/{media}/image-delete', RemoveCategoryImageController::class)->name('categories.image-delete');
+    Route::resource('products', ProductsController::class);
+    Route::delete('/media/{media}/delete', DeleteMediaController::class)->name('media.delete');
 });
 
 Route::get('/dashboard', function () {

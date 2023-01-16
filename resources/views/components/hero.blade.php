@@ -4,10 +4,12 @@
     </x-wrapper>
 
     @if($imageUrl)
-        <div
-            class="absolute hero-clip z-0 top-0 right-0 md:w-[650px] md:h-[750px] bg-primary-500 2xl:w-[850px] 2xl:h-[900px] opacity-20 md:opacity-100">
-            <img class="object-cover  w-full h-full" src="{{ $imageUrl }}"
-                 alt="Hero image for {{config('app.name')}}">
+        <div class="drop-shadow-x shadow-xl shadow-black">
+            <div
+                class="absolute hero-clip z-0 top-0 right-0 md:w-[650px] md:h-[750px] bg-primary-500 2xl:w-[850px] 2xl:h-[900px] opacity-20 md:opacity-100 l">
+                <img class="object-cover  w-full h-full" loading="lazy" width="900" height="900" src="{{ $imageUrl }}"
+                     alt="Hero image for {{config('app.name')}}">
+            </div>
         </div>
     @endif
 

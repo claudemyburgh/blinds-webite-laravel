@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Dasboard;
+namespace App\Http\Requests\Dashboard;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -24,8 +24,15 @@ class CategoryCreateRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'title' => 'required|string',
+
+
+            return [
+            'title' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('categories', 'title')->ignore(request()->category?->id)
+            ],
             'excerpt' => 'nullable|string',
             'description' => 'nullable|string',
             'body' => 'nullable|string',

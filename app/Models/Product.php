@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\Image\Exceptions\InvalidManipulation;
 use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -20,9 +21,18 @@ class Product extends Model implements HasMedia
 
     use MostPopular;
 
-
-    protected $fillable = ['title', 'slug', 'category_id', 'description', 'excerpt', 'body', 'social_description'];
-
+    protected $fillable = [
+        'category_id',
+        'title',
+        'slug',
+        'description',
+        'excerpt',
+        'body',
+        'live',
+        'popular',
+        'price',
+        "product_range"
+    ];
 
     /**
      * @return BelongsTo
@@ -32,13 +42,19 @@ class Product extends Model implements HasMedia
         return $this->belongsTo(Category::class);
     }
 
+    /**
+     * @return HasMany
+     */
     public function variants(): HasMany
     {
         return $this->hasMany(Variant::class);
     }
 
-
-
+    /**
+     * @param Media|null $media
+     * @return void
+     * @throws InvalidManipulation
+     */
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
@@ -55,7 +71,6 @@ class Product extends Model implements HasMedia
 
     }
 
-
     /**
      * @return void
      */
@@ -64,6 +79,4 @@ class Product extends Model implements HasMedia
         $this->addMediaCollection('default')
             ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
     }
-
-
 }

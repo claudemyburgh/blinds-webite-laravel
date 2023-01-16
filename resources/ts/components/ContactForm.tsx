@@ -115,7 +115,7 @@ export default function ContactForm() {
 
                 <div className={`w-full p-2 relative`}>
                     <label htmlFor="subject" className={`leading-7 text-sm text-gray-600 font-semibold`}>Subject</label>
-                    <input type="tel" id="subject" name="subject"
+                    <input type="text" id="subject" name="subject"
                            onChange={handleFormInput}
                            value={form.subject}
                            className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.subject ? 'border-red-500' : 'border-gray-300'}`}/>
@@ -165,9 +165,7 @@ export default function ContactForm() {
                 </div>
             </div>
         </>
-
     )
-
 }
 
 
