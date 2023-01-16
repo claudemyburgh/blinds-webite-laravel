@@ -61,9 +61,9 @@ export default function ContactForm() {
                 <div
                     className="relative p-5 mb-4 mx-2 border border-green-500 bg-green-50 bg-green-500 rounded-md text-white shadow-lg shadow-green-500/30">
                     <button onClick={() => setSuccess(false)} type="button"
-                            className={`absolute right-1 flex items-center justify-center top-1 h-8 w-8 rounded-md border border-white/30 text-white`}>
+                            className={`absolute right-1 -skew-x-12 flex items-center justify-center top-1 h-8 w-8 rounded-md border border-white/30 text-white`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                             stroke="currentColor" className="w-5 h-5">
+                             stroke="currentColor" className="w-5 h-5 skew-x-12">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
@@ -76,9 +76,9 @@ export default function ContactForm() {
                 <div
                     className="relative p-5 mb-4 mx-2 border border-red-500 bg-red-500 rounded-md text-white shadow-lg shadow-red-500/30">
                     <button onClick={() => setErrors({})} type="button"
-                            className={`absolute right-1 flex items-center justify-center top-1 h-8 w-8 rounded-md border border-white/30 text-white`}>
+                            className={`absolute right-1 flex items-center justify-center top-1 h-8 w-8 -skew-x-12 rounded-md border border-white/30 text-white`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                             stroke="currentColor" className="w-5 h-5">
+                             stroke="currentColor" className="w-5 h-5 skew-x-12">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
@@ -147,8 +147,8 @@ export default function ContactForm() {
                 </div>
                 <div className={`p-2 w-full`}>
                     <button disabled={loading} type="button" onClick={submitForm}
-                            className={`relative flex mx-auto text-white bg-primary-500 border-0 py-2 px-8 focus:outline-2 focus:outline-primary-500 focus:outline-offset-2 hover:bg-primary-600 disabled:text-primary-500	rounded text-lg disabled:bg-primary-50`}>
-                            <span className={`relative`}>
+                            className={`relative flex mx-auto text-white bg-primary-500 -skew-x-12 border-0 py-2 px-8 focus:outline-2 focus:outline-primary-500 focus:outline-offset-2 hover:bg-primary-600 disabled:text-primary-500	rounded text-lg disabled:bg-primary-50`}>
+                            <span className={`relative skew-x-12`}>
                               SUBMIT
                             </span>
                         {loading && (

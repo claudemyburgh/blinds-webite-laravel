@@ -10,6 +10,8 @@ $themeStyle = [
 @endphp
 
 
-<a {{ $attributes->merge(['class' =>  'rounded-md px-6 py-3 line-flex font-semibold ' . $themeStyle[$theme]]) }}>
-    {{ $slot }}
+<a {{ $attributes->merge(['class' =>  'rounded-md px-6 py-3 inline-flex font-semibold -skew-x-12 ' . $themeStyle[$theme]]) }}>
+    <span class="skew-x-12 inline-block">
+        {{ $slot }}
+    </span>
 </a>

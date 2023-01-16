@@ -5,6 +5,7 @@
                 <a href="{{ config('app.url') }}" class="flex-shrink-0 text-2xl font-bold">
                     @include('layouts.partials._logo')
                     <span class="sr-only">{{ config('app.name') }}</span>
+                    <span class="sr-only">{{ config('app.slogan') }}</span>
                 </a>
                 <div class="hidden lg:block lg:ml-6">
                     <div class="flex space-x-2">

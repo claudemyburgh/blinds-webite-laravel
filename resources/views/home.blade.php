@@ -3,7 +3,6 @@
         <x-title class="text-black">
              Best Selection of Blinds<br/> at Affordable Prices
         </x-title>
-
         <x-paragraph class="rounded-md backdrop-blur py-4 max-w-3xl">
             We offer a wide range of high-quality blinds at affordable prices. Our blinds are perfect for any room in
             the house and will add style and function to your space. We have a variety of options to choose from,
@@ -21,8 +20,5 @@
         <x-btn-link href="{{ route('categories.index') }}" >VIEW ALL PRODUCTS</x-btn-link>
         <x-slot:image-url>{{Vite::asset('resources/img/hero/hero-blinds.jpg')}}</x-slot:image-url>
     </x-hero>
-
     <x-category-list></x-category-list>
-
-
 </x-site-layout>
