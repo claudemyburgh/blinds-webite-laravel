@@ -22,10 +22,10 @@
               'border-red-500' => $errors->has('product_range')
               ])>
             <option value="">Select option</option>
-            <option @selected(old('product_range') == "winter" ||  $product->product_range == "winter")  value="winter">Winter {{ $product->product_range == "winter" }}</option>
-            <option @selected(old('product_range') == "summer" ||  $product->product_range == "summer")  value="summer">Summer  {{ $product->product_range == "summer" }}</option>
-            <option @selected(old('product_range') == "spring" ||  $product->product_range == "spring")  value="spring">Spring  {{ $product->product_range == "spring" }}</option>
-            <option @selected(old('product_range') == "autumn" ||  $product->product_range == "autumn")  value="autumn">Autumn  {{ $product->product_range == "autumn" }}</option>
+            <option @selected(old('product_range') == "winter" ||  $product->product_range == "winter")  value="winter">Winter</option>
+            <option @selected(old('product_range') == "summer" ||  $product->product_range == "summer")  value="summer">Summer</option>
+            <option @selected(old('product_range') == "spring" ||  $product->product_range == "spring")  value="spring">Spring</option>
+            <option @selected(old('product_range') == "autumn" ||  $product->product_range == "autumn")  value="autumn">Autumn</option>
 
         </select>
     </div>
