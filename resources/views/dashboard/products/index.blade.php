@@ -14,7 +14,7 @@
         <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle">
                 <div
-                    class="overflow-hidden rounded-md bg-gray-800 dark:border-gray-900 shadow-sm ring-1 ring-black ring-opacity-5">
+                    class="overflow-hiddens rounded-md bg-white dark:bg-gray-800 dark:border-gray-900 shadow-sm ring-1 ring-black ring-opacity-5">
                     <table class="min-w-full divide-y divide-gray-300 dark:divide-gray-900">
                         <thead class="bg-gray-50 dark:bg-gray-700 ">
                         <tr>

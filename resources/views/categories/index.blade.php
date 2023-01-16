@@ -2,7 +2,7 @@
     <x-wrapper size="none" class="pt-28 2xl:pt-36 ">
         <div class="relative">
                 <x-title>Catalog</x-title>
-                <x-prose class="my-6">
+                <x-prose class="my-4">
                     <p>
                         We are excited to offer you a wide variety of products to choose from. We have put in a lot of
                         effort to curate a diverse range of products to cater to different needs and preferences

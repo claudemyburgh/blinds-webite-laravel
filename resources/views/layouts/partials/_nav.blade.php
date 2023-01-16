@@ -7,19 +7,20 @@
                     <span class="sr-only">{{ config('app.name') }}</span>
                 </a>
                 <div class="hidden lg:block lg:ml-6">
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-2">
                         <a href="{{ route('home') }}"
                            @if( request()->routeIs('home')) aria-current="true" @endif
                             @class([
-                            'px-5 py-2.5 rounded-md text-base font-medium',
+                            'px-5 py-2.5 rounded-md text-base font-medium -skew-x-12',
                             'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('home'),
                             'bg-primary-500 text-white' => request()->routeIs('home')
-                            ])>Home
+                            ])>
+                            <span class="skew-x-12 inline-block">Home</span>
                         </a>
                         <headless-popover class="block">
                             <button type="button"
                                     @class([
-                                    'px-5 py-2.5 rounded-md text-base font-medium flex items-center',
+                                    'pl-5 pr-2.5 py-2.5 rounded-md text-base font-medium flex items-center -skew-x-12',
                                     'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
                                     'bg-primary-500 text-white' => request()->routeIs('categor*')
 
@@ -28,7 +29,7 @@
                                     aria-haspopup="true"
                                     aria-expanded="false"
                             >
-                                <span>
+                                <span class="skew-x-12 inline-block">
                                     Products
                                 </span>
                                 <span aria-hidden="true" class="ml-1">
@@ -41,53 +42,24 @@
                             </button>
                             <div aria-labelledby="products-links" hidden
                                  class="absolute bg-white inset-x-0 py-4 top-full shadow-lg border-t border-b border-gray-300">
-                                <x-wrapper class="grid grid-cols-4 gap-4">
-                                    <div class="col-span-4 border-b border-gray-100">
-                                        <a href="{{ route('categories.index') }}"
-                                           class="inline-flex space-x-px items-center font-semibold text-xl ">
-                                            <span>Catalog</span>
-                                            <span aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                     stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-                                                  <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"/>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    @foreach($categories as $category)
-                                        <ul class="list-disc list-outside pl-5">
-                                            <li>
-                                                <a href="{{ route('category.products.index', $category) }}">{{ $category->title }}</a>
-                                                @if($category->children)
-                                                    <ul class="list-disc list-outside pl-4 ">
-                                                        @foreach($category->children as $child)
-                                                            <li>
-                                                                <a href="{{ route('category.products.index', $child) }}">{{ $child->title }}</a>
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
-                                                @endif
-                                            </li>
-                                        </ul>
-                                    @endforeach
-
-                                </x-wrapper>
+                                @include('layouts.partials._megamenu')
                             </div>
                         </headless-popover>
 
                         <a href="{{ route('contact-us') }}"
                            @if( request()->routeIs('contact-us')) aria-current="true" @endif
                             @class([
-                            'px-5 py-2.5 rounded-md text-base font-medium',
+                            'px-5 py-2.5 rounded-md text-base font-medium -skew-x-12',
                             'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('contact-us'),
                             'bg-primary-500 text-white' => request()->routeIs('contact-us')
-                            ])>Contact Us</a>
-
+                            ])>
+                            <span class="skew-x-12 inline-block">
+                                Contact Us
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
-
             <div class="flex lg:hidden">
                 <button type="button"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"

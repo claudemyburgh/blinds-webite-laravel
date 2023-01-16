@@ -26,7 +26,6 @@
             <option @selected(old('product_range') == "summer" ||  $product->product_range == "summer")  value="summer">Summer</option>
             <option @selected(old('product_range') == "spring" ||  $product->product_range == "spring")  value="spring">Spring</option>
             <option @selected(old('product_range') == "autumn" ||  $product->product_range == "autumn")  value="autumn">Autumn</option>
-
         </select>
     </div>
     @error('product_range')

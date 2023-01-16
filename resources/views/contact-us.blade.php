@@ -13,13 +13,10 @@
                 <x-paragraph>
                     You can also fill out the contact form below and we will get back to you as soon as possible. We look forward to hearing from you!
                 </x-paragraph>
-
             </article>
-
             <side>
                 <x-form-contact/>
             </side>
-
         </div>
 
     </x-wrapper>
