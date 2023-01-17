@@ -89,6 +89,8 @@ class VariantsController extends Controller
     public function update(VariantsRequest $request, Product $product, Variant $variant)
     {
 
+        $variant->update($request->only( 'image','sku', 'colour', 'material', 'pattern', 'thickness', 'pattern_width', 'pattern_height', 'popular'));
+
         if($request->image) {
             $variant->addMedia($request->image)
                 ->preservingOriginal()

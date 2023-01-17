@@ -84,6 +84,7 @@
                 <tr>
                     <th scope="col" class="py-2 pl-4 pr-3 w-16 text-left text-sm font-semibold text-gray-900 sm:pl-2">Image</th>
                     <th scope="col" class="px-2 py-2 text-left text-sm font-semibold text-gray-900">SKU</th>
+                    <th scope="col" class="px-2 py-2 text-left text-sm font-semibold text-gray-900">Colour</th>
                     <th scope="col" class="relative py-2 pl-3 pr-4 sm:pr-2">
                         <span class="sr-only">Edit</span>
                     </th>

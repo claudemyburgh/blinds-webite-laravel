@@ -1,46 +1,39 @@
-<div class="-mx-4 mt-8 flex flex-col sm:-mx-6 md:mx-0">
-    <table class="min-w-full divide-y divide-gray-300">
-        <thead>
-        <tr>
-            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 md:pl-0">Details</th>
-            <th scope="col" class="hidden py-3.5 px-3 text-right text-sm font-semibold text-gray-900 sm:table-cell">Description</th>
-        </tr>
-        </thead>
-        <tbody>
-
-        <tr class="border-b border-gray-200">
-            <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
-                <div class="font-medium text-gray-900">Product Range</div>
-                <div class="mt-0.5 text-gray-500 sm:hidden">12.0 hours at $75.00</div>
-            </td>
-            <td class="py-4 pl-3 pr-4 text-right text-sm text-gray-500 sm:pr-6 md:pr-0">$900.00</td>
-        </tr>
-
-        <tr class="border-b border-gray-200">
-            <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
-                <div class="font-medium text-gray-900">New Advertising Campaign</div>
-                <div class="mt-0.5 text-gray-500 sm:hidden">12.0 hours at $75.00</div>
-            </td>
-            <td class="py-4 pl-3 pr-4 text-right text-sm text-gray-500 sm:pr-6 md:pr-0">$900.00</td>
-        </tr>
-
-        <tr class="border-b border-gray-200">
-            <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
-                <div class="font-medium text-gray-900">New Advertising Campaign</div>
-                <div class="mt-0.5 text-gray-500 sm:hidden">12.0 hours at $75.00</div>
-            </td>
-            <td class="py-4 pl-3 pr-4 text-right text-sm text-gray-500 sm:pr-6 md:pr-0">$900.00</td>
-        </tr>
-
-        <tr class="border-b border-gray-200">
-            <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
-                <div class="font-medium text-gray-900">New Advertising Campaign</div>
-                <div class="mt-0.5 text-gray-500 sm:hidden">12.0 hours at $75.00</div>
-            </td>
-            <td class="py-4 pl-3 pr-4 text-right text-sm text-gray-500 sm:pr-6 md:pr-0">$900.00</td>
-        </tr>
-
-        <!-- More projects... -->
-        </tbody>
-    </table>
+<div class="inline-block min-w-full py-2 align-middle">
+    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+        <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+            <tr>
+                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Details</th>
+{{--                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th>--}}
+            </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+            @foreach($variants as $variant)
+                <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
+                        <div class="flex items-center">
+                            <div class="h-10 w-10 flex-shrink-0">
+                                <button type="button" data-image-url="{{ $variant->getFirstMediaUrl('variant','medium') }}">
+                                    <img class="h-10 w-10 rounded-md"
+                                         src="{{ $variant->getFirstMediaUrl('variant', 'tiny') }}"
+                                         alt="">
+                                </button>
+                            </div>
+                            <div class="ml-4">
+                                <div class="font-medium text-gray-900">{{ $product->title }} - {{ $variant->colour }}</div>
+                                <div class="text-gray-500">lindsay.walto</div>
+                            </div>
+                        </div>
+                    </td>
+{{--                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">--}}
+{{--                        <div class="text-gray-900">Front-end Developer</div>--}}
+{{--                        <div class="text-gray-500">Optimization</div>--}}
+{{--                    </td>--}}
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
+
+

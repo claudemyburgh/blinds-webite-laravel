@@ -26,7 +26,7 @@ class VariantsRequest extends FormRequest
         return [
             'sku' => 'required|max:15',
             'image' => 'nullable|mimes:jpg,bmp,png',
-            'colour' => 'nullable|string|max:80',
+            'colour' => 'required|string|max:80',
             'material' => 'nullable|string|max:120',
             'pattern' => 'nullable|string|max:120',
             'thickness' => 'nullable|numeric',

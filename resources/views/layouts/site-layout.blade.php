@@ -23,7 +23,9 @@
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
     @livewireStyles
 </head>
-<body class="font-sans antialiased h-full flex flex-col bg-gray-50 ">
+<body class="font-sans antialiased h-full flex flex-col bg-gray-50 overflow-x-hidden">
+
+<a href="#main" class="sr-only">Skip to main</a>
 
 @include('layouts.partials._nav')
 
@@ -42,9 +44,15 @@
     {{ $slot }}
 </main>
 
-@include('layouts.partials._stats')
+{{--@include('layouts.partials._stats')--}}
 @include('layouts.partials._footer')
 @include('layouts.partials._scroll-top')
+
+<div aria-hidden="true" class="h-full w-full fixed top-0 left-0 blur-3xl -z-10 pointer-events-none opacity-40">
+    <div class="absolute h-1/2 -left-12 -top-12 rounded-full w-1/2 bg-primary-500/30  "></div>
+    <div class="absolute h-1/2 bottom-0 right-0 rounded-full w-1/2 bg-amber-500/5  "></div>
+</div>
+
 @livewireScripts
 </body>
 </html>

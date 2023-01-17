@@ -1,24 +1,26 @@
 <x-site-layout>
 
     <x-wrapper size="none" class="pt-28 2xl:pt-36 grid md:grid-cols-2 gap-8">
-        <image-swap class="grid grid-cols-4 gap-2 md:gap-4">
+        <div>
+            <image-swap class="grid grid-cols-4 gap-2 md:gap-4">
 
-            <img id="main-product-image" data-image="main"
-                 class="aspect-square col-span-4 rounded-md w-full bg-gray-100 border border-gray-400"
-                 src="{{ $product->getFirstMediaUrl('default', 'thumb') }}"
-                 alt="{{ $product->title }} featured image">
+                <img id="main-product-image" data-image="main"
+                     class="aspect-square col-span-4 rounded-md w-full bg-gray-100 border border-gray-400"
+                     src="{{ $product->getFirstMediaUrl('default', 'normal') }}"
+                     alt="{{ $product->title }} featured image">
 
-            @if($product->media->count() > 1)
-                @foreach($product->media as $media)
-                    <button type="button" data-image-url="{{ $media->getFullUrl('medium')  }}">
-                        <img
-                            class="aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
-                            src="{{ $media->getFullUrl('thumb') }}"
-                            alt="{{ $product->title }} featured image">
-                    </button>
-                @endforeach
-            @endif
-        </image-swap>
+                @if($product->media->count() > 1)
+                    @foreach($product->media as $media)
+                        <button type="button" data-image-url="{{ $media->getFullUrl('normal') }}">
+                            <img
+                                class="aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
+                                src="{{ $media->getFullUrl('thumb') }}"
+                                alt="{{ $product->title }} featured image">
+                        </button>
+                    @endforeach
+                @endif
+            </image-swap>
+        </div>
         <div>
             <x-title>{{ $product->title }}</x-title>
             <a href="{{ route('category.products.index', $category) }}"
@@ -27,9 +29,9 @@
             <x-paragraph>
                 {{ $product->description }}
             </x-paragraph>
-            <x-product.table :$product></x-product.table>
+            <x-product.table :variants="$product->variants" :$product></x-product.table>
+
+            <div id="contact-form"class="my-6"></div>
         </div>
     </x-wrapper>
-
-
 </x-site-layout>

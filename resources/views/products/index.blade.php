@@ -14,6 +14,8 @@
         <x-product.list :$category />
     </x-wrapper>
 
+    <
+
 
 
 </x-site-layout>
