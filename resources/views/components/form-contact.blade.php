@@ -35,12 +35,40 @@
                 </div>
                 <div class="p-2 w-full md:w-1/2">
                     <div class="relative">
+                        <label for="surname"
+                               class="leading-7 text-sm text-gray-600 font-semibold">Surname</label>
+                        <input type="text" id="surname" name="surname" value="{{old('surname')}}"
+                               class="w-full bg-gray-100 bg-opacity-50 rounded border	border-gray-300 focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out @error('surname') border-red-500   @enderror">
+                        @error('surname')
+                        <span class="text-red-500 block py-1 text-sm">
+                                    {{$message}}
+                                </span>
+                        @enderror
+
+                    </div>
+                </div>
+                <div class="p-2 w-full md:w-1/2">
+                    <div class="relative">
                         <label for="email"
                                class="leading-7 text-sm text-gray-600 font-semibold">Email</label>
                         <input type="email" id="email" name="email"
                                value="{{old('email')}}"
                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out @error('email') border-red-500   @enderror">
                         @error('email')
+                        <span class="text-red-500 block py-1 text-sm">
+                                    {{$message}}
+                                </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="p-2 w-full md:w-1/2">
+                    <div class="relative">
+                        <label for="phone"
+                               class="leading-7 text-sm text-gray-600 font-semibold">Phone</label>
+                        <input type="tel" id="phone" name="phone"
+                               value="{{old('phone')}}"
+                               class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out @error('phone') border-red-500 @enderror">
+                        @error('phone')
                         <span class="text-red-500 block py-1 text-sm">
                                     {{$message}}
                                 </span>
@@ -61,20 +89,7 @@
                         @enderror
                     </div>
                 </div>
-                <div class="p-2 w-full">
-                    <div class="relative">
-                        <label for="phone"
-                               class="leading-7 text-sm text-gray-600 font-semibold">Phone</label>
-                        <input type="tel" id="phone" name="phone"
-                               value="{{old('phone')}}"
-                               class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out @error('phone') border-red-500 @enderror">
-                        @error('phone')
-                        <span class="text-red-500 block py-1 text-sm">
-                                    {{$message}}
-                                </span>
-                        @enderror
-                    </div>
-                </div>
+
                 <div class="p-2 w-full">
                     <div class="relative">
                         <label for="message"

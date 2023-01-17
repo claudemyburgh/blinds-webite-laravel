@@ -1,7 +1,6 @@
 <x-site-layout>
-    <x-wrapper size="none" class="py-28 2xl:pt-36">
+    <x-wrapper size="none" class="py-28 2xl:pt-36 mb-12">
         <x-title>Contact Us </x-title>
-
         <div class="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             <article>
                 <x-paragraph>
@@ -13,12 +12,10 @@
                 <x-paragraph>
                     You can also fill out the contact form below and we will get back to you as soon as possible. We look forward to hearing from you!
                 </x-paragraph>
-
             </article>
             <side>
                 <x-form-contact/>
             </side>
         </div>
-
     </x-wrapper>
 </x-site-layout>
