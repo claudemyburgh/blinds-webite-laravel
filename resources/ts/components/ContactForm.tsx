@@ -12,6 +12,7 @@ export default function ContactForm() {
 
     const [form, setForm] = useState({
         name: "",
+        surname: "",
         email: "",
         subject: "",
         phone: "",
@@ -40,6 +41,7 @@ export default function ContactForm() {
             await setSuccess(true)
             setForm({
                 name: "",
+                surname: "",
                 email: "",
                 subject: "",
                 phone: "",
@@ -99,6 +101,19 @@ export default function ContactForm() {
                         )}
                     </div>
                 </div>
+                <div className={`p-2 w-full md:w-1/2 `}>
+                    <div className="relative">
+                        <label htmlFor="surname" className={`leading-7 text-sm text-gray-600 font-semibold`}>Surname</label>
+                        <input type="text" id="surname"
+                               value={form.surname}
+                               name="surname"
+                               onChange={handleFormInput}
+                               className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.surname ? 'border-red-500' : 'border-gray-300'}`}/>
+                        {errors?.surname && (
+                            <span className={`py-2 text-sm text-red-500 block`}>{errors.surname[0]}</span>
+                        )}
+                    </div>
+                </div>
                 <div className={`p-2 w-full md:w-1/2`}>
                     <div className="relative">
                         <label htmlFor="email" className={`leading-7 text-sm text-gray-600 font-semibold`}>Email</label>
@@ -113,6 +128,17 @@ export default function ContactForm() {
                     </div>
                 </div>
 
+                <div className={`p-2 w-full md:w-1/2 relative`}>
+                    <label htmlFor="phone" className={`leading-7 text-sm text-gray-600 font-semibold`}>Phone</label>
+                    <input type="tel" id="phone" name="phone"
+                           onChange={handleFormInput}
+                           value={form.phone}
+                           className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.phone ? 'border-red-500' : 'border-gray-300'}`}/>
+                    {errors?.phone && (
+                        <span className={`py-2 text-sm text-red-500 block`}>{errors.phone[0]}</span>
+                    )}
+                </div>
+
                 <div className={`w-full p-2 relative`}>
                     <label htmlFor="subject" className={`leading-7 text-sm text-gray-600 font-semibold`}>Subject</label>
                     <input type="text" id="subject" name="subject"
@@ -124,16 +150,7 @@ export default function ContactForm() {
                     )}
                 </div>
 
-                <div className={`w-full p-2 relative`}>
-                    <label htmlFor="phone" className={`leading-7 text-sm text-gray-600 font-semibold`}>Phone</label>
-                    <input type="tel" id="phone" name="phone"
-                           onChange={handleFormInput}
-                           value={form.phone}
-                           className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.phone ? 'border-red-500' : 'border-gray-300'}`}/>
-                    {errors?.phone && (
-                        <span className={`py-2 text-sm text-red-500 block`}>{errors.phone[0]}</span>
-                    )}
-                </div>
+
 
                 <div className={`w-full p-2 relative`}>
                     <label htmlFor="message" className={`leading-7 text-sm text-gray-600 font-semibold`}>Message</label>

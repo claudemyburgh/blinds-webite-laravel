@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Events\ContactFormWasSubmitted;
+use App\Listeners\ClientListener;
 use App\Listeners\SendContactForm;
 use App\Listeners\ThanksContactForm;
 use Illuminate\Auth\Events\Registered;
@@ -24,7 +25,8 @@ class EventServiceProvider extends ServiceProvider
 
         ContactFormWasSubmitted::class => [
             SendContactForm::class,
-            ThanksContactForm::class
+            ThanksContactForm::class,
+            ClientListener::class,
         ],
 
     ];

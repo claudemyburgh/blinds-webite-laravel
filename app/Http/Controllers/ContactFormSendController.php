@@ -21,7 +21,7 @@ class ContactFormSendController extends Controller
     public function __invoke(FormContactRequest $request)
     {
 
-        event(new ContactFormWasSubmitted($request->only('name', 'email', 'phone' , 'subject', 'message')));
+        event(new ContactFormWasSubmitted($request->only('name' , 'surname', 'email', 'phone' , 'subject', 'message')));
 
         return back()->withSuccess('Email successfully send');
     }

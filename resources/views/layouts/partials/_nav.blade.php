@@ -1,4 +1,4 @@
-<headless-navigation role="navigation" class="bg-white fixed inset-x-0 top-0 block shadow-sm shadow-black/30 z-100">
+<headless-navigation role="navigation" class="bg-white w-full relative md:fixed inset-x-0 top-0 block shadow-sm shadow-black/30 z-100">
     <div class="wrapper">
         <div class="flex items-center justify-between h-16 md:h-20">
             <div class="flex flex-1 items-center justify-between px-2 lg:px-0">
@@ -80,9 +80,11 @@
         </div>
     </div>
 
+
+
     <!-- Mobile menu, show/hide based on menu state. -->
     <div hidden class="lg:hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
+        <div class="px-2 pt-2 pb-3 space-y-3">
 
             <a href="{{ route('home') }}"
                @if( request()->routeIs('home')) aria-current="true" @endif
@@ -93,14 +95,24 @@
                 ])>Home
             </a>
 
-            <a href="{{ route('categories.index') }}"
-               @if( request()->routeIs('categor*')) aria-current="true" @endif
-                @class([
-                'px-3 py-2 block rounded-md text-base font-medium',
-                'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
-                'bg-primary-500 text-white' => request()->routeIs('categor*')
-                ])>Catalog
-            </a>
+            <headless-disclosure class="block my-2">
+                <button type="button"
+                    aria-controls="mobile-nav-categories"
+                    aria-expanded="false"
+                    @class([
+                     'px-3 py-2 block rounded-md text-base font-medium w-full text-left',
+                     'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
+                     'bg-primary-500 text-white' => request()->routeIs('categor*')
+                 ])
+                >Catalog </button>
+
+                <div hidden id="mobile-nav-categories" class="space-y-2 py-2 pl-4">
+                   @foreach($categories[0]->children as $category)
+                        <a class="block w-full px-3 py-2 bg-gray-100 rounded-md  hover:bg-primary-500 hover:text-white" href="{{ route('category.products.index', $category) }}">{{ $category->title }} </a>
+                   @endforeach
+                </div>
+
+            </headless-disclosure>
 
             <a href="{{ route('contact-us') }}"
                @if( request()->routeIs('contact-us')) aria-current="true" @endif

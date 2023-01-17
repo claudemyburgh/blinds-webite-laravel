@@ -48,6 +48,7 @@ class ContactUs extends Mailable implements ShouldQueue
             markdown: 'emails.forms.contact',
             with: [
                 'name' => $this->data['name'],
+                'surname' => $this->data['surname'],
                 'email' => $this->data['email'],
                 'phone' => $this->data['phone'],
                 'message' => $this->data['message'],

@@ -29,7 +29,7 @@
                 </a>
             @endforeach
         </div>
-        <a href="{{ route('category.products.index', 'motion-blinds') }}" class="border w-1/3 block border-gray-300 rounded-md p-2 hover:bg-gray-100 relative overflow-hidden">
+        <a href="{{ route('category.products.index', 'motion-blinds') }}" class="border w-1/3 block border-gray-300 rounded-md hover:opacity-80 relative overflow-hidden">
 
             <div aria-hidden="true" class="h-40 w-40 left-[33%] top-[30%] pointer-events-none absolute">
                 <div class="pulse pulse-1 w-full h-full"></div>
@@ -45,7 +45,7 @@
                     class="w-full"
                     loading="lazy" width="500" height="154" src="{{ Vite::asset('resources/img/Powered-by-MotionBlinds.png') }}" alt="Motion Blinds logo">
             </div>
-            <img class="w-full h-full object-cover" loading="lazy" width="500" height="375" src="{{ Vite::asset('resources/img/motion.jpeg') }}" alt="Motion">
+            <img class="w-full h-full object-cover absolute" loading="lazy" width="500" height="375" src="{{ Vite::asset('resources/img/motion.jpeg') }}" alt="Motion">
         </a>
 
     </div>

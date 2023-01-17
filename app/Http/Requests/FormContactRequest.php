@@ -26,6 +26,7 @@ class FormContactRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
+            'surname' => 'required|string',
             'email' => 'required|string|email',
             'subject' => 'required|string',
             'phone' => ['required', new Phone],
