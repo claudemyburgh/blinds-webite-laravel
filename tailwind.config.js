@@ -16,6 +16,21 @@ const customPrimary = {
 }
 
 
+const fGreen = {
+    50: '#D9FFD9',
+    100: '#C4FFC4',
+    200: '#9BFF9B',
+    300: '#73FF73',
+    400: '#4AFF4A',
+    500: '#21FF21',
+    600: '#00E800',
+    700: '#00B000',
+    800: '#007800',
+    900: '#004000'
+}
+
+
+
 module.exports = {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',

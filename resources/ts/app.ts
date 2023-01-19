@@ -2,6 +2,7 @@ import './bootstrap';
 import "vanilla-headless"
 import "./components/ContactForm"
 import "./components/ImageSwap"
+import "./components/ToggleShow"
 
 
 const messages = document.querySelectorAll('.session-state')

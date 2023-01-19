@@ -95,9 +95,9 @@
                 ])>Home
             </a>
 
-            <headless-disclosure class="block my-2">
+            <toggle-show class="block my-2">
                 <button type="button"
-                    aria-controls="mobile-nav-categories"
+                    data-container-trigger="categories"
                     aria-expanded="false"
                     @class([
                      'px-3 py-2 block rounded-md text-base font-medium w-full text-left',
@@ -106,13 +106,13 @@
                  ])
                 >Catalog </button>
 
-                <div hidden id="mobile-nav-categories" class="space-y-2 py-2 pl-4">
+                <div hidden data-container="categories" id="mobile-nav-categories" class="space-y-2 py-2 pl-4">
                    @foreach($categories[0]->children as $category)
                         <a class="block w-full px-3 py-2 bg-gray-100 rounded-md  hover:bg-primary-500 hover:text-white" href="{{ route('category.products.index', $category) }}">{{ $category->title }} </a>
                    @endforeach
                 </div>
 
-            </headless-disclosure>
+            </toggle-show>
 
             <a href="{{ route('contact-us') }}"
                @if( request()->routeIs('contact-us')) aria-current="true" @endif
