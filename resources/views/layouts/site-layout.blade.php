@@ -21,7 +21,7 @@
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
     @livewireStyles
 </head>
-<body class="font-serif antialiased h-full flex flex-col bg-gray-50 overflow-x-hidden">
+<body class="font-serif antialiased h-full flex flex-col bg-gray-50 overflow-x-hidden overflow-y-scroll">
 
 <a href="#main" class="sr-only">Skip to main</a>
 
@@ -38,7 +38,7 @@
 
 
 <!-- Page Content -->
-<main id="main" class="flex-1">
+<main id="main">
     {{ $slot }}
 </main>
 

@@ -3,7 +3,7 @@
     <div aria-hidden="true" class="absolute w-1/2 h-1/2 bg-gradient-to-br from-sky-500/30 blur-3xl to-transparent bottom-0 right-0 "></div>
 
     <x-wrapper>
-        <div class="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+        <div class="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-full">
             <div>
                 <x-title>Contact Us</x-title>
                 <x-paragraph class="max-w-xl">
