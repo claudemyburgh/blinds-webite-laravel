@@ -43,6 +43,9 @@
 </main>
 
 {{--@include('layouts.partials._stats')--}}
+
+<x-contact-us/>
+
 @include('layouts.partials._footer')
 @include('layouts.partials._scroll-top')
 

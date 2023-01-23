@@ -3,6 +3,9 @@ import "vanilla-headless"
 import "./components/ContactForm"
 import "./components/ImageSwap"
 import "./components/ToggleShow"
+import "./components/Slider-box"
+
+
 
 
 const messages = document.querySelectorAll('.session-state')
