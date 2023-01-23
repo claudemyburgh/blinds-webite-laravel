@@ -22,7 +22,7 @@
                         <div aria-hidden="true"
                              class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none"></div>
                         <div
-                            class="aspect-square shrink-0 w-32 bg-gradient-to-tr from-primary-500 to-secondary-300 user-clip rounded-md rotate-12">
+                            class="shrink-0 w-20 h-20 md:w-32 md:h-32 bg-gradient-to-tr from-primary-500 to-secondary-300 user-clip rounded-md rotate-12">
 
                         </div>
                         <div class="space-y-1 p-4">
