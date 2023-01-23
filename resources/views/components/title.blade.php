@@ -2,7 +2,7 @@
 @php
     switch ($type) {
         case 'h1':
-            $classType = 'font-black text-5xl md:text-6xl tracking-tight';
+            $classType = 'font-black text-5xl md:text-6xl tracking-tight bg-clip-text text-transparent bg-gradient-to-tr from-primary-500 to-secondary-300';
             break;
         case 'h2':
             $classType = 'font-semibold text-3xl md:text-4xl';
@@ -14,12 +14,12 @@
             $classType = 'font-semibold text-lg md:text-xl';
             break;
         default:
-            $classType = 'font-bold text-5xl';
+            $classType = 'font-bold text-5xl text-black';
             break;
     }
 @endphp
 
-<{{$type}} @class(['tracking-tight text-black leading-tight ', $classType, $class])">
+<{{$type}} @class(['tracking-tight font-title italic leading-tight drop-shadow-hard', $classType, $class])">
 {{ $slot }}
 </{{$type}}>
 

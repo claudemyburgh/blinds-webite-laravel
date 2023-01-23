@@ -17,7 +17,7 @@
         <div class="grid  grid-cols-3 gap-4 w-2/3">
             @foreach($categories[0]->children as $category)
                 <a href="{{ route('category.products.index', $category) }}" @class([
-                        'border border-gray-300 rounded-md p-2 hover:bg-primary-500 hover:text-primary-50 flex',
+                        'border border-gray-300 rounded-md p-2 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white flex',
                         'bg-primary-500 text-primary-50 items-center' => request()->segment(2) === $category->slug
                     ])>
                     <img

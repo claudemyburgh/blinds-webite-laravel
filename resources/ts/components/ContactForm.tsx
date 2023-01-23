@@ -94,6 +94,7 @@ export default function ContactForm() {
                         <input type="text" id="name"
                                value={form.name}
                                name="name"
+                               autocomplete={`given-name`}
                                onChange={handleFormInput}
                                className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.name ? 'border-red-500' : 'border-gray-300'}`}/>
                         {errors?.name && (
@@ -107,6 +108,7 @@ export default function ContactForm() {
                         <input type="text" id="surname"
                                value={form.surname}
                                name="surname"
+                               autocomplete={`family-name`}
                                onChange={handleFormInput}
                                className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.surname ? 'border-red-500' : 'border-gray-300'}`}/>
                         {errors?.surname && (
@@ -120,6 +122,7 @@ export default function ContactForm() {
                         <input type="text" id="email"
                                name="email"
                                value={form.email}
+                               autocomplete={`email`}
                                onChange={handleFormInput}
                                className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.email ? 'border-red-500' : 'border-gray-300'}`}/>
                         {errors?.email && (
@@ -133,6 +136,7 @@ export default function ContactForm() {
                     <input type="tel" id="phone" name="phone"
                            onChange={handleFormInput}
                            value={form.phone}
+                           autocomplete={`tel`}
                            className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.phone ? 'border-red-500' : 'border-gray-300'}`}/>
                     {errors?.phone && (
                         <span className={`py-2 text-sm text-red-500 block`}>{errors.phone[0]}</span>
@@ -164,7 +168,7 @@ export default function ContactForm() {
                 </div>
                 <div className={`p-2 w-full`}>
                     <button disabled={loading} type="button" onClick={submitForm}
-                            className={`relative flex mx-auto text-white bg-primary-500 -skew-x-12 border-0 py-2 px-8 focus:outline-2 focus:outline-primary-500 focus:outline-offset-2 hover:bg-primary-600 disabled:text-primary-500	rounded text-lg disabled:bg-primary-50`}>
+                            className={`relative flex mx-auto text-white bg-gradient-to-tr from-primary-500 to-secondary-300 hover:to-secondary-200 -skew-x-12 border-0 py-2 px-8 focus:outline-2 focus:outline-primary-500 focus:outline-offset-2 hover:bg-primary-600 disabled:text-primary-500 rounded text-lg disabled:bg-primary-50`}>
                             <span className={`relative skew-x-12`}>
                               SUBMIT
                             </span>

@@ -29,6 +29,19 @@ const fGreen = {
     900: '#004000'
 }
 
+const primary = {
+    50: "#99D4F0",
+    100: "#87CDED",
+    200: "#63BEE8",
+    300: "#40AFE3",
+    400: "#209FDA",
+    500: "#1B85B6",
+    600: "#146185",
+    700: "#0D3E54",
+    800: "#051A23",
+    900: "#000000",
+}
+
 
 
 module.exports = {
@@ -43,14 +56,19 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                serif: ['Roboto', ...defaultTheme.fontFamily.serif],
+                title: ['Raleway', ...defaultTheme.fontFamily.serif]
             },
             colors: {
-                primary: customPrimary,
-                gray: colors.zinc
+                primary,
+                secondary: colors.emerald,
+                gray: colors.gray
             },
             width: {
                 "square-diagonal": (Math.sqrt(2) * 100).toFixed(2) + "%",
+            },
+            dropShadow: {
+              hard: '2px 2px 0 theme("colors.primary.700")'
             },
             zIndex: {
                 100: 100,

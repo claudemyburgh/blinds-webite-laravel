@@ -1,6 +1,6 @@
 <x-site-layout>
     <x-hero >
-        <x-title class="text-black">
+        <x-title>
              Best Selection of Blinds<br/> at Affordable Prices
         </x-title>
         <x-paragraph class="rounded-md backdrop-blur py-4 max-w-3xl">
@@ -18,7 +18,7 @@
             as the purchasing process. That's why we offer professional installation services for all of our blinds.
         </x-paragraph>
         <x-btn-link href="{{ route('categories.index') }}" >VIEW ALL PRODUCTS</x-btn-link>
-        <x-slot:image-url>{{Vite::asset('resources/img/hero/hero-blinds.jpg')}}</x-slot:image-url>
+        <x-slot:image-url>{{Vite::asset('resources/img/hero/bamboo-blinds.jpg')}}</x-slot:image-url>
     </x-hero>
     <x-category-list></x-category-list>
 </x-site-layout>

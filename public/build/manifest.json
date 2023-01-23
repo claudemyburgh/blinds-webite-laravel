@@ -7,13 +7,13 @@
     "file": "assets/bamboo-blinds-8db77571.jpg",
     "src": "resources/img/hero/bamboo-blinds.jpg"
   },
-  "resources/img/hero/aluminium-blinds.jpg": {
-    "file": "assets/aluminium-blinds-2bcbf102.jpg",
-    "src": "resources/img/hero/aluminium-blinds.jpg"
-  },
   "resources/img/hero/basswood-blinds.jpg": {
     "file": "assets/basswood-blinds-34a63e76.jpg",
     "src": "resources/img/hero/basswood-blinds.jpg"
+  },
+  "resources/img/hero/aluminium-blinds.jpg": {
+    "file": "assets/aluminium-blinds-2bcbf102.jpg",
+    "src": "resources/img/hero/aluminium-blinds.jpg"
   },
   "resources/img/hero/double-roller-blinds.jpg": {
     "file": "assets/double-roller-blinds-d2be0c9a.jpg",
@@ -55,6 +55,10 @@
     "file": "assets/zebra-blinds-cf7b7e6c.jpg",
     "src": "resources/img/hero/zebra-blinds.jpg"
   },
+  "resources/img/hero/wave.svg": {
+    "file": "assets/wave-ebbdac34.svg",
+    "src": "resources/img/hero/wave.svg"
+  },
   "resources/img/motion.jpeg": {
     "file": "assets/motion-d8eba19e.jpeg",
     "src": "resources/img/motion.jpeg"
@@ -63,13 +67,17 @@
     "file": "assets/blob-7dd4f7e7.svg",
     "src": "resources/img/svg/blob.svg"
   },
+  "resources/img/svg/logo-long.svg": {
+    "file": "assets/logo-long-45f71350.svg",
+    "src": "resources/img/svg/logo-long.svg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-b5d10aac.css",
+    "file": "assets/app-79cf33c4.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-efa08b05.js",
+    "file": "assets/app-9d34dcc5.js",
     "src": "resources/ts/app.ts",
     "isEntry": true
   },

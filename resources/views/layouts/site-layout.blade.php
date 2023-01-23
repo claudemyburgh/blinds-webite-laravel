@@ -8,11 +8,9 @@
     <title>{{ config('app.name', config('app.name')) }} | @yield('title', config('app.slogan'))</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,400;1,500&display=swap" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -23,7 +21,7 @@
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
     @livewireStyles
 </head>
-<body class="font-sans antialiased h-full flex flex-col bg-gray-50 overflow-x-hidden">
+<body class="font-serif antialiased h-full flex flex-col bg-gray-50 overflow-x-hidden">
 
 <a href="#main" class="sr-only">Skip to main</a>
 

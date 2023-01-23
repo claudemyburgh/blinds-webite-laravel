@@ -1,9 +1,9 @@
-<headless-navigation role="navigation" class="bg-white w-full relative md:fixed inset-x-0 top-0 block shadow-sm shadow-black/30 z-100">
+<headless-navigation role="navigation" class="bg-white/80 backdrop-blur-md w-full relative md:fixed inset-x-0 top-0 block shadow-sm shadow-black/30 z-100">
     <div class="wrapper">
         <div class="flex items-center justify-between h-16 md:h-20">
             <div class="flex flex-1 items-center justify-between px-2 lg:px-0">
                 <a href="{{ config('app.url') }}" class="flex-shrink-0 text-2xl font-bold">
-                    @include('layouts.partials._logo')
+                    <img class="h-10 w-auto shrink-0" src="{{ Vite::asset('resources/img/svg/logo-long.svg') }}" alt="">
                     <span class="sr-only">{{ config('app.name') }}</span>
                     <span class="sr-only">{{ config('app.slogan') }}</span>
                 </a>
@@ -13,8 +13,8 @@
                            @if( request()->routeIs('home')) aria-current="true" @endif
                             @class([
                             'px-5 py-2.5 rounded-md text-base font-medium -skew-x-12',
-                            'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('home'),
-                            'bg-primary-500 text-white' => request()->routeIs('home')
+                            'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('home'),
+                            'bg-gradient-to-tr from-primary-500 to-secondary-300 text-white' => request()->routeIs('home')
                             ])>
                             <span class="skew-x-12 inline-block">Home</span>
                         </a>
@@ -22,8 +22,8 @@
                             <button type="button"
                                     @class([
                                     'pl-5 pr-2.5 py-2.5 rounded-md text-base font-medium flex items-center -skew-x-12',
-                                    'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
-                                    'bg-primary-500 text-white' => request()->routeIs('categor*')
+                                    'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('categor*'),
+                                    'bg-gradient-to-tr from-primary-500 to-secondary-300 text-white' => request()->routeIs('categor*')
 
                                     ])
                                     id="products-links"
@@ -51,8 +51,8 @@
                            @if( request()->routeIs('contact-us')) aria-current="true" @endif
                             @class([
                             'px-5 py-2.5 rounded-md text-base font-medium -skew-x-12',
-                            'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('contact-us'),
-                            'bg-primary-500 text-white' => request()->routeIs('contact-us')
+                            'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('contact-us'),
+                            'bg-gradient-to-tr from-primary-500 to-secondary-300 text-white' => request()->routeIs('contact-us')
                             ])>
                             <span class="skew-x-12 inline-block">
                                 Contact Us
@@ -90,8 +90,8 @@
                @if( request()->routeIs('home')) aria-current="true" @endif
                 @class([
                 'px-3 py-2 block rounded-md text-base font-medium',
-                'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('home'),
-                'bg-primary-500 text-white' => request()->routeIs('home')
+                'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('home'),
+                'bg-gradient-to-tr from-primary-500 to-secondary-300  text-white' => request()->routeIs('home')
                 ])>Home
             </a>
 
@@ -101,8 +101,8 @@
                     aria-expanded="false"
                     @class([
                      'px-3 py-2 block rounded-md text-base font-medium w-full text-left',
-                     'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('categor*'),
-                     'bg-primary-500 text-white' => request()->routeIs('categor*')
+                     'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('categor*'),
+                     'bg-gradient-to-tr from-primary-500 to-secondary-300  text-white' => request()->routeIs('categor*')
                  ])
                 >Catalog </button>
 
@@ -118,8 +118,8 @@
                @if( request()->routeIs('contact-us')) aria-current="true" @endif
                 @class([
                 'px-3 py-2 block rounded-md text-base font-medium',
-                'text-gray-900 hover:bg-primary-500 hover:text-white' => !request()->routeIs('contact-us'),
-                'bg-primary-500 text-white' => request()->routeIs('contact-us')
+                'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('contact-us'),
+                'bg-gradient-to-tr from-primary-500 to-secondary-300  text-white' => request()->routeIs('contact-us')
                 ])>Contact Us
             </a>
 
