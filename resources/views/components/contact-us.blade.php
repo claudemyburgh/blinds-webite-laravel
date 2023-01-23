@@ -18,7 +18,7 @@
             <div class="flex space-y-6 flex-col lg:w-1/2 p-4 w-full">
                 @foreach($users as $user)
                     <div
-                        class="border border-primary-500 bg-gray-900 rounded-md relative flex even:translate-x-12 flex-1 gap-4 md:gap-6 lg:gap-8 shadow-lg shadow-secondary-500/10">
+                        class="border border-primary-500 bg-gray-900 rounded-md md:space-x-4 relative flex even:translate-x-12 flex-1 shadow-lg shadow-secondary-500/10">
                         <div aria-hidden="true"
                              class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none"></div>
                         <div
