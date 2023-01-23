@@ -1,5 +1,4 @@
 <x-site-layout>
-
     <x-hero>
         <x-title>{{ $category->title }}</x-title>
         @if($category->description)
