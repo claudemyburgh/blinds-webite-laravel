@@ -14,10 +14,9 @@
         fill: #231f20;
       }
     </style>
-    <radialGradient id="radial-gradient" cx="444.4" cy="-11.34" fx="444.4" fy="-11.34" r="636.61" gradientUnits="userSpaceOnUse">
-      <stop offset=".12" stop-color="#83ccad"/>
-      <stop offset=".63" stop-color="#1e85b6"/>
-      <stop offset=".86" stop-color="#1e85b6"/>
+    <radialGradient id="radial-gradient" cx="440.82" cy=".96" fx="440.82" fy=".96" r="623.68" gradientUnits="userSpaceOnUse">
+      <stop offset=".02" stop-color="#83ccad"/>
+      <stop offset=".87" stop-color="#1e85b6"/>
     </radialGradient>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
