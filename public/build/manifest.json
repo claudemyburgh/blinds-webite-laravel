@@ -27,6 +27,10 @@
     "file": "assets/indoor-6d699ab3.jpg",
     "src": "resources/img/hero/outdoor.jpg"
   },
+  "resources/img/hero/hero-blinds.jpg": {
+    "file": "assets/hero-blinds-bf14b685.jpg",
+    "src": "resources/img/hero/hero-blinds.jpg"
+  },
   "resources/img/hero/hero-blinds-2.jpg": {
     "file": "assets/hero-blinds-2-b39d35f2.jpg",
     "src": "resources/img/hero/hero-blinds-2.jpg"
@@ -35,17 +39,13 @@
     "file": "assets/motion-blinds-1aefd8b6.jpg",
     "src": "resources/img/hero/motion-blinds.jpg"
   },
-  "resources/img/hero/hero-blinds.jpg": {
-    "file": "assets/hero-blinds-bf14b685.jpg",
-    "src": "resources/img/hero/hero-blinds.jpg"
+  "resources/img/hero/venetian-blinds.jpg": {
+    "file": "assets/venetian-blinds-983df028.jpg",
+    "src": "resources/img/hero/venetian-blinds.jpg"
   },
   "resources/img/hero/roller-blinds.jpg": {
     "file": "assets/roller-blinds-583b3132.jpg",
     "src": "resources/img/hero/roller-blinds.jpg"
-  },
-  "resources/img/hero/venetian-blinds.jpg": {
-    "file": "assets/venetian-blinds-983df028.jpg",
-    "src": "resources/img/hero/venetian-blinds.jpg"
   },
   "resources/img/hero/blinds.jpg": {
     "file": "assets/blinds-49fb0e30.jpg",
@@ -72,7 +72,7 @@
     "src": "resources/img/svg/logo-long.svg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-53705a64.css",
+    "file": "assets/app-c0aa6cec.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
