@@ -31,6 +31,8 @@ class SendContactForm implements ShouldQueue
      */
     public function handle(ContactFormWasSubmitted $event): void
     {
-        Mail::to(config('mail.from.address'))->queue(new ContactUs($event->data));
+        Mail::to(config('mail.from.address'))
+            ->cc(config('dashboard.admin.claude.email'))
+            ->queue(new ContactUs($event->data));
     }
 }
