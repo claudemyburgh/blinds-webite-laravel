@@ -31,7 +31,7 @@
                         <button type="button" data-image-url="{{ $variant->getFirstMediaUrl('variant', 'large') }}">
                             <img
                                 class="aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
-                                src="{{ $variant->getFirstMediaUrl('variant', 'thumb')}}"
+                                src="{{ $variant->getFirstMediaUrl('variant', 'small')}}"
                                 alt="{{ $variant->sku }} {{ $variant->colour }}">
                         </button>
                     @endforeach
