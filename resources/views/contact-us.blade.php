@@ -1,5 +1,5 @@
 <x-site-layout>
-    <x-wrapper size="none" class="py-28 2xl:pt-36 mb-12 my-32">
+    <x-wrapper size="xl">
         <x-title>Contact Us </x-title>
         <div class="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             <article>

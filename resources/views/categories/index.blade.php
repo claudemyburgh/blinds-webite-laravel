@@ -1,5 +1,5 @@
 <x-site-layout>
-    <x-wrapper size="none" class="pt-28 2xl:pt-36 ">
+    <x-wrapper size="xl">
         <div class="relative">
                 <x-title>Catalog</x-title>
                 <x-prose class="my-4">
@@ -24,7 +24,7 @@
 
     </x-wrapper>
 
-    <x-wrapper class="my-24">
+    <x-wrapper>
         <div class="grid grid-cols-2 gap-4">
             @foreach($categories as $category)
                 <div>

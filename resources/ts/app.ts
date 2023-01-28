@@ -4,8 +4,7 @@ import "./components/ContactForm"
 import "./components/ImageSwap"
 import "./components/ToggleShow"
 import "./components/Slider-box"
-
-
+// import "./flickity.js"
 
 
 const messages = document.querySelectorAll('.session-state')

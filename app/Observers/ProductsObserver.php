@@ -17,13 +17,6 @@ class ProductsObserver
         $model->slug = Str::slug($model->title ." ". $model->product_range);
     }
 
-    /**
-     * @param Model $model
-     * @return void
-     */
-    public function updating(Model $model): void
-    {
-        $model->slug = Str::slug($model->title ." ". $model->product_range);
-    }
+
 
 }

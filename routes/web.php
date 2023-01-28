@@ -43,7 +43,7 @@ Route::group([
     'prefix' => '/dashboard',
     'namespace' => "App\Http\Controllers\Dashboard"
     ], function() {
-//    Route::get('/', \App\Http\Controllers\Dashboard\DashboardController::class)->name('index');
+    Route::get('/', \App\Http\Controllers\Dashboard\DashboardController::class)->name('index');
     Route::resource('categories', CategoriesControllers::class);
     Route::resource('products', ProductsController::class);
     Route::delete('/media/{media}/delete', DeleteMediaController::class)->name('media.delete');
@@ -51,9 +51,9 @@ Route::group([
     Route::resource('/{product}/variants', VariantsController::class);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware(['auth', 'verified'])->name('dashboard.index');
+//Route::get('/dashboard', function () {
+//    return view('dashboard.index');
+//})->middleware(['auth', 'verified'])->name('dashboard.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -22,6 +22,10 @@
 
 @layer base {
 
+    .mask {
+        mask-image: linear-gradient(to left, white 70%, transparent 85%);
+    }
+
 
     /*
    These are the styles from DaisyUI needed

@@ -17,11 +17,15 @@ export class ImageSwap extends HTMLElement{
         this.hideShowButton();
         this.smallImages?.forEach((button) => button.addEventListener('click', this.swapImage.bind(this)))
         this.resetButton.addEventListener('click', this.reset.bind(this))
+        document.body.addEventListener('keydown', (event: KeyboardEvent) => {
+            event.key === 'Escape' && this.reset()
+        })
     }
 
     disconnectCallback() {
         this.smallImages?.forEach((button) => button.removeEventListener('click', this.swapImage))
         this.resetButton.removeEventListener('click', this.reset)
+        document.body.removeEventListener('keydown', this.reset)
     }
 
     private get checkIfFirstImageIsCurrent() {
@@ -45,12 +49,6 @@ export class ImageSwap extends HTMLElement{
         (this.mainImage as HTMLElement).setAttribute('src', this.initialUrl)
         this.hideShowButton();
     }
-
-
-
-
-
-
 
 }
 
