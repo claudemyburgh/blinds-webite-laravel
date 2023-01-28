@@ -67,9 +67,6 @@ export default function ContactForm() {
         setLoading(false)
     }
 
-    useEffect(() => {
-        console.log(contactDiv.dataset.productTitle)
-    }, [])
 
 
     return (
@@ -103,8 +100,6 @@ export default function ContactForm() {
                     <strong className={`font-black`}>Oops!</strong> {Object.keys(errors).length} {Object.keys(errors).length === 1 ? 'error' : "errors"} was detected.
                 </div>
             )}
-
-            {JSON.stringify(form)}
 
             <div className={`flex flex-wrap bg-white rounded-md p-4 border border-gray-200`}>
                 <div className={`p-2 w-full md:w-1/2 `}>
@@ -197,30 +192,30 @@ export default function ContactForm() {
                         <span className={`py-2 text-sm text-red-500 block`}>{errors.message[0]}</span>
                     )}
                 </div>
-                <div className={`p-2 w-full`}>
-                    <div className="relative flex items-start">
-                        <div className="flex items-center h-5">
-                            <input
-                                id="newsletter"
-                                aria-describedby="newsletter-description"
-                                name="newsletter"
-                                onChange={handleFormInputCheck}
-                                value={form.newsletter}
-                                checked={form.newsletter}
-                                type="checkbox"
-                                className="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
-                            />
-                        </div>
-                        <div className="ml-3 text-sm">
-                            <label htmlFor="newsletter" className="font-medium text-gray-700">
-                                Receive Newsletter
-                            </label>
-                            <span id="newsletter-description" className="text-gray-500">
-                            <span className="sr-only">New newsletter </span> so you always know what's happening.
-                                </span>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className={`p-2 w-full`}>*/}
+                {/*    <div className="relative flex items-start">*/}
+                {/*        <div className="flex items-center h-5">*/}
+                {/*            <input*/}
+                {/*                id="newsletter"*/}
+                {/*                aria-describedby="newsletter-description"*/}
+                {/*                name="newsletter"*/}
+                {/*                onChange={handleFormInputCheck}*/}
+                {/*                value={form.newsletter}*/}
+                {/*                checked={form.newsletter}*/}
+                {/*                type="checkbox"*/}
+                {/*                className="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"*/}
+                {/*            />*/}
+                {/*        </div>*/}
+                {/*        <div className="ml-3 text-sm">*/}
+                {/*            <label htmlFor="newsletter" className="font-medium text-gray-700">*/}
+                {/*                Receive Newsletter*/}
+                {/*            </label>*/}
+                {/*            <span id="newsletter-description" className="text-gray-500">*/}
+                {/*            <span className="sr-only">New newsletter </span> so you always know what's happening.*/}
+                {/*                </span>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <div className={`p-2 w-full`}>
                     <button disabled={loading} type="button" onClick={submitForm}
                             className={`relative flex mx-auto text-white bg-gradient-to-tr from-primary-500 to-secondary-300 hover:to-secondary-200 -skew-x-12 border-0 py-2 px-8 focus:outline-2 focus:outline-primary-500 focus:outline-offset-2 hover:bg-primary-600 disabled:text-primary-500 rounded text-lg disabled:bg-primary-50`}>
