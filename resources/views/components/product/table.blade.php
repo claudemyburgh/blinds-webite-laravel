@@ -21,7 +21,9 @@
                             </div>
                             <div class="ml-4">
                                 <div class="font-medium text-gray-900">{{ $product->title }} - {{ $variant->colour }}</div>
-                                <div class="text-gray-500">lindsay.walto</div>
+                                <div class="text-gray-500"><strong class="font-semibold">Item code:</strong>
+                                    <span class="uppercase">{{ $variant->sku }}</span>
+                                </div>
                             </div>
                         </div>
                     </td>

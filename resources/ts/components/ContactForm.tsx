@@ -1,6 +1,8 @@
 import {createRoot} from 'react-dom/client'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import axios from "axios";
+
+const contactDiv = document.getElementById('contact-form')
 
 export default function ContactForm() {
 
@@ -16,7 +18,8 @@ export default function ContactForm() {
         email: "",
         subject: "",
         phone: "",
-        message: ""
+        message: "",
+        newsletter: true
     })
 
     const [errors, setErrors] = useState({})
@@ -27,6 +30,14 @@ export default function ContactForm() {
             [e.target.name]: e.target.value
         })
     }
+    const handleFormInputCheck = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.checked
+        })
+    }
+
+
 
 
     const submitForm = async (e) => {
@@ -45,7 +56,8 @@ export default function ContactForm() {
                 email: "",
                 subject: "",
                 phone: "",
-                message: ""
+                message: "",
+                newsletter: ""
             })
         } catch (e) {
             setErrors({
@@ -54,6 +66,10 @@ export default function ContactForm() {
         }
         setLoading(false)
     }
+
+    useEffect(() => {
+        console.log(contactDiv.dataset.productTitle)
+    }, [])
 
 
     return (
@@ -87,6 +103,9 @@ export default function ContactForm() {
                     <strong className={`font-black`}>Oops!</strong> {Object.keys(errors).length} {Object.keys(errors).length === 1 ? 'error' : "errors"} was detected.
                 </div>
             )}
+
+            {JSON.stringify(form)}
+
             <div className={`flex flex-wrap bg-white rounded-md p-4 border border-gray-200`}>
                 <div className={`p-2 w-full md:w-1/2 `}>
                     <div className="relative">
@@ -94,7 +113,7 @@ export default function ContactForm() {
                         <input type="text" id="name"
                                value={form.name}
                                name="name"
-                               autocomplete={`given-name`}
+                               autoComplete={`given-name`}
                                onChange={handleFormInput}
                                className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.name ? 'border-red-500' : 'border-gray-300'}`}/>
                         {errors?.name && (
@@ -108,7 +127,7 @@ export default function ContactForm() {
                         <input type="text" id="surname"
                                value={form.surname}
                                name="surname"
-                               autocomplete={`family-name`}
+                               autoComplete={`family-name`}
                                onChange={handleFormInput}
                                className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.surname ? 'border-red-500' : 'border-gray-300'}`}/>
                         {errors?.surname && (
@@ -122,7 +141,7 @@ export default function ContactForm() {
                         <input type="text" id="email"
                                name="email"
                                value={form.email}
-                               autocomplete={`email`}
+                               autoComplete={`email`}
                                onChange={handleFormInput}
                                className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.email ? 'border-red-500' : 'border-gray-300'}`}/>
                         {errors?.email && (
@@ -136,19 +155,31 @@ export default function ContactForm() {
                     <input type="tel" id="phone" name="phone"
                            onChange={handleFormInput}
                            value={form.phone}
-                           autocomplete={`tel`}
+                           autoComplete={`tel`}
                            className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.phone ? 'border-red-500' : 'border-gray-300'}`}/>
                     {errors?.phone && (
                         <span className={`py-2 text-sm text-red-500 block`}>{errors.phone[0]}</span>
                     )}
                 </div>
 
+
+
                 <div className={`w-full p-2 relative`}>
                     <label htmlFor="subject" className={`leading-7 text-sm text-gray-600 font-semibold`}>Subject</label>
-                    <input type="text" id="subject" name="subject"
-                           onChange={handleFormInput}
-                           value={form.subject}
-                           className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.subject ? 'border-red-500' : 'border-gray-300'}`}/>
+                    {contactDiv.dataset.productTitle ? (
+                        <select name="subject" id="subject" onChange={handleFormInput}
+                                value={form.subject} className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.subject ? 'border-red-500' : 'border-gray-300'}`}>
+                            <option value="">Select an subject</option>
+                            <option value="I need info about {contactDiv.dataset.productTitle}">I need info about {contactDiv.dataset.productTitle}</option>
+                            <option value="Can you give me a quote on {contactDiv.dataset.productTitle}">Can you give me a quote on {contactDiv.dataset.productTitle}</option>
+                        </select>
+                        ) : (
+                        <input type="text" id="subject" name="subject"
+                               onChange={handleFormInput}
+                               value={form.subject}
+                               className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.subject ? 'border-red-500' : 'border-gray-300'}`}/>
+                    )}
+
                     {errors?.subject && (
                         <span className={`py-2 text-sm text-red-500 block`}>{errors.subject[0]}</span>
                     )}
@@ -165,6 +196,30 @@ export default function ContactForm() {
                     {errors?.message && (
                         <span className={`py-2 text-sm text-red-500 block`}>{errors.message[0]}</span>
                     )}
+                </div>
+                <div className={`p-2 w-full`}>
+                    <div className="relative flex items-start">
+                        <div className="flex items-center h-5">
+                            <input
+                                id="newsletter"
+                                aria-describedby="newsletter-description"
+                                name="newsletter"
+                                onChange={handleFormInputCheck}
+                                value={form.newsletter}
+                                checked={form.newsletter}
+                                type="checkbox"
+                                className="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
+                            />
+                        </div>
+                        <div className="ml-3 text-sm">
+                            <label htmlFor="newsletter" className="font-medium text-gray-700">
+                                Receive Newsletter
+                            </label>
+                            <span id="newsletter-description" className="text-gray-500">
+                            <span className="sr-only">New newsletter </span> so you always know what's happening.
+                                </span>
+                        </div>
+                    </div>
                 </div>
                 <div className={`p-2 w-full`}>
                     <button disabled={loading} type="button" onClick={submitForm}
@@ -190,7 +245,7 @@ export default function ContactForm() {
 }
 
 
-const contactDiv = document.getElementById('contact-form')
+
 
 if (contactDiv) {
     createRoot(contactDiv).render(<ContactForm/>)

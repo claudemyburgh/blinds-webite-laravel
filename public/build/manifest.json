@@ -7,13 +7,13 @@
     "file": "assets/aluminium-blinds-2bcbf102.jpg",
     "src": "resources/img/hero/aluminium-blinds.jpg"
   },
-  "resources/img/hero/bamboo-blinds.jpg": {
-    "file": "assets/bamboo-blinds-8db77571.jpg",
-    "src": "resources/img/hero/bamboo-blinds.jpg"
-  },
   "resources/img/hero/basswood-blinds.jpg": {
     "file": "assets/basswood-blinds-34a63e76.jpg",
     "src": "resources/img/hero/basswood-blinds.jpg"
+  },
+  "resources/img/hero/bamboo-blinds.jpg": {
+    "file": "assets/bamboo-blinds-8db77571.jpg",
+    "src": "resources/img/hero/bamboo-blinds.jpg"
   },
   "resources/img/hero/double-roller-blinds.jpg": {
     "file": "assets/double-roller-blinds-d2be0c9a.jpg",
@@ -72,12 +72,12 @@
     "src": "resources/img/motion.jpeg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-dd3aed86.css",
+    "file": "assets/app-297caf49.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-9d34dcc5.js",
+    "file": "assets/app-4c3fbddd.js",
     "src": "resources/ts/app.ts",
     "isEntry": true
   },

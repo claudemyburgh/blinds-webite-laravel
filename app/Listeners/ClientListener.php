@@ -4,8 +4,11 @@ namespace App\Listeners;
 
 use App\Events\ContactFormWasSubmitted;
 use App\Models\Client;
+
+
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+
 
 class ClientListener
 {
@@ -33,5 +36,9 @@ class ClientListener
             $client->fill($event->data);
             $client->save();
         }
+
+//        Newsletter::subscribe('rincewind@discworld.com', ['first_name' => 'Rince', 'last_name' => 'Wind']);
+
+
     }
 }

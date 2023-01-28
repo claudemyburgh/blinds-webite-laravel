@@ -24,8 +24,8 @@ class VariantsRequest extends FormRequest
     public function rules()
     {
         return [
-            'sku' => 'required|max:15',
-            'image' => 'nullable|mimes:jpg,bmp,png',
+            'sku' => 'required|max:25',
+            'image' => 'nullable|mimes:jpg,bmp,png,jpeg|max:4000',
             'colour' => 'required|string|max:80',
             'material' => 'nullable|string|max:120',
             'pattern' => 'nullable|string|max:120',

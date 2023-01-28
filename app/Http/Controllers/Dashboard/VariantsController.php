@@ -26,7 +26,7 @@ class VariantsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Product $product)
+    public function create(Product $product): View
     {
         $variant = new Variant();
         return view('dashboard.variants.create', compact('product', 'variant'));

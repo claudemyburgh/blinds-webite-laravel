@@ -53,7 +53,7 @@
     <div class="absolute h-1/2 -left-12 -top-12 rounded-full w-1/2 bg-primary-500/30  "></div>
     <div class="absolute h-1/2 bottom-0 right-0 rounded-full w-1/2 bg-amber-500/5  "></div>
 </div>
-
+{{--<x-support-bubble />--}}
 @livewireScripts
 </body>
 </html>
