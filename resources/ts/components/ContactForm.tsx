@@ -100,6 +100,7 @@ export default function ContactForm() {
                     <strong className={`font-black`}>Oops!</strong> {Object.keys(errors).length} {Object.keys(errors).length === 1 ? 'error' : "errors"} was detected.
                 </div>
             )}
+            
 
             <div className={`flex flex-wrap bg-white rounded-md p-4 border border-gray-200`}>
                 <div className={`p-2 w-full md:w-1/2 `}>
@@ -165,8 +166,8 @@ export default function ContactForm() {
                         <select name="subject" id="subject" onChange={handleFormInput}
                                 value={form.subject} className={`w-full bg-gray-100 bg-opacity-50 rounded border focus:border-primary-500 focus:bg-white focus:ring-2 focus:ring-primary-200 text-base	outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${errors?.subject ? 'border-red-500' : 'border-gray-300'}`}>
                             <option value="">Select an subject</option>
-                            <option value="I need info about {contactDiv.dataset.productTitle}">I need info about {contactDiv.dataset.productTitle}</option>
-                            <option value="Can you give me a quote on {contactDiv.dataset.productTitle}">Can you give me a quote on {contactDiv.dataset.productTitle}</option>
+                            <option value={`I need info about ${contactDiv.dataset.productTitle} product`} >I need info about {contactDiv.dataset.productTitle} product</option>
+                            <option value={`Can you give me a quote on ${contactDiv.dataset.productTitle} product`}>Can you give me a quote on {contactDiv.dataset.productTitle} product</option>
                         </select>
                         ) : (
                         <input type="text" id="subject" name="subject"
