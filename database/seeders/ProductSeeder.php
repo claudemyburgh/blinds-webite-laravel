@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
         $products = [
             [
                 "title" => "Nairobi", //1
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Sheer",
                 "description" => "The Nairobi fabric boasts of its natural and one-of-a-kind texture and color variations, which gives a sense of purity to any interior space. Its generous width makes it perfect for larger windows and various other uses.",
                 "excerpt" => "",
@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Waving Leave", //2
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Sheer",
                 "description" => "The intricate and delicate leaves and flowers on printed and jacquard woven fabrics bring a sense of liveliness. The soft pastel colors used in the fabrics create a romantic and gentle atmosphere, exuding femininity.",
                 "excerpt" => "",
@@ -34,7 +34,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Essential 3000 10%", //3
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Light Filtering",
                 "description" => "Screen 3010 is a fabric made of polyester featuring a delicate 2 x 2 basket weave structure, that provides a subtle texture while still allowing for a clear view through.",
                 "excerpt" => "",
@@ -42,7 +42,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Essential 4000 5%", //4
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Light Filtering",
                 "description" => "Screen 4005, made of polyester, has a delicate 2 x 2 basket weave structure that provides a subtle texture while allowing only 5% visibility, making it perfect for privacy needs",
                 "excerpt" => "",
@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Mombassa", //5
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Light Filtering",
                 "description" => "The Mombassa LF collection features a contemporary design and a tactile sensation. Its natural fabrics provide a cozy ambiance in any room, and the soft color scheme adds a touch of sophistication to the space.",
                 "excerpt" => "",
@@ -58,7 +58,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Proto", //6
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Light Filtering",
                 "description" => "The Prato collection features modern, light-filtering fabrics made from recycled yarns and available in a variety of popular colors. It gives an aesthetic look with an eco-friendly touch.",
                 "excerpt" => "",
@@ -66,7 +66,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Berlin", //7
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Block-out",
                 "description" => "The Berlin collection presents fabrics that completely block out daylight with a robust, durable textile appearance. The material provides complete darkness and privacy, and the collection is perfect for creating a cozy and secluded ambiance.",
                 "excerpt" => "",
@@ -74,7 +74,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Mombassa", //8
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Block-out",
                 "description" => "The Mombassa LF collection boasts of a modern aesthetic and a pleasant texture. The fabrics used are naturally delicate, which results in a warm and inviting atmosphere in any setting. The soft color palette adds a touch of elegance to the interior.",
                 "excerpt" => "",
@@ -82,7 +82,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Yamar", //9
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Block-out",
                 "description" => "The Yamar collection features roller blind fabrics with a textured appearance, which adds a modern aesthetic. The collection comes in a range of neutral color tones.",
                 "excerpt" => "",
@@ -90,7 +90,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "title" => "Satin Flower", //10
-                "category_id" => 9,
+                "category_id" => 8,
                 "product_range" => "Block-out",
                 "description" => "Printed and jacquard woven fabrics feature intricate leaf and flower designs that bring a sense of liveliness. The soft pastel colors used in the fabrics create a pure and gentle atmosphere in the interior.",
                 "excerpt" => "",

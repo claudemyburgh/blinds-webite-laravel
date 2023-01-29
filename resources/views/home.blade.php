@@ -11,7 +11,7 @@
                 @if($loop->last)
                      and
                 @endif
-                <x-link href="{{ route('category.products.index', $category->slug) }}">{{ $category->title }}</x-link>
+                <x-link href="{{ route('products.index', $category->slug) }}">{{ $category->title }}</x-link>
                 @if(!$loop->last), @endif
             @endforeach
             . At {{ config('app.name') }}, we believe that the installation of your blinds should be just as hassle-free

@@ -7,8 +7,6 @@ use Illuminate\View\Component;
 
 class CategoryList extends Component
 {
-
-
     public $categories;
 
     /**
@@ -18,7 +16,7 @@ class CategoryList extends Component
      */
     public function __construct()
     {
-        $this->categories = Category::tree()->get()->toTree();
+        $this->categories = Category::with('products.media')->tree()->get()->toTree();
     }
 
     /**

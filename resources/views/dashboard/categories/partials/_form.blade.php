@@ -1,3 +1,4 @@
+
 <div>
     <label for="title" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Title</label>
     <input type="text" name="title" id="title" value="{{ old('title', $category->title) }}"
@@ -9,6 +10,20 @@
     @error('title')
         <p class="text-red-500 mt-1 block">{{ $message }}</p>
     @enderror
+</div>
+
+<div>
+    <label for="link_description" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Link Description</label>
+    <input type="text" name="link_description" id="link_description" value="{{ old('link_description', $category->link_description) }}"
+        @class([
+             'mt-1 focus:ring-primary-500 focus:border-primary-500 block w-full shadow-sm sm:text-sm border-gray-300 text-gray-700 dark:text-gray-300 dark:border-gray-700 rounded-md border bg-gray-50 dark:bg-gray-900',
+             'border-red-500' => $errors->has('link_description')
+             ])
+    >
+    @error('link_description')
+        <p class="text-red-500 mt-1 block">{{ $message }}</p>
+    @enderror
+    <p class="mt-2 text-sm text-gray-500">UX/UI description for link.</p>
 </div>
 
 <div>

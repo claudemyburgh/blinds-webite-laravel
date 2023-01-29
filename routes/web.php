@@ -9,8 +9,8 @@ use App\Http\Controllers\Dashboard\ProductsController;
 use App\Http\Controllers\Dashboard\DeleteMediaController;
 use App\Http\Controllers\Dashboard\VariantsController;
 use App\Http\Controllers\HomePageController;
-use App\Http\Controllers\ProductInCategoryShow;
-use App\Http\Controllers\ProductsByCategoryIndexController;
+use App\Http\Controllers\ProductShow;
+use App\Http\Controllers\ProductIndexController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +30,8 @@ Route::get('/about-us', AboutUsPageController::class)->name('about-us');
 Route::get('/contact-us', ContactUsPageController::class)->name('contact-us');
 
 Route::get('/categories', CategoriesPageController::class)->name('categories.index');
-Route::get('/category/{category:slug}', ProductsByCategoryIndexController::class)->name('category.products.index');
-Route::get('/category/{category:slug}/product/{product:slug}', ProductInCategoryShow::class)->name('category.product.show');
+Route::get('/category/{category:slug}', ProductIndexController::class)->name('products.index');
+Route::get('/product/{category:slug}/{product:slug}', ProductShow::class)->name('product.show');
 
 
 Route::post('/contact-send', ContactFormSendController::class)->name('contact.send');
@@ -51,9 +51,7 @@ Route::group([
     Route::resource('/{product}/variants', VariantsController::class);
 });
 
-//Route::get('/dashboard', function () {
-//    return view('dashboard.index');
-//})->middleware(['auth', 'verified'])->name('dashboard.index');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

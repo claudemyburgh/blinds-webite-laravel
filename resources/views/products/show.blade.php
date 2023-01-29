@@ -35,7 +35,7 @@
         </div>
         <div>
             <x-title>{{ $product->title }}</x-title>
-            <a href="{{ route('category.products.index', $category) }}"
+            <a href="{{ route('products.index', $category) }}"
                class="text-gray-400 mt-2 inline-flex text-xs px-3 py-[3px] bg-gray-100 border border-gray-200 rounded-full hover:text-primary-600 hover:border-primary-600">In
                 category {{ $category->title }}</a>
             <x-paragraph>

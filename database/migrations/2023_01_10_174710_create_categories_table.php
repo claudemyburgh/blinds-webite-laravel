@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->string('slug')->unique()->index();
+            $table->string('link_description')->nullable();
             $table->text('description')->nullable();
             $table->text('body')->nullable();
             $table->text('excerpt')->nullable();

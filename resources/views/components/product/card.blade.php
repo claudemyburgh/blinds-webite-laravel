@@ -8,7 +8,7 @@
         </div>
         <div class="flex-1 p-4 space-y-2 flex flex-col">
             <h3 class="text-sm font-medium text-gray-900">
-                <a href="{{ route('category.product.show', [$category, $product]) }}">
+                <a href="{{ route('product.show', [$category, $product]) }}">
                     <span aria-hidden="true" class="absolute inset-0"></span>
                     {{ $product->title }}
                 </a>

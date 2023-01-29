@@ -17,7 +17,7 @@ class CategoriesPageController extends Controller
      */
     public function __invoke(Category $categories): View
     {
-        $categories = Category::with('media')->orderBy('title')->tree()->get()->toTree();
+        $categories = Category::with('media', 'products')->orderBy('title')->tree()->get()->toTree();
         return view('categories.index', [
             'categories' => $categories
         ]);

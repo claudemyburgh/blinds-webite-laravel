@@ -1,4 +1,5 @@
-<div class="bg-gray-900 text-gray-50 py-12 relative mt-24 w-full">
+<div id="contact-section" class="bg-gray-900 text-gray-50 py-12 relative mt-24 w-full">
+    <canvas class="absolute pointer-events-none z-20 opacity-70 inset-0 w-full h-full" id="canvas"></canvas>
     <div aria-hidden="true"
          class="absolute w-1/2 h-1/2 bg-gradient-to-br from-violet-500/30 blur-3xl to-transparent top-0 "></div>
     <div aria-hidden="true"

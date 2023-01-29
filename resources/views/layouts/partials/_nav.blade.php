@@ -107,8 +107,8 @@
                 >Catalog </button>
 
                 <div hidden data-container="categories" id="mobile-nav-categories" class="space-y-2 py-2 pl-4">
-                   @foreach($categories[0]->children as $category)
-                        <a class="block w-full px-3 py-2 bg-gray-100 rounded-md  hover:bg-primary-500 hover:text-white" href="{{ route('category.products.index', $category) }}">{{ $category->title }} </a>
+                   @foreach($categories as $category)
+                        <a class="block w-full px-3 py-2 bg-gray-100 rounded-md  hover:bg-primary-500 hover:text-white" href="{{ route('products.index', $category) }}">{{ $category->title }} </a>
                    @endforeach
                 </div>
 

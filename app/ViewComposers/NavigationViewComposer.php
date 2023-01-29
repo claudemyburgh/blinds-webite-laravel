@@ -12,7 +12,17 @@ class NavigationViewComposer
     public function compose(View $view)
     {
 
-        $categories = Category::with('media')->orderBy('title')->tree()->get()->toTree();
+        $categories = Category::with('media')->orderBy('title')->get();
+
+        $exclude = ['indoor-blinds', 'outdoor-blinds'];
+
+        $categories = collect($categories)->filter(function ($cat) use ($exclude) {
+            if (in_array($cat['slug'], $exclude)) {
+                return false;
+            }
+            return true;
+        });
+
 
         return $view->with('categories', $categories);
     }

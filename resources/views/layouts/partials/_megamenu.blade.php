@@ -15,8 +15,8 @@
 
     <div class="flex gap-4">
         <div class="grid  grid-cols-3 gap-4 w-2/3">
-            @foreach($categories[0]->children as $category)
-                <a href="{{ route('category.products.index', $category) }}" @class([
+            @foreach($categories as $category)
+                <a href="{{ route('products.index', $category) }}" @class([
                         'border border-gray-300 rounded-md p-2 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white flex',
                         'bg-primary-500 text-primary-50 items-center' => request()->segment(2) === $category->slug
                     ])>
@@ -29,7 +29,7 @@
                 </a>
             @endforeach
         </div>
-        <a href="{{ route('category.products.index', 'motion-blinds') }}" class="border w-1/3 block border-gray-300 rounded-md hover:opacity-80 relative overflow-hidden">
+        <a href="{{ route('products.index', 'motion-blinds') }}" class="border w-1/3 block border-gray-300 rounded-md hover:opacity-80 relative overflow-hidden">
 
             <div aria-hidden="true" class="h-40 w-40 left-[33%] top-[30%] pointer-events-none absolute">
                 <div class="pulse pulse-1 w-full h-full"></div>

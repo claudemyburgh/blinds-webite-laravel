@@ -10,8 +10,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
 
-class ClientListener
+class ClientListener implements ShouldQueue
 {
+    use InteractsWithQueue;
+
     /**
      * Create the event listener.
      *
