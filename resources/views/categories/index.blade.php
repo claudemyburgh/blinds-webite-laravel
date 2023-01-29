@@ -25,7 +25,7 @@
     </x-wrapper>
 
     <x-wrapper>
-        <div class="grid grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div class="grid  md:grid-cols-2  lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             @foreach($categories as $category)
                 <div class="border border-gray-300 rounded-md bg-white ">
                     <header
