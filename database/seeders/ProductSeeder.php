@@ -96,6 +96,30 @@ class ProductSeeder extends Seeder
                 "excerpt" => "",
                 "body" => "Printed and jacquard woven fabrics feature intricate leaf and flower designs that bring a sense of liveliness. The soft pastel colors used in the fabrics create a pure and gentle atmosphere in the interior."
             ],
+            [
+                "title" => "Skyros", //10
+                "category_id" => 10,
+                "product_range" => "Zebra-Blinds",
+                "description" => "The delicately woven structure and subtle satin gloss of these double roller fabrics brings a feeling of elegance to the interior.",
+                "excerpt" => "",
+                "body" => "The delicately woven structure and subtle satin gloss of these double roller fabrics brings a feeling of elegance to the interior."
+            ],
+            [
+                "title" => "Zakynthos", //10
+                "category_id" => 10,
+                "product_range" => "Zebra-Blinds",
+                "description" => "The refined silk-look texture of these double roller fabrics adds zest and makes the colors pop-out. The open weaving texture of the transparent stripes give the fabrics an o en feel.",
+                "excerpt" => "",
+                "body" => "The refined silk-look texture of these double roller fabrics adds zest and makes the colors pop-out. The open weaving texture of the transparent stripes give the fabrics an o en feel."
+            ],
+            [
+                "title" => "Palma", //10
+                "category_id" => 7,
+                "product_range" => "Honeycomb",
+                "description" => "Create a pure atmosphere with the delicate light filtering and block-out fabrics in this collection. The refined plain fabrics in the Palma collection are available in 25 mm and 45 mm.",
+                "excerpt" => "",
+                "body" => "Create a pure atmosphere with the delicate light filtering and block-out fabrics in this collection. The refined plain fabrics in the Palma collection are available in 25 mm and 45 mm."
+            ],
         ];
 
 
