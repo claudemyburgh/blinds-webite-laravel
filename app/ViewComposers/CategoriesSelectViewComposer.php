@@ -3,6 +3,7 @@
 namespace App\ViewComposers;
 
 use App\Models\Category;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
 class CategoriesSelectViewComposer
@@ -11,11 +12,9 @@ class CategoriesSelectViewComposer
     public function compose(View $view)
     {
 
-/*        $categories = Category::where(function ($query) {
-            $query->where('parent_id', null);
-        })->orderBy('title')->get();*/
-
-        $categories = Category::orderBy('title')->tree()->get()->toTree();
+        $categories = Cache::rememberForever('categories-select', function () {
+            return Category::orderBy('title')->tree()->get()->toTree();
+        });
 
         return $view->with('categories', $categories);
     }

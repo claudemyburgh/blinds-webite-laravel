@@ -100,7 +100,7 @@ export default function ContactForm() {
                     <strong className={`font-black`}>Oops!</strong> {Object.keys(errors).length} {Object.keys(errors).length === 1 ? 'error' : "errors"} was detected.
                 </div>
             )}
-            
+
 
             <div className={`flex flex-wrap bg-white rounded-md p-4 border border-gray-200`}>
                 <div className={`p-2 w-full md:w-1/2 `}>

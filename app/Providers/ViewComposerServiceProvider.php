@@ -19,7 +19,6 @@ class ViewComposerServiceProvider extends ServiceProvider
         view()->composer('layouts.partials._nav', NavigationViewComposer::class);
         view()->composer('dashboard.categories.partials._categories-select', CategoriesSelectViewComposer::class);
         view()->composer('dashboard.products.partials._categories-select', CategoriesSelectViewComposer::class);
-
     }
 
     /**
