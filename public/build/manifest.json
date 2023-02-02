@@ -3,13 +3,13 @@
     "file": "assets/Powered-by-MotionBlinds-e85d4bf4.png",
     "src": "resources/img/Powered-by-MotionBlinds.png"
   },
-  "resources/img/hero/bamboo-blinds.jpg": {
-    "file": "assets/bamboo-blinds-8db77571.jpg",
-    "src": "resources/img/hero/bamboo-blinds.jpg"
-  },
   "resources/img/hero/aluminium-blinds.jpg": {
     "file": "assets/aluminium-blinds-2bcbf102.jpg",
     "src": "resources/img/hero/aluminium-blinds.jpg"
+  },
+  "resources/img/hero/bamboo-blinds.jpg": {
+    "file": "assets/bamboo-blinds-8db77571.jpg",
+    "src": "resources/img/hero/bamboo-blinds.jpg"
   },
   "resources/img/hero/basswood-blinds.jpg": {
     "file": "assets/basswood-blinds-34a63e76.jpg",
@@ -27,17 +27,17 @@
     "file": "assets/indoor-6d699ab3.jpg",
     "src": "resources/img/hero/outdoor.jpg"
   },
-  "resources/img/hero/hero-blinds-2.jpg": {
-    "file": "assets/hero-blinds-2-b39d35f2.jpg",
-    "src": "resources/img/hero/hero-blinds-2.jpg"
+  "resources/img/hero/hero-blinds.jpg": {
+    "file": "assets/hero-blinds-bf14b685.jpg",
+    "src": "resources/img/hero/hero-blinds.jpg"
   },
   "resources/img/hero/motion-blinds.jpg": {
     "file": "assets/motion-blinds-1aefd8b6.jpg",
     "src": "resources/img/hero/motion-blinds.jpg"
   },
-  "resources/img/hero/hero-blinds.jpg": {
-    "file": "assets/hero-blinds-bf14b685.jpg",
-    "src": "resources/img/hero/hero-blinds.jpg"
+  "resources/img/hero/hero-blinds-2.jpg": {
+    "file": "assets/hero-blinds-2-b39d35f2.jpg",
+    "src": "resources/img/hero/hero-blinds-2.jpg"
   },
   "resources/img/hero/blinds.jpg": {
     "file": "assets/blinds-49fb0e30.jpg",
@@ -77,7 +77,7 @@
     "isEntry": true
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-49232d66.js",
+    "file": "assets/app-553fd620.js",
     "src": "resources/ts/app.ts",
     "isEntry": true
   },

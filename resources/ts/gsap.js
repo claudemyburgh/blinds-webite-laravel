@@ -9,11 +9,13 @@ gsap.to(".product-card", {
     scrollTrigger: {
         trigger: ".category-list-component",
         markers: false,
-        scrub: true,
+        scrub: 1,
         start: "top 150",
-        end: "bottom center",
+        ease: "power1.out",
+        end: () => "+=" + document.querySelector('.category-list-component').offsetWidth,
         pin: true,
-        toggleActions: "play pause reverse pause"
+        toggleActions: "play pause reverse pause",
+        snap: 1 / (cards.length - 1)
     },
     xPercent: -100 * (cards.length - 3 )
 });
