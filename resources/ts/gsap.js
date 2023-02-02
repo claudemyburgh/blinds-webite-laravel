@@ -17,6 +17,6 @@ gsap.to(".product-card", {
         toggleActions: "play pause reverse pause",
         snap: 1 / (cards.length - 1)
     },
-    xPercent: -100 * (cards.length - 3 )
+    xPercent: -100 * (cards.length  )
 });
 
