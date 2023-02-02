@@ -10,6 +10,7 @@ specifiers:
   autoprefixer: ^10.4.2
   axios: ^1.1.2
   flickity: ^3.0.0
+  gsap: ^3.11.4
   laravel-vite-plugin: ^0.7.2
   lodash: ^4.17.19
   postcss: ^8.4.6
@@ -26,6 +27,7 @@ dependencies:
   '@vitejs/plugin-react': 3.0.1_vite@4.0.4
   '@vitejs/plugin-react-refresh': 1.3.6
   flickity: 3.0.0
+  gsap: 3.11.4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tailwindcss-attributes: 1.2.2
@@ -908,6 +910,10 @@ packages:
   /globals/11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
+    dev: false
+
+  /gsap/3.11.4:
+    resolution: {integrity: sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==}
     dev: false
 
   /has-flag/3.0.0:
