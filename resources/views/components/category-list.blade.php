@@ -4,7 +4,7 @@
             @foreach($categories[0]->children as $category)
                 @foreach($category->products as $product)
                     <x-product.card :$product :$category
-                                    class="min-w-[300px]  my-10 block carousel-cell product-card"/>
+                                    class="min-w-[200px] md:min-w-[300px] my-10 block carousel-cell product-card"/>
                 @endforeach
             @endforeach
         </div>

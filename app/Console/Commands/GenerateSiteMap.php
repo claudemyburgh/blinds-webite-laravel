@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Console\Command;
-use Illuminate\Routing\Route;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;
 
