@@ -1,4 +1,4 @@
-<side-scroll class="relative block overflow-x-scroll pl-4 category-list-component border border-transparent">
+<side-scroll class="relative py-12 block overflow-x-scroll pl-4 category-list-component border border-transparent">
     <x-wrapper>
             <div data-draggable class="flex flex-1 space-x-6 whitespace-nowrap draggable">
                 @foreach($categories[0]->children as $category)

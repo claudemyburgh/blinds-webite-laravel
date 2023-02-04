@@ -1,5 +1,5 @@
 <x-site-layout>
-    <x-wrapper size="xl">
+    <x-wrapper size="md" class="py-6 md:py-28">
         <div class="relative">
             <x-title>Catalog</x-title>
             <x-prose class="my-4">

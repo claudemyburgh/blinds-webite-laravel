@@ -1,5 +1,5 @@
 <section class="relative">
-    <x-wrapper class="relative z-10 pt-12 lg:pt-40 xl:pt-44 " size="none">
+    <x-wrapper size="md" class="relative z-10 pt-6 xl:pt-28 2xl:pt-44 " size="none">
         {{ $slot }}
     </x-wrapper>
 

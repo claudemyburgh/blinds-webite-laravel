@@ -1,5 +1,5 @@
 <x-site-layout>
-    <x-wrapper size="none" class="pt-28 2xl:pt-36 grid md:grid-cols-2 gap-8">
+    <x-wrapper size="md" class="py-6 xl:py-28 grid md:grid-cols-2 gap-8">
         <div>
             <image-swap class="grid grid-cols-4 gap-2 md:gap-4 relative">
                 <div class="col-span-4 relative">
