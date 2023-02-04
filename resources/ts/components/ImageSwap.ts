@@ -6,8 +6,6 @@ export class ImageSwap extends HTMLElement{
     private initialUrl: string;
     private resetButton: HTMLButtonElement;
 
-
-
     constructor() {
         super();
         this.mainImage = this.querySelector('[data-image]')

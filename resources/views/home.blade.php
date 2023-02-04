@@ -1,7 +1,4 @@
 <x-site-layout>
-
-
-
     <x-hero >
         <x-title>
              Best Selection of Blinds<br/> at Affordable Prices

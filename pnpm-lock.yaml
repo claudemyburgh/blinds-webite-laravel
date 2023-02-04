@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@mystroken/drag': ^0.2.0
   '@tailwindcss/forms': ^0.5.2
   '@tailwindcss/line-clamp': ^0.4.2
   '@tailwindcss/typography': ^0.5.8
@@ -23,6 +24,7 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
+  '@mystroken/drag': 0.2.0
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   '@vitejs/plugin-react': 3.0.1_vite@4.0.4
@@ -487,6 +489,10 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: false
+
+  /@mystroken/drag/0.2.0:
+    resolution: {integrity: sha512-jvlK+EUtCRpTeUTnIn2WB9Dc4zB1GorcuX1/LsmoXgYTJ/vk6FCSVDsIbC2oAb8Qwrh4IVq+EasB+CsVHXHSRQ==}
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:

@@ -19,7 +19,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
-    @livewireStyles
+{{--    @livewireStyles--}}
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -73,6 +73,6 @@
     <div class="absolute h-1/2 bottom-0 right-0 rounded-full w-1/2 bg-amber-500/5  "></div>
 </div>
 {{--<x-support-bubble />--}}
-@livewireScripts
+{{--@livewireScripts--}}
 </body>
 </html>
