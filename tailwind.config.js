@@ -55,7 +55,7 @@ module.exports = {
         './resources/ts/**/*.{ts,tsx}',
     ],
     darkMode: "class",
-    safelist: ['[x-clock]'],
+    safelist: ['[x-clock]', 'active'],
     theme: {
         extend: {
             fontFamily: {

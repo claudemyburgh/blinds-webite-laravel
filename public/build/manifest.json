@@ -1,83 +1,83 @@
 {
-  "resources/img/Powered-by-MotionBlinds.png": {
-    "file": "assets/Powered-by-MotionBlinds-e85d4bf4.png",
-    "src": "resources/img/Powered-by-MotionBlinds.png"
+  "resources/img/hero/aluminium-blinds.jpg": {
+    "file": "assets/aluminium-blinds-2bcbf102.jpg",
+    "src": "resources/img/hero/aluminium-blinds.jpg"
   },
   "resources/img/hero/bamboo-blinds.jpg": {
     "file": "assets/bamboo-blinds-8db77571.jpg",
     "src": "resources/img/hero/bamboo-blinds.jpg"
   },
-  "resources/img/hero/aluminium-blinds.jpg": {
-    "file": "assets/aluminium-blinds-2bcbf102.jpg",
-    "src": "resources/img/hero/aluminium-blinds.jpg"
-  },
-  "resources/img/hero/basswood-blinds.jpg": {
-    "file": "assets/basswood-blinds-34a63e76.jpg",
-    "src": "resources/img/hero/basswood-blinds.jpg"
+  "resources/img/Powered-by-MotionBlinds.png": {
+    "file": "assets/Powered-by-MotionBlinds-e85d4bf4.png",
+    "src": "resources/img/Powered-by-MotionBlinds.png"
   },
   "resources/img/hero/double-roller-blinds.jpg": {
     "file": "assets/double-roller-blinds-d2be0c9a.jpg",
     "src": "resources/img/hero/double-roller-blinds.jpg"
   },
-  "resources/img/hero/hero-blinds.jpg": {
-    "file": "assets/hero-blinds-bf14b685.jpg",
-    "src": "resources/img/hero/hero-blinds.jpg"
-  },
-  "resources/img/hero/hero-blinds-2.jpg": {
-    "file": "assets/hero-blinds-2-b39d35f2.jpg",
-    "src": "resources/img/hero/hero-blinds-2.jpg"
+  "resources/img/hero/basswood-blinds.jpg": {
+    "file": "assets/basswood-blinds-34a63e76.jpg",
+    "src": "resources/img/hero/basswood-blinds.jpg"
   },
   "resources/img/hero/honeycomb-blinds.jpg": {
     "file": "assets/honeycomb-blinds-62a77f56.jpg",
     "src": "resources/img/hero/honeycomb-blinds.jpg"
   },
+  "resources/img/hero/hero-blinds-2.jpg": {
+    "file": "assets/hero-blinds-2-b39d35f2.jpg",
+    "src": "resources/img/hero/hero-blinds-2.jpg"
+  },
   "resources/img/hero/outdoor.jpg": {
     "file": "assets/indoor-6d699ab3.jpg",
     "src": "resources/img/hero/outdoor.jpg"
+  },
+  "resources/img/hero/hero-blinds.jpg": {
+    "file": "assets/hero-blinds-bf14b685.jpg",
+    "src": "resources/img/hero/hero-blinds.jpg"
   },
   "resources/img/hero/motion-blinds.jpg": {
     "file": "assets/motion-blinds-1aefd8b6.jpg",
     "src": "resources/img/hero/motion-blinds.jpg"
   },
-  "resources/img/hero/roller-blinds.jpg": {
-    "file": "assets/roller-blinds-583b3132.jpg",
-    "src": "resources/img/hero/roller-blinds.jpg"
-  },
-  "resources/img/hero/blinds.jpg": {
-    "file": "assets/blinds-49fb0e30.jpg",
-    "src": "resources/img/hero/blinds.jpg"
-  },
   "resources/img/hero/wave.svg": {
     "file": "assets/wave-ebbdac34.svg",
     "src": "resources/img/hero/wave.svg"
   },
-  "resources/img/hero/venetian-blinds.jpg": {
-    "file": "assets/venetian-blinds-983df028.jpg",
-    "src": "resources/img/hero/venetian-blinds.jpg"
+  "resources/img/hero/roller-blinds.jpg": {
+    "file": "assets/roller-blinds-583b3132.jpg",
+    "src": "resources/img/hero/roller-blinds.jpg"
   },
   "resources/img/svg/blob.svg": {
     "file": "assets/blob-7dd4f7e7.svg",
     "src": "resources/img/svg/blob.svg"
   },
-  "resources/img/svg/logo-long.svg": {
-    "file": "assets/logo-long-0c60079a.svg",
-    "src": "resources/img/svg/logo-long.svg"
-  },
-  "resources/img/hero/zebra-blinds.jpg": {
-    "file": "assets/zebra-blinds-cf7b7e6c.jpg",
-    "src": "resources/img/hero/zebra-blinds.jpg"
+  "resources/img/hero/venetian-blinds.jpg": {
+    "file": "assets/venetian-blinds-983df028.jpg",
+    "src": "resources/img/hero/venetian-blinds.jpg"
   },
   "resources/img/motion.jpeg": {
     "file": "assets/motion-d8eba19e.jpeg",
     "src": "resources/img/motion.jpeg"
   },
+  "resources/img/hero/zebra-blinds.jpg": {
+    "file": "assets/zebra-blinds-cf7b7e6c.jpg",
+    "src": "resources/img/hero/zebra-blinds.jpg"
+  },
+  "resources/img/hero/blinds.jpg": {
+    "file": "assets/blinds-49fb0e30.jpg",
+    "src": "resources/img/hero/blinds.jpg"
+  },
+  "resources/img/svg/logo-long.svg": {
+    "file": "assets/logo-long-0c60079a.svg",
+    "src": "resources/img/svg/logo-long.svg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-ee354fcf.css",
+    "file": "assets/app-57d17263.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-2378a495.js",
+    "file": "assets/app-d1a518fd.js",
     "src": "resources/ts/app.ts",
     "isEntry": true
   },
