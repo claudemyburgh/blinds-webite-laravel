@@ -69,10 +69,9 @@ class Category extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('default')
-            ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
+            ->useFallbackUrl(url(config('app.placeholder')));
+//            ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
 
-//        $this->addMediaCollection('default')
-//            ->useFallbackPath(public_path('img/hero-blinds.jpg'));
 
     }
 

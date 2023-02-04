@@ -18,6 +18,8 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
     'slogan' => env('APP_SLOGAN', ''),
 
+    'placeholder' => env('APP_URL') . '/img/placeholder.jpg',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

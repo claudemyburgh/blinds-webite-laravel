@@ -66,7 +66,7 @@ class Variant extends Model implements HasMedia
     {
         $this->addMediaCollection('variant')
             ->singleFile()
-            ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
+            ->useFallbackUrl(url(config('app.placeholder')));
     }
 
 }
