@@ -59,18 +59,23 @@ class Product extends Model implements HasMedia
     {
 
         $this->addMediaConversion('thumb')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 100, 100);
 
         $this->addMediaConversion('small')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 200, 200);
 
         $this->addMediaConversion('medium')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 400, 400);
 
         $this->addMediaConversion('normal')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 800, 800);
 
         $this->addMediaConversion('large')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 1200, 1200);
 
     }

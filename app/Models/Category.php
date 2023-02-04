@@ -47,18 +47,23 @@ class Category extends Model implements HasMedia
 //        $this->addMediaCollection('categories');
 
         $this->addMediaConversion('thumb')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 100, 100);
 
         $this->addMediaConversion('small')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 200, 200);
 
         $this->addMediaConversion('medium')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 400, 400);
 
         $this->addMediaConversion('normal')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 800, 800);
 
         $this->addMediaConversion('large')
+            ->format('webp')
             ->fit(Manipulations::FIT_CROP, 1600, 1600);
 
     }
@@ -70,7 +75,6 @@ class Category extends Model implements HasMedia
     {
         $this->addMediaCollection('default')
             ->useFallbackUrl(url(config('app.placeholder')));
-//            ->useFallbackUrl(url('https://barbqvillage.com/wp-content/uploads/woocommerce-placeholder.png'));
 
 
     }
