@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "butschster/meta-tags": "^2.3",
         "drewm/mailchimp-api": "^2.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel-validation-rules/phone": "^1.7",

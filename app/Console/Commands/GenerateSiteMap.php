@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Console\Command;
+use Illuminate\Routing\Route;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;
 
@@ -31,13 +32,22 @@ class GenerateSiteMap extends Command
      */
     public function handle()
     {
-        SitemapGenerator::create(config('app.url'))
+        $sitemap = SitemapGenerator::create(config('app.url'));
+
+        $sitemap
             ->getSitemap()
             ->add(Url::create('/')->setPriority(1))
             ->add(Url::create('/categories')->setPriority(1))
-            ->add(Url::create('/contact-us')->setPriority(1))
-            ->add(Category::all())
-            ->add(Product::all())
+            ->add(Url::create('/contact-us')->setPriority(1));
+
+        foreach (Category::all() as $category) {
+            $sitemap->getSitemap()->add(Url::create(route('products.index', $category->slug)));
+        }
+
+        foreach (Product::all() as $product) {
+            $sitemap->getSitemap()->add(Url::create(route('product.show', [$product->category, $product])));
+        }
+        $sitemap
             ->writeToFile(public_path('sitemap.xml'));
     }
 }
