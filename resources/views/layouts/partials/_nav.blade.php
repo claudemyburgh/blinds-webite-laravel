@@ -100,11 +100,15 @@
                     data-container-trigger="categories"
                     aria-expanded="false"
                     @class([
-                     'px-3 py-2 block rounded-md text-base font-medium w-full text-left',
+                     'px-3 py-2 flex justify-between rounded-md text-base font-medium w-full text-left',
                      'text-gray-900 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white' => !request()->routeIs('categor*'),
                      'bg-gradient-to-tr from-primary-500 to-secondary-300  text-white' => request()->routeIs('categor*')
                  ])
-                >Catalog </button>
+                ><span>Catalog</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                </button>
 
                 <div hidden data-container="categories" id="mobile-nav-categories" class="space-y-2 py-2 pl-4">
                    @foreach($categories as $category)
