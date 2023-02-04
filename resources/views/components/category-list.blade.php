@@ -1,6 +1,6 @@
 <div class="relative overflow-x-hidden pl-4 category-list-component">
     <x-wrapper>
-        <div class="flex flex-1 space-x-6 whitespace-nowrap">
+        <div class="flex flex-1 space-x-6 whitespace-nowrap draggable">
             @foreach($categories[0]->children as $category)
                 @foreach($category->products as $product)
                     <x-product.card :$product :$category

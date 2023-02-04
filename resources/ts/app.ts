@@ -1,11 +1,16 @@
 import './bootstrap';
 import "vanilla-headless"
 import "./components/ContactForm"
+import "./gsap"
 import "./components/ImageSwap"
 import "./components/ToggleShow"
 import "./components/Slider-box"
 import "./flare.js"
-import "./gsap"
+import Pace from 'pace-js'
+
+Pace.on('done', () => {
+    alert('done')
+})
 
 const messages = document.querySelectorAll('.session-state')
 

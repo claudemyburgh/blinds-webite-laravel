@@ -1,9 +1,12 @@
 
+
 export class ImageSwap extends HTMLElement{
     private mainImage: HTMLElement;
     private smallImages: NodeListOf<HTMLElement>;
     private initialUrl: string;
     private resetButton: HTMLButtonElement;
+
+
 
     constructor() {
         super();
@@ -41,7 +44,7 @@ export class ImageSwap extends HTMLElement{
     }
 
     private swapImage(event) {
-        (this.mainImage as HTMLElement).setAttribute('src', event.target.dataset.imageUrl)
+        ;(this.mainImage as HTMLElement).setAttribute('src', event.target.dataset.imageUrl)
         this.hideShowButton();
     }
 
