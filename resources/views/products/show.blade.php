@@ -14,12 +14,12 @@
                     </button>
                     <img id="main-product-image" data-image="main"
                          class="aspect-square rounded-md w-full bg-gray-100 border border-gray-400"
-                         src="{{ $product->getFirstMediaUrl('default', 'normal') }}"
+                         src="{{ $product->getFirstMediaUrl('default', 'large') }}"
                          alt="{{ $product->title }} featured image">
                 </div>
                 @if($product->media->count() > 1)
                     @foreach($product->media as $media)
-                        <button type="button" data-image-url="{{ $media->getFullUrl('normal') }}">
+                        <button type="button" data-image-url="{{ $media->getFullUrl('large') }}">
                             <img
                                 class=" aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
                                 src="{{ $media->getFullUrl('thumb') }}"

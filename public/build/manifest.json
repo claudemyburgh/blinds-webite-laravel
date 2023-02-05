@@ -1,78 +1,86 @@
 {
+  "resources/img/Powered-by-MotionBlinds.webp": {
+    "file": "assets/Powered-by-MotionBlinds-430c673b.webp",
+    "src": "resources/img/Powered-by-MotionBlinds.webp"
+  },
   "resources/img/Powered-by-MotionBlinds.png": {
     "file": "assets/Powered-by-MotionBlinds-e85d4bf4.png",
     "src": "resources/img/Powered-by-MotionBlinds.png"
   },
-  "resources/img/hero/aluminium-blinds.jpg": {
-    "file": "assets/aluminium-blinds-2bcbf102.jpg",
-    "src": "resources/img/hero/aluminium-blinds.jpg"
+  "resources/img/hero/bamboo-blinds.webp": {
+    "file": "assets/bamboo-blinds-665fe695.webp",
+    "src": "resources/img/hero/bamboo-blinds.webp"
   },
-  "resources/img/hero/bamboo-blinds.jpg": {
-    "file": "assets/bamboo-blinds-8db77571.jpg",
-    "src": "resources/img/hero/bamboo-blinds.jpg"
+  "resources/img/hero/aluminium-blinds.webp": {
+    "file": "assets/aluminium-blinds-84bac624.webp",
+    "src": "resources/img/hero/aluminium-blinds.webp"
   },
-  "resources/img/hero/basswood-blinds.jpg": {
-    "file": "assets/basswood-blinds-34a63e76.jpg",
-    "src": "resources/img/hero/basswood-blinds.jpg"
+  "resources/img/hero/double-roller-blinds.webp": {
+    "file": "assets/double-roller-blinds-c74c67df.webp",
+    "src": "resources/img/hero/double-roller-blinds.webp"
   },
-  "resources/img/hero/double-roller-blinds.jpg": {
-    "file": "assets/double-roller-blinds-d2be0c9a.jpg",
-    "src": "resources/img/hero/double-roller-blinds.jpg"
+  "resources/img/hero/basswood-blinds.webp": {
+    "file": "assets/basswood-blinds-7b4236de.webp",
+    "src": "resources/img/hero/basswood-blinds.webp"
   },
-  "resources/img/hero/honeycomb-blinds.jpg": {
-    "file": "assets/honeycomb-blinds-62a77f56.jpg",
-    "src": "resources/img/hero/honeycomb-blinds.jpg"
+  "resources/img/hero/honeycomb-blinds.webp": {
+    "file": "assets/honeycomb-blinds-5fb2f145.webp",
+    "src": "resources/img/hero/honeycomb-blinds.webp"
   },
-  "resources/img/hero/outdoor.jpg": {
-    "file": "assets/indoor-6d699ab3.jpg",
-    "src": "resources/img/hero/outdoor.jpg"
+  "resources/img/hero/outdoor.webp": {
+    "file": "assets/indoor-57a84d30.webp",
+    "src": "resources/img/hero/outdoor.webp"
   },
-  "resources/img/hero/hero-blinds.jpg": {
-    "file": "assets/hero-blinds-bf14b685.jpg",
-    "src": "resources/img/hero/hero-blinds.jpg"
+  "resources/img/hero/blinds.webp": {
+    "file": "assets/blinds-edc930ef.webp",
+    "src": "resources/img/hero/blinds.webp"
   },
-  "resources/img/hero/motion-blinds.jpg": {
-    "file": "assets/motion-blinds-1aefd8b6.jpg",
-    "src": "resources/img/hero/motion-blinds.jpg"
+  "resources/img/hero/hero-blinds-2.webp": {
+    "file": "assets/hero-blinds-2-c41e88f0.webp",
+    "src": "resources/img/hero/hero-blinds-2.webp"
+  },
+  "resources/img/hero/hero-blinds.webp": {
+    "file": "assets/hero-blinds-b57433d0.webp",
+    "src": "resources/img/hero/hero-blinds.webp"
+  },
+  "resources/img/hero/motion-blinds.webp": {
+    "file": "assets/motion-blinds-2557bce3.webp",
+    "src": "resources/img/hero/motion-blinds.webp"
+  },
+  "resources/img/hero/venetian-blinds.webp": {
+    "file": "assets/venetian-blinds-69be9a82.webp",
+    "src": "resources/img/hero/venetian-blinds.webp"
   },
   "resources/img/hero/wave.svg": {
     "file": "assets/wave-ebbdac34.svg",
     "src": "resources/img/hero/wave.svg"
   },
-  "resources/img/hero/hero-blinds-2.jpg": {
-    "file": "assets/hero-blinds-2-b39d35f2.jpg",
-    "src": "resources/img/hero/hero-blinds-2.jpg"
+  "resources/img/hero/zebra-blinds.webp": {
+    "file": "assets/zebra-blinds-426144f4.webp",
+    "src": "resources/img/hero/zebra-blinds.webp"
   },
-  "resources/img/hero/roller-blinds.jpg": {
-    "file": "assets/roller-blinds-583b3132.jpg",
-    "src": "resources/img/hero/roller-blinds.jpg"
-  },
-  "resources/img/hero/venetian-blinds.jpg": {
-    "file": "assets/venetian-blinds-983df028.jpg",
-    "src": "resources/img/hero/venetian-blinds.jpg"
-  },
-  "resources/img/hero/blinds.jpg": {
-    "file": "assets/blinds-49fb0e30.jpg",
-    "src": "resources/img/hero/blinds.jpg"
-  },
-  "resources/img/hero/zebra-blinds.jpg": {
-    "file": "assets/zebra-blinds-cf7b7e6c.jpg",
-    "src": "resources/img/hero/zebra-blinds.jpg"
-  },
-  "resources/img/svg/blob.svg": {
-    "file": "assets/blob-7dd4f7e7.svg",
-    "src": "resources/img/svg/blob.svg"
-  },
-  "resources/img/svg/logo-long.svg": {
-    "file": "assets/logo-long-0c60079a.svg",
-    "src": "resources/img/svg/logo-long.svg"
+  "resources/img/hero/roller-blinds.webp": {
+    "file": "assets/roller-blinds-b9afc445.webp",
+    "src": "resources/img/hero/roller-blinds.webp"
   },
   "resources/img/motion.jpeg": {
     "file": "assets/motion-d8eba19e.jpeg",
     "src": "resources/img/motion.jpeg"
   },
+  "resources/img/motion.webp": {
+    "file": "assets/motion-67733d47.webp",
+    "src": "resources/img/motion.webp"
+  },
+  "resources/img/svg/logo-long.svg": {
+    "file": "assets/logo-long-0c60079a.svg",
+    "src": "resources/img/svg/logo-long.svg"
+  },
+  "resources/img/svg/blob.svg": {
+    "file": "assets/blob-7dd4f7e7.svg",
+    "src": "resources/img/svg/blob.svg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-f95c2fc7.css",
+    "file": "assets/app-93b6c93e.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -81,8 +89,8 @@
     "src": "resources/ts/app.ts",
     "isEntry": true
   },
-  "resources/img/hero/indoor.jpg": {
-    "file": "assets/indoor-6d699ab3.jpg",
-    "src": "resources/img/hero/outdoor.jpg"
+  "resources/img/hero/indoor.webp": {
+    "file": "assets/indoor-57a84d30.webp",
+    "src": "resources/img/hero/outdoor.webp"
   }
 }

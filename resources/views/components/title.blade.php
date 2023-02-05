@@ -19,7 +19,7 @@
     }
 @endphp
 
-<{{$type}} @class(['tracking-tight font-title italic leading-tight drop-shadow-hard', $classType, $class])">
+<{{$type}} @class(['tracking-tight font-title italic leading-tight drop-shadow-hard py-2', $classType, $class])">
 {{ $slot }}
 </{{$type}}>
 

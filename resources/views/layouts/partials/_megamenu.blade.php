@@ -43,9 +43,9 @@
             <div class="absolute z-10 bottom-3 right-3 w-44 p-2 bg-white/70 rounded-md">
                 <img
                     class="w-full"
-                    loading="lazy" width="500" height="154" src="{{ Vite::asset('resources/img/Powered-by-MotionBlinds.png') }}" alt="Motion Blinds logo">
+                    loading="lazy" width="500" height="154" src="{{ Vite::asset('resources/img/Powered-by-MotionBlinds.webp') }}" alt="Motion Blinds logo">
             </div>
-            <img class="w-full h-full object-cover absolute" loading="lazy" width="500" height="375" src="{{ Vite::asset('resources/img/motion.jpeg') }}" alt="Motion">
+            <img class="w-full h-full object-cover absolute" loading="lazy" width="500" height="375" src="{{ Vite::asset('resources/img/motion.webp') }}" alt="Motion">
         </a>
 
     </div>
