@@ -3,10 +3,6 @@
     "file": "assets/Powered-by-MotionBlinds-430c673b.webp",
     "src": "resources/img/Powered-by-MotionBlinds.webp"
   },
-  "resources/img/Powered-by-MotionBlinds.png": {
-    "file": "assets/Powered-by-MotionBlinds-e85d4bf4.png",
-    "src": "resources/img/Powered-by-MotionBlinds.png"
-  },
   "resources/img/hero/bamboo-blinds.webp": {
     "file": "assets/bamboo-blinds-665fe695.webp",
     "src": "resources/img/hero/bamboo-blinds.webp"
@@ -23,14 +19,6 @@
     "file": "assets/basswood-blinds-7b4236de.webp",
     "src": "resources/img/hero/basswood-blinds.webp"
   },
-  "resources/img/hero/honeycomb-blinds.webp": {
-    "file": "assets/honeycomb-blinds-5fb2f145.webp",
-    "src": "resources/img/hero/honeycomb-blinds.webp"
-  },
-  "resources/img/hero/outdoor.webp": {
-    "file": "assets/indoor-57a84d30.webp",
-    "src": "resources/img/hero/outdoor.webp"
-  },
   "resources/img/hero/blinds.webp": {
     "file": "assets/blinds-edc930ef.webp",
     "src": "resources/img/hero/blinds.webp"
@@ -39,33 +27,33 @@
     "file": "assets/hero-blinds-2-c41e88f0.webp",
     "src": "resources/img/hero/hero-blinds-2.webp"
   },
+  "resources/img/hero/honeycomb-blinds.webp": {
+    "file": "assets/honeycomb-blinds-5fb2f145.webp",
+    "src": "resources/img/hero/honeycomb-blinds.webp"
+  },
   "resources/img/hero/hero-blinds.webp": {
     "file": "assets/hero-blinds-b57433d0.webp",
     "src": "resources/img/hero/hero-blinds.webp"
+  },
+  "resources/img/hero/outdoor.webp": {
+    "file": "assets/indoor-57a84d30.webp",
+    "src": "resources/img/hero/outdoor.webp"
   },
   "resources/img/hero/motion-blinds.webp": {
     "file": "assets/motion-blinds-2557bce3.webp",
     "src": "resources/img/hero/motion-blinds.webp"
   },
-  "resources/img/hero/venetian-blinds.webp": {
-    "file": "assets/venetian-blinds-69be9a82.webp",
-    "src": "resources/img/hero/venetian-blinds.webp"
-  },
-  "resources/img/hero/wave.svg": {
-    "file": "assets/wave-ebbdac34.svg",
-    "src": "resources/img/hero/wave.svg"
-  },
-  "resources/img/hero/zebra-blinds.webp": {
-    "file": "assets/zebra-blinds-426144f4.webp",
-    "src": "resources/img/hero/zebra-blinds.webp"
-  },
   "resources/img/hero/roller-blinds.webp": {
     "file": "assets/roller-blinds-b9afc445.webp",
     "src": "resources/img/hero/roller-blinds.webp"
   },
-  "resources/img/motion.jpeg": {
-    "file": "assets/motion-d8eba19e.jpeg",
-    "src": "resources/img/motion.jpeg"
+  "resources/img/hero/venetian-blinds.webp": {
+    "file": "assets/venetian-blinds-69be9a82.webp",
+    "src": "resources/img/hero/venetian-blinds.webp"
+  },
+  "resources/img/hero/zebra-blinds.webp": {
+    "file": "assets/zebra-blinds-426144f4.webp",
+    "src": "resources/img/hero/zebra-blinds.webp"
   },
   "resources/img/motion.webp": {
     "file": "assets/motion-67733d47.webp",
@@ -80,12 +68,12 @@
     "src": "resources/img/svg/blob.svg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-93b6c93e.css",
+    "file": "assets/app-956bc5b2.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-d1a518fd.js",
+    "file": "assets/app-4bdbe342.js",
     "src": "resources/ts/app.ts",
     "isEntry": true
   },

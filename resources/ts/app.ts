@@ -19,3 +19,17 @@ messages.forEach( (mess) => {
     }, 3000)
 })
 
+
+const variantsTriggers = document.querySelectorAll('[data-variant-trigger]')
+
+variantsTriggers.forEach(trigger => trigger.addEventListener('mouseover', function () {
+    const target = document.querySelector(`[data-variant-target=${(trigger as HTMLElement).dataset.variantTrigger}]`)
+    target.classList.add('bg-gray-100')
+}))
+
+variantsTriggers.forEach(trigger => trigger.addEventListener('mouseleave', function () {
+    const target = document.querySelector(`[data-variant-target=${(trigger as HTMLElement).dataset.variantTrigger}]`)
+    target.classList.remove('bg-gray-100')
+}))
+
+

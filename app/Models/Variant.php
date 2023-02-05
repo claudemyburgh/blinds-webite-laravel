@@ -62,6 +62,10 @@ class Variant extends Model implements HasMedia
         $this->addMediaConversion('normal')
             ->format('webp')
             ->fit(Manipulations::FIT_CROP, 800, 800);
+
+        $this->addMediaConversion('large')
+            ->format('webp')
+            ->fit(Manipulations::FIT_CROP, 1200, 1200);
     }
 
     /**

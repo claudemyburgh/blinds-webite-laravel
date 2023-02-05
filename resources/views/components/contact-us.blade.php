@@ -27,14 +27,22 @@
 
                         </div>
                         <div class="space-y-1 p-4">
-                            <x-title type="h3">{{ $user['name'] }}</x-title>
+                            <p class="font-semibold text-xl md:text-2xl text-white">{{ $user['name'] }}</p>
+
                             <x-paragraph>
-                                <x-link class="text-white"
-                                        href="mailto:{{ $user['email'] }}">{{ $user['email'] }}</x-link>
+                                <a class="relative px-2 py-1.5 text-primary-400 hover:underline underline-primary-500 inline-block"
+                                   href="mailto:{{ $user['email'] }}">
+                                    {{ $user['email'] }}
+                                    <span aria-hidden="true"
+                                          class="absolute -inset-x-1 bottom-2 bg-primary-500/10 h-1/3 rounded-lg"></span>
+                                </a>
                             </x-paragraph>
                             <x-paragraph>
-                                <x-link href="tel:{{ $user['phone']['plain'] }}"
-                                        class="text-white">{{ $user['phone']['formatted'] }}</x-link>
+                                <a href="tel:{{ $user['phone']['plain'] }}"
+                                   class="relative px-2 py-1.5 text-primary-400 hover:underline underline-primary-500 inline-block">{{ $user['phone']['formatted'] }}
+                                    <span aria-hidden="true"
+                                          class="absolute -inset-x-1 bottom-2 bg-primary-500/10 h-1/3 rounded-lg"></span>
+                                </a>
                             </x-paragraph>
                         </div>
                     </div>

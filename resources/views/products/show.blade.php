@@ -29,11 +29,17 @@
                 @endif
                 @if($product->variants->count())
                     @foreach($product->variants as $variant)
-                        <button type="button" data-image-url="{{ $variant->getFirstMediaUrl('variant', 'large') }}">
+                        <button
+                            type="button"
+                            data-image-url="{{ $variant->getFirstMediaUrl('variant', 'large') }}"
+                            data-variant-trigger="{{ $variant->sku }}"
+                            
+                        >
                             <img
                                 class="thumb aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
-                                src="{{ $variant->getFirstMediaUrl('variant', 'small')}}"
+                                src="{{ $variant->getFirstMediaUrl('variant', 'thumb')}}"
                                 alt="{{ $variant->sku }} {{ $variant->colour }}">
+                            <span>{{ $variant->colour }}</span>
                         </button>
                     @endforeach
                 @endif
