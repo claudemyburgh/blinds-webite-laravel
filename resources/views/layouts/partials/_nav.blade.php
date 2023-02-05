@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between h-16 md:h-20">
             <div class="flex flex-1 items-center justify-between px-2 lg:px-0">
                 <a href="{{ config('app.url') }}" class="flex-shrink-0 text-2xl font-bold">
-                    <img class="h-10 w-auto shrink-0" src="{{ Vite::asset('resources/img/svg/logo-long.svg') }}" alt="">
+                    <img class="h-10 w-auto shrink-0" height="37" width="280" src="{{ Vite::asset('resources/img/svg/logo-long.svg') }}" alt="{{ config('app.name') }} logo" loading="lazy">
                     <span class="sr-only">{{ config('app.name') }}</span>
                     <span class="sr-only">{{ config('app.slogan') }}</span>
                 </a>

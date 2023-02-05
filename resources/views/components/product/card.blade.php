@@ -4,6 +4,9 @@
         <div class="aspect-square bg-gray-200 group-hover:opacity-75 border-b border-gray-200">
             <img src="{{ $product->getFirstMediaUrl('default', 'medium') }}"
                  alt="{{ $product->title }}"
+                 height="300"
+                 width="300"
+                 loading="lazy"
                  class="w-full h-full object-center object-cover sm:w-full sm:h-full">
         </div>
         <div class="flex-1 p-4 space-y-2 flex flex-col">

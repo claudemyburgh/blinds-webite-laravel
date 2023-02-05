@@ -2,18 +2,16 @@
     <x-wrapper size="md" class="relative z-10 pt-6 xl:pt-28 2xl:pt-44 " size="none">
         {{ $slot }}
     </x-wrapper>
-
     @if($imageUrl)
         <div>
             <div
                 class="absolute hero-clip z-0 top-0 right-0 md:w-[650px] md:h-[750px] bg-primary-500 2xl:w-[850px] 2xl:h-[900px]">
-                <img class="object-cover  w-full h-full" loading="lazy" width="900" height="900" src="{{ $imageUrl }}"
+                <img class="object-cover w-full h-full" loading="lazy" width="900" height="900" src="{{ $imageUrl }}"
                      alt="Hero image for {{config('app.name')}}">
             </div>
 
         </div>
     @endif
-
     <svg class="svg" height="0" width="0">
         <defs>
             <clipPath id="svgClipPath" clipPathUnits="objectBoundingBox">

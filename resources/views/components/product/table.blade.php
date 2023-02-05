@@ -15,6 +15,8 @@
                         <div class="flex items-center">
                             <div class="h-10 w-10 flex-shrink-0">
                                 <img class="h-10 w-10 rounded-md"
+                                     height="40" width="40"
+                                     loading="lazy"
                                      src="{{ $variant->getFirstMediaUrl('variant', 'tiny') }}"
                                      alt="{{ $variant->color }}">
                             </div>
@@ -27,10 +29,6 @@
                             </div>
                         </div>
                     </td>
-                    {{--                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">--}}
-                    {{--                        <div class="text-gray-900">Front-end Developer</div>--}}
-                    {{--                        <div class="text-gray-500">Optimization</div>--}}
-                    {{--                    </td>--}}
                 </tr>
             @endforeach
             </tbody>

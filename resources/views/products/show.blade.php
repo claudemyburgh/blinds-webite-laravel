@@ -16,12 +16,16 @@
                     <img id="main-product-image" data-image="main"
                          class="aspect-square rounded-md w-full bg-gray-100 border border-gray-400"
                          src="{{ $product->getFirstMediaUrl('default', 'large') }}"
+                         height="590" width="590"
+                         loading="lazy"
                          alt="{{ $product->title }} featured image">
                 </div>
                 @if($product->media->count() > 1)
                     @foreach($product->media as $media)
                         <button type="button" data-image-url="{{ $media->getFullUrl('large') }}">
                             <img
+                                height="135" width="135"
+                                loading="lazy"
                                 class=" aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
                                 src="{{ $media->getFullUrl('thumb') }}"
                                 alt="{{ $product->title }} featured image">
@@ -37,10 +41,12 @@
 
                         >
                             <img
+                                height="135" width="135"
+                                loading="lazy"
                                 class="thumb aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
                                 src="{{ $variant->getFirstMediaUrl('variant', 'thumb')}}"
                                 alt="{{ $variant->sku }} {{ $variant->colour }}">
-                            <span>{{ $variant->colour }}</span>
+                            <span class="line-clamp-1">{{ $variant->colour }}</span>
                         </button>
                     @endforeach
                 @endif
