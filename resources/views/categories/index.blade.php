@@ -1,4 +1,5 @@
 <x-site-layout>
+    @section('title', "A full list of our products" )
     <x-wrapper size="md" class="py-6 md:py-28">
         <div class="relative">
             <x-title>Catalog</x-title>
