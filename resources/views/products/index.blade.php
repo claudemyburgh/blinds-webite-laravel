@@ -1,4 +1,5 @@
 <x-site-layout>
+    @section('title', $category->title )
     <x-hero>
         <x-title>{{ $category->title }}</x-title>
         @if($category->description)

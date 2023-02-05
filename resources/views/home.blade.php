@@ -1,4 +1,8 @@
-<x-site-layout>
+
+<x-site-layout xmlns:x-slote="http://www.w3.org/1999/xlink">
+
+
+
     <x-hero >
         <x-title>
              Best Selection of Blinds<br/> at Affordable Prices

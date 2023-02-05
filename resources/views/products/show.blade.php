@@ -1,4 +1,5 @@
 <x-site-layout>
+    @section('title', $product->title . ' ' . $product->category->title )
     <x-wrapper size="md" class="py-6 xl:py-28 grid md:grid-cols-2 gap-8">
         <div>
             <image-swap class="grid grid-cols-4 gap-2 md:gap-4 relative">
@@ -33,7 +34,7 @@
                             type="button"
                             data-image-url="{{ $variant->getFirstMediaUrl('variant', 'large') }}"
                             data-variant-trigger="{{ $variant->sku }}"
-                            
+
                         >
                             <img
                                 class="thumb aspect-square rounded-md w-full bg-gray-100 border border-gray-400 pointer-events-none"
@@ -46,7 +47,7 @@
             </image-swap>
         </div>
         <div>
-            <x-title>{{ $product->title }}</x-title>
+            <x-title>{{ $product->title }}  {{ $product->category->title }}</x-title>
             <a href="{{ route('products.index', $category) }}"
                class="text-gray-400 mt-2 inline-flex text-xs px-3 py-[3px] bg-gray-100 border border-gray-200 rounded-full hover:text-primary-600 hover:border-primary-600">In
                 category {{ $category->title }}</a>
