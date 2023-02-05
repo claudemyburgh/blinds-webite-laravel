@@ -9,7 +9,6 @@
         "butschster/meta-tags": "^2.3",
         "drewm/mailchimp-api": "^2.5",
         "guzzlehttp/guzzle": "^7.2",
-        "ladumor/laravel-pwa": "^0.0.3",
         "laravel-validation-rules/phone": "^1.7",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",

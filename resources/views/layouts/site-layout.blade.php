@@ -21,24 +21,25 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/ts/app.ts'])
-{{--    @livewireStyles--}}
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TTK378M');</script>
-<!-- End Google Tag Manager -->
-
+@production
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTK378M');</script>
+    <!-- End Google Tag Manager -->
+@endproduction
 
 </head>
 <body class="font-serif antialiased h-full flex flex-col bg-gray-50 overflow-x-hidden overflow-y-scroll">
+@production
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTK378M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
+@endproduction
 
 
 <a href="#main" class="sr-only">Skip to main</a>
@@ -72,14 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="absolute h-1/2 bottom-0 right-0 rounded-full w-1/2 bg-amber-500/5  "></div>
 </div>
 
-<script src="{{ asset('/sw.js') }}"></script>
-<script>
-    if (!navigator.serviceWorker.controller) {
-        navigator.serviceWorker.register("/sw.js").then(function (reg) {
-            console.log("Service worker has been registered for scope: " + reg.scope);
-        });
-    }
-</script>
+
 
 </body>
 </html>
