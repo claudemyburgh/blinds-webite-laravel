@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::supportBubble();
+Route::post('contact-send', \App\Http\Controllers\Api\ContactFormSendController::class);
 
 
 

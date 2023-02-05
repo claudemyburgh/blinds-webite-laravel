@@ -35,7 +35,7 @@ Route::get('/product/{category:slug}/{product:slug}', ProductShow::class)->name(
 
 
 Route::post('/contact-send', ContactFormSendController::class)->name('contact.send');
-Route::post('api/contact-send', \App\Http\Controllers\Api\ContactFormSendController::class);
+
 
 Route::group([
     'middleware' => ['auth', 'verified'],

@@ -1,0 +1,17 @@
+{
+    "name": "Eloquent Blinds",
+    "short_name": "EB",
+    "start_url": "/index.php",
+    "background_color": "#ffffff",
+    "description": "Effortless elegance for any window",
+    "display": "fullscreen",
+    "theme_color": "#1B85B6",
+    "icons": [
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -45,7 +45,7 @@ class ThankYou extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'emails.from.thank-you',
+            markdown: 'emails.form.thank-you',
             with: [
                 'name' => $this->data['name']
             ]
