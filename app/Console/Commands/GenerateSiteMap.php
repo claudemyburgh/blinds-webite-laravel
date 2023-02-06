@@ -36,7 +36,7 @@ class GenerateSiteMap extends Command
         $sitemap
             ->getSitemap()
             ->add(Url::create('/')->setPriority(1))
-            ->add(Url::create('/categories')->setPriority(1))
+            ->add(Url::create('/catalog')->setPriority(1))
             ->add(Url::create('/contact-us')->setPriority(1));
 
         foreach (Category::all() as $category) {
