@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
-class CategoriesPageController extends Controller
+class CatalogPageController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -17,8 +17,12 @@ class CategoriesPageController extends Controller
      */
     public function __invoke(Category $categories): View
     {
-        $categories = Category::with('media', 'products')->orderBy('title')->tree()->get()->toTree();
-        return view('categories.index', [
+
+        SEOMeta::setTitle('List');
+
+        $categories = Category::live()->with('media', 'products')->orderBy('title')->tree()->get()->toTree();
+
+        return view('catalog.index', [
             'categories' => $categories
         ]);
     }

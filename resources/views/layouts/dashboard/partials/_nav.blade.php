@@ -80,7 +80,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
+            <x-responsive-nav-link :href="route('catalog.index')" :active="request()->routeIs('catalog.index')">
                 {{ __('Categories') }}
             </x-responsive-nav-link>
         </div>

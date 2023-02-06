@@ -1,4 +1,3 @@
-
 <x-site-layout xmlns:x-slote="http://www.w3.org/1999/xlink">
     <x-hero >
         <x-title>
@@ -18,7 +17,7 @@
             . At {{ config('app.name') }}, we believe that the installation of your blinds should be just as hassle-free
             as the purchasing process. That's why we offer professional installation services for all of our blinds.
         </x-paragraph>
-        <x-btn-link href="{{ route('categories.index') }}" >VIEW ALL PRODUCTS</x-btn-link>
+        <x-btn-link href="{{ route('catalog.index') }}" >VIEW ALL PRODUCTS</x-btn-link>
 
 
         <x-slot:image-url>{{Vite::asset('resources/img/hero/bamboo-blinds.webp')}}</x-slot:image-url>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -14,6 +15,8 @@ class AboutUsPageController extends Controller
      */
     public function __invoke(): View
     {
+        SEOMeta::setTitle('About Us');
+
         return view('about-us');
     }
 }

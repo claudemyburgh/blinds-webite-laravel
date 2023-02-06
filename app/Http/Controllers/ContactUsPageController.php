@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\View\View;
 
 class ContactUsPageController extends Controller
@@ -13,6 +14,8 @@ class ContactUsPageController extends Controller
      */
     public function __invoke(): View
     {
+        SEOMeta::setTitle('Contact us');
+
         return view('contact-us');
     }
 }

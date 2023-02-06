@@ -1,5 +1,4 @@
 <x-site-layout>
-    @section('title', $product->title . ' ' . $product->category->title )
     <x-wrapper size="md" class="py-6 xl:py-28 grid md:grid-cols-2 gap-8">
         <div>
             <image-swap class="grid grid-cols-4 gap-2 md:gap-4 relative">

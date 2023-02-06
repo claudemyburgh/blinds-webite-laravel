@@ -1,5 +1,4 @@
 <x-site-layout>
-    @section('title', 'Contact Us')
     <x-wrapper size="none" class="pt-6 xl:pt-28">
         <x-title>Contact Us </x-title>
         <div class="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">

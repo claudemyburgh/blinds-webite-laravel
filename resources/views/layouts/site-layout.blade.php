@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="theme-color" content="#1B85B6"/>
-
-    <title>{{ config('app.name', config('app.name')) }} | @yield('title', config('app.slogan'))</title>
+    {!! SEOMeta::generate(true) !!}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,400;1,500&display=swap" rel="stylesheet">
 
-    <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -72,7 +70,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="absolute h-1/2 -left-12 -top-12 rounded-full w-1/2 bg-primary-500/30  "></div>
     <div class="absolute h-1/2 bottom-0 right-0 rounded-full w-1/2 bg-amber-500/5  "></div>
 </div>
-
 
 
 </body>

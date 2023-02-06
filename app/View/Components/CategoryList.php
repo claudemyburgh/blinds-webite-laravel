@@ -3,6 +3,8 @@
 namespace App\View\Components;
 
 use App\Models\Category;
+
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\View\Component;
 
 class CategoryList extends Component
@@ -16,7 +18,7 @@ class CategoryList extends Component
      */
     public function __construct()
     {
-        $this->categories = Category::with('products.media')->tree()->get()->toTree();
+        $this->categories = Category::live()->with('products.media')->tree()->get()->toTree();
     }
 
     /**
@@ -26,6 +28,8 @@ class CategoryList extends Component
      */
     public function render()
     {
+        SEOMeta::setTitle('Full list categories and products');
+
         return view('components.category-list');
     }
 }
