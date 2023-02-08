@@ -18,7 +18,6 @@
         "grid grid-cols-3 gap-4 w-2/3",
         "grid-cols-2" => $categories->count() <=4
         ])>
-
             @foreach($categories as $category)
                 <a href="{{ route('products.index', $category) }}" @class([
                         'border border-gray-300 rounded-md p-2 hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-300 hover:text-white flex items-center',

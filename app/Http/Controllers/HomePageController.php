@@ -22,7 +22,8 @@ class HomePageController extends Controller
         $categories = Cache::rememberForever('hero_links', function () {
            return Category::find(1)->descendants()->depthFirst()->get();
         });
-        
+
+
         return view('home', [
             'categories' => $categories
         ]);

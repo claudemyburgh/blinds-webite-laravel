@@ -30,8 +30,8 @@ Route::get('/about-us', AboutUsPageController::class)->name('about-us');
 Route::get('/contact-us', ContactUsPageController::class)->name('contact-us');
 
 Route::get('/catalog', CatalogPageController::class)->name('catalog.index');
-Route::get('/category/{category:slug}', ProductIndexController::class)->name('products.index');
-Route::get('/product/{category:slug}/{product:slug}', ProductShow::class)->name('product.show');
+Route::get('/{category:slug}', ProductIndexController::class)->name('products.index');
+Route::get('/{category:slug}/{product:slug}', ProductShow::class)->name('product.show');
 
 
 Route::post('/contact-send', ContactFormSendController::class)->name('contact.send');
