@@ -12,8 +12,6 @@ class DashboardController extends Controller
     public function __invoke(): View
     {
         $clients = Client::paginate();
-
-
         return view('dashboard.index', compact('clients'));
     }
 }
