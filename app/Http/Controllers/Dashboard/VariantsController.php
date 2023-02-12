@@ -40,7 +40,6 @@ class VariantsController extends Controller
      */
     public function store(VariantsRequest $request, Product $product)
     {
-
         $variant = $product->variants()
             ->create($request->only( 'image','sku', 'colour', 'material', 'pattern', 'thickness', 'pattern_width', 'pattern_height', 'popular'));
 
@@ -73,7 +72,6 @@ class VariantsController extends Controller
      */
     public function edit(Product $product, Variant $variant): View
     {
-
         $variant->load('media');
 
         return view('dashboard.variants.edit', compact('product', 'variant'));
@@ -108,7 +106,6 @@ class VariantsController extends Controller
      */
     public function destroy(Product $product, Variant $variant)
     {
-
         $variant->delete();
 
         return response()->redirectToRoute('dashboard.products.edit', $product)->withSuccess('Variant successfully deleted');

@@ -7,6 +7,13 @@
     "file": "assets/aluminium-blinds-84bac624.webp",
     "src": "resources/img/hero/aluminium-blinds.webp"
   },
+<<<<<<< refs/remotes/origin/main
+=======
+  "resources/img/hero/bamboo-blinds.webp": {
+    "file": "assets/bamboo-blinds-665fe695.webp",
+    "src": "resources/img/hero/bamboo-blinds.webp"
+  },
+>>>>>>> fixed dashboard access
   "resources/img/hero/basswood-blinds.webp": {
     "file": "assets/basswood-blinds-7b4236de.webp",
     "src": "resources/img/hero/basswood-blinds.webp"
@@ -15,13 +22,23 @@
     "file": "assets/blinds-edc930ef.webp",
     "src": "resources/img/hero/blinds.webp"
   },
+<<<<<<< refs/remotes/origin/main
   "resources/img/hero/bamboo-blinds.webp": {
     "file": "assets/bamboo-blinds-665fe695.webp",
     "src": "resources/img/hero/bamboo-blinds.webp"
+=======
+  "resources/img/hero/double-roller-blinds.webp": {
+    "file": "assets/double-roller-blinds-c74c67df.webp",
+    "src": "resources/img/hero/double-roller-blinds.webp"
   },
-  "resources/img/hero/hero-blinds.webp": {
-    "file": "assets/hero-blinds-b57433d0.webp",
-    "src": "resources/img/hero/hero-blinds.webp"
+  "resources/img/hero/hero-blinds-2.webp": {
+    "file": "assets/hero-blinds-2-c41e88f0.webp",
+    "src": "resources/img/hero/hero-blinds-2.webp"
+>>>>>>> fixed dashboard access
+  },
+  "resources/img/hero/outdoor.webp": {
+    "file": "assets/indoor-57a84d30.webp",
+    "src": "resources/img/hero/outdoor.webp"
   },
   "resources/img/hero/double-roller-blinds.webp": {
     "file": "assets/double-roller-blinds-c74c67df.webp",
@@ -31,9 +48,9 @@
     "file": "assets/hero-blinds-2-c41e88f0.webp",
     "src": "resources/img/hero/hero-blinds-2.webp"
   },
-  "resources/img/hero/outdoor.webp": {
-    "file": "assets/indoor-57a84d30.webp",
-    "src": "resources/img/hero/outdoor.webp"
+  "resources/img/hero/hero-blinds.webp": {
+    "file": "assets/hero-blinds-b57433d0.webp",
+    "src": "resources/img/hero/hero-blinds.webp"
   },
   "resources/img/hero/motion-blinds.webp": {
     "file": "assets/motion-blinds-2557bce3.webp",
@@ -47,28 +64,32 @@
     "file": "assets/roller-blinds-b9afc445.webp",
     "src": "resources/img/hero/roller-blinds.webp"
   },
-  "resources/img/hero/venetian-blinds.webp": {
-    "file": "assets/venetian-blinds-69be9a82.webp",
-    "src": "resources/img/hero/venetian-blinds.webp"
+  "resources/img/svg/blob.svg": {
+    "file": "assets/blob-7dd4f7e7.svg",
+    "src": "resources/img/svg/blob.svg"
   },
   "resources/img/hero/zebra-blinds.webp": {
     "file": "assets/zebra-blinds-426144f4.webp",
     "src": "resources/img/hero/zebra-blinds.webp"
   },
-  "resources/img/motion.webp": {
-    "file": "assets/motion-67733d47.webp",
-    "src": "resources/img/motion.webp"
-  },
-  "resources/img/svg/blob.svg": {
-    "file": "assets/blob-7dd4f7e7.svg",
-    "src": "resources/img/svg/blob.svg"
+  "resources/img/hero/venetian-blinds.webp": {
+    "file": "assets/venetian-blinds-69be9a82.webp",
+    "src": "resources/img/hero/venetian-blinds.webp"
   },
   "resources/img/svg/logo-long.svg": {
     "file": "assets/logo-long-0c60079a.svg",
     "src": "resources/img/svg/logo-long.svg"
   },
+  "resources/img/motion.webp": {
+    "file": "assets/motion-67733d47.webp",
+    "src": "resources/img/motion.webp"
+  },
   "resources/css/app.css": {
+<<<<<<< refs/remotes/origin/main
     "file": "assets/app-82d6465d.css",
+=======
+    "file": "assets/app-1ac5e428.css",
+>>>>>>> fixed dashboard access
     "src": "resources/css/app.css",
     "isEntry": true
   },

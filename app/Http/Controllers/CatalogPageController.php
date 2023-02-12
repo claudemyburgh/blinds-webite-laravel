@@ -18,7 +18,7 @@ class CatalogPageController extends Controller
     public function __invoke(Category $categories): View
     {
 
-        SEOMeta::setTitle('List');
+        SEOMeta::setTitle('A full catalog of our products');
 
         $categories = Category::live()->with('media', 'products')->orderBy('title')->tree()->get()->toTree();
 

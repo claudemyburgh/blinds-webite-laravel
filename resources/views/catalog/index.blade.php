@@ -1,7 +1,7 @@
 <x-site-layout>
     <x-wrapper size="md" class="py-6 md:py-28">
         <div class="relative">
-            <x-title>Catalog</x-title>
+            <x-title>A full catalog of our products</x-title>
             <x-prose class="my-4">
                 <p>
                     We are excited to offer you a wide variety of products to choose from. We have put in a lot of
