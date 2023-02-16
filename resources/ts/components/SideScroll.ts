@@ -26,7 +26,7 @@ export class SideScroll extends HTMLElement {
         this.scrollLeftPosition = null
         this.velocity = 0
         this.smoothing = 0.5;
-        this.bounciness = 0.58;
+        this.bounciness = 0.78;
         this.links = this.querySelectorAll('a')
     }
 
@@ -66,20 +66,20 @@ export class SideScroll extends HTMLElement {
     }
 
     protected mouseMove(e: MouseEvent) {
-        if (!this.isDown) return
         e.preventDefault()
         e.stopPropagation();
+        if (!this.isDown) return
         const x = e.pageX - this.offsetLeft
         const walk = (x - this.startX) * 1.2
         this.scrollLeft = this.scrollLeftPosition - walk
-        this.velocity = -walk
+        this.velocity =- walk
     }
 
     protected update() {
         if (!this.isDown) {
             this.scrollLeft += this.velocity + this.smoothing
             this.velocity *= this.bounciness
-            if (Math.abs(this.velocity) < 0.1) {
+            if (Math.abs(this.velocity) < 0.35) {
                 this.stopInertia()
             }
         }
@@ -89,9 +89,6 @@ export class SideScroll extends HTMLElement {
     protected stopInertia() {
         this.velocity = 0;
     }
-
-
-
 
 }
 
