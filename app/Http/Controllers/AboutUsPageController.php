@@ -17,6 +17,12 @@ class AboutUsPageController extends Controller
     {
         SEOMeta::setTitle('About Us');
 
+
+
         return view('about-us');
     }
+
+
+
+
 }

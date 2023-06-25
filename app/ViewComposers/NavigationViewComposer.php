@@ -12,9 +12,8 @@ class NavigationViewComposer
     public function compose(View $view)
     {
 
-        $categories = Cache::rememberForever('navigation-categories',  function () {
-           return Category::live()->with('media')->orderBy('title')->get();
-        });
+        $categories = Category::live()->with('media')->orderBy('title')->get();
+
 
         $exclude = ['indoor-blinds', 'outdoor-blinds'];
 

@@ -76,7 +76,6 @@ class Category extends Model implements HasMedia
         $this->addMediaCollection('default')
             ->useFallbackUrl(url(config('app.placeholder')));
 
-
     }
 
 

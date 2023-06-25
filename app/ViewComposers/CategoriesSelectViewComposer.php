@@ -12,9 +12,8 @@ class CategoriesSelectViewComposer
     public function compose(View $view)
     {
 
-        $categories = Cache::rememberForever('categories-select', function () {
-            return Category::live()->orderBy('title')->tree()->get()->toTree();
-        });
+        $categories = Category::live()->orderBy('title')->tree()->get()->toTree();
+
 
         return $view->with('categories', $categories);
     }
