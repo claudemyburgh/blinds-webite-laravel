@@ -25,7 +25,7 @@ class EventServiceProvider extends ServiceProvider
 
         ContactFormWasSubmitted::class => [
             SendContactForm::class,
-            ThanksContactForm::class,
+            // ThanksContactForm::class,
             ClientListener::class,
         ],
 

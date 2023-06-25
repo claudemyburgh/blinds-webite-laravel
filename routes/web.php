@@ -25,18 +25,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomePageController::class)->name('home');
-Route::get('/about-us', AboutUsPageController::class)->name('about-us');
-Route::get('/contact-us', ContactUsPageController::class)->name('contact-us');
-
-Route::get('/catalog', CatalogPageController::class)->name('catalog.index');
-Route::get('/category/{category:slug}', ProductIndexController::class)->name('products.index');
-Route::get('/product/{category:slug}/{product:slug}', ProductShow::class)->name('product.show');
-
-
-Route::post('/contact-send', ContactFormSendController::class)->name('contact.send');
-
-
 Route::group([
     'middleware' => ['auth', 'verified'],
     'as' => 'dashboard.',
@@ -60,3 +48,18 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/', HomePageController::class)->name('home');
+Route::get('/about-us', AboutUsPageController::class)->name('about-us');
+Route::get('/contact-us', ContactUsPageController::class)->name('contact-us');
+
+Route::get('/catalog', CatalogPageController::class)->name('catalog.index');
+Route::get('/category/{category:slug}', ProductIndexController::class)->name('products.index');
+Route::get('/product/{category:slug}/{product:slug}', ProductShow::class)->name('product.show');
+
+
+Route::post('/contact-send', ContactFormSendController::class)->name('contact.send');
+
+
