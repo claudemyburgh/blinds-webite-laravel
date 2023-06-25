@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Events\UpdateData;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
@@ -21,7 +22,7 @@ class CategoriesObserver
         }else {
             $model->slug = Str::slug($model->title);
         }
-
+        event(new UpdateData($model));
     }
 
     /**
@@ -35,6 +36,8 @@ class CategoriesObserver
         }else {
             $model->slug = Str::slug($model->title);
         }
+
+        event(new UpdateData($model));
     }
 
 

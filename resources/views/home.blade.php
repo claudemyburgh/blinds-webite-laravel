@@ -18,8 +18,6 @@
             as the purchasing process. That's why we offer professional installation services for all of our blinds.
         </x-paragraph>
         <x-btn-link href="{{ route('catalog.index') }}" >VIEW ALL PRODUCTS</x-btn-link>
-
-
         <x-slot:image-url>{{Vite::asset('resources/img/hero/bamboo-blinds.webp')}}</x-slot:image-url>
     </x-hero>
     <x-category-list></x-category-list>

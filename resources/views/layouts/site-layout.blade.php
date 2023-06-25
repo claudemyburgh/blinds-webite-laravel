@@ -7,6 +7,8 @@
     <meta name="theme-color" content="#1B85B6"/>
     {!! SEOMeta::generate(true) !!}
 
+    <link rel="canonical" href="{{ url()->current() }}" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +46,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 @include('layouts.partials._nav')
 
+
 <!-- Page Heading -->
 @if (isset($header))
     <header class="bg-white dark:bg-gray-800 shadow">
@@ -58,6 +61,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main">
     {{ $slot }}
 </main>
+
+
+
+
 
 {{--@include('layouts.partials._stats')--}}
 

@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use App\Events\ContactFormWasSubmitted;
+use App\Events\ModelsUpdate;
+use App\Events\UpdateData;
+use App\Listeners\ClearViewAndCache;
 use App\Listeners\ClientListener;
 use App\Listeners\SendContactForm;
 use App\Listeners\ThanksContactForm;
@@ -28,6 +31,10 @@ class EventServiceProvider extends ServiceProvider
             // ThanksContactForm::class,
             ClientListener::class,
         ],
+
+        UpdateData::class => [
+            ClearViewAndCache::class
+        ]
 
     ];
 

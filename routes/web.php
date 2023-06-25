@@ -25,6 +25,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+require __DIR__.'/auth.php';
+
+
 Route::group([
     'middleware' => ['auth', 'verified'],
     'as' => 'dashboard.',
@@ -47,7 +51,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
 
 
 
